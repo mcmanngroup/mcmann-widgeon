@@ -1272,12 +1272,12 @@ function showTab(id,el){
     renderSchedule(d.schedule||[]);
   }
 }
-var GAS_URL='https://script.google.com/macros/s/AKfycbx1XdpPdTRjbpv4AvOSlgoQWC7oUt2Hyu-i0zoBWbDjt6fX9K0QbJRbGpFk6CrT_cct/exec';
+var DATA_URL='/data.json';
 
 function syncData(){
   const btn=document.querySelector('button[onclick="syncData()"]');
   if(btn){btn.textContent='Syncing...';btn.disabled=true;}
-  fetch(GAS_URL+'?format=json&nocache=1')
+  fetch(DATA_URL+'?v='+Date.now())
     .then(function(r){return r.json();})
     .then(function(data){
       window.__SHEET_DATA__=data;
@@ -1303,16 +1303,15 @@ function toggleGroup(group){
   if(sub)sub.classList.toggle('hidden',isOpen);
 }
 // Load live data on page open
-fetch(GAS_URL+'?format=json')
+fetch(DATA_URL+'?v='+Date.now())
   .then(function(r){return r.json();})
   .then(function(data){
     window.__SHEET_DATA__=data;
     renderDashboard(data);
   })
   .catch(function(err){
-    console.error('Initial load failed:',err);
+    console.error('Could not load data.json:',err);
   });
 </script>
 </body>
 </html>
-
