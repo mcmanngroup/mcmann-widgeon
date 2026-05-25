@@ -75,6 +75,20 @@ html,body{font-family:'DM Sans',sans-serif;background:var(--gray);color:var(--te
 .tab{font-size:14px;font-weight:600;color:rgba(255,255,255,.55);padding:12px 20px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;transition:color .15s,border-color .15s;}
 .tab:hover{color:rgba(255,255,255,.85);}
 .tab.active{color:#fff;border-bottom-color:var(--gold);}
+/* GITHUB SYNC */
+.sync-bar{background:var(--navy2);border-bottom:2px solid var(--gold);padding:8px 22px;display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.sync-status{font-family:'DM Mono',monospace;font-size:.62rem;color:rgba(255,255,255,.5);flex:1;}
+.sync-status.ok{color:#6ee7b7;}
+.sync-status.err{color:#fca5a5;}
+.sync-status.syncing{color:var(--gold2);}
+.sync-btn{padding:7px 18px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:var(--radius-sm);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:opacity .15s;display:flex;align-items:center;gap:6px;}
+.sync-btn:hover{opacity:.88;}
+.sync-btn:disabled{opacity:.4;cursor:not-allowed;}
+.gh-setup{display:flex;align-items:center;gap:8px;}
+.gh-input{font-family:'DM Mono',monospace;font-size:.7rem;padding:6px 10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:4px;outline:none;width:220px;}
+.gh-input:focus{border-color:var(--gold2);}
+.gh-input::placeholder{color:rgba(255,255,255,.3);font-size:.65rem;}
+.gh-lbl{font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;}
 /* REPORT BAR */
 .report-bar{background:var(--white);border-bottom:1px solid var(--border);padding:9px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(10,22,40,.06);flex-shrink:0;}
 .rb-left{display:flex;align-items:center;gap:16px;}
@@ -442,6 +456,29 @@ tr:hover .ra{opacity:1;}
       <div class="rb-badge">✓ 2125 Widgeon Rd</div>
     </div>
   </div>
+  <!-- GITHUB SYNC BAR -->
+  <div class="sync-bar" id="sync-bar" style="display:none">
+    <div id="gh-setup-wrap" style="display:flex;align-items:center;gap:10px">
+      <div>
+        <div class="gh-lbl">GitHub Token</div>
+        <input class="gh-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx" style="width:180px"/>
+      </div>
+      <div>
+        <div class="gh-lbl">GitHub Username</div>
+        <input class="gh-input" id="gh-user" type="text" placeholder="your-username" style="width:140px"/>
+      </div>
+      <div>
+        <div class="gh-lbl">Repo Name</div>
+        <input class="gh-input" id="gh-repo" type="text" placeholder="mcmann-widgeon" style="width:140px"/>
+      </div>
+      <button class="sync-btn" onclick="saveGhConfig()" style="margin-top:16px">Save Settings</button>
+    </div>
+    <div id="gh-sync-wrap" style="display:none;align-items:center;gap:12px;flex:1">
+      <div class="sync-status" id="sync-status">● Ready to sync</div>
+      <button class="sync-btn" id="sync-btn" onclick="syncToGitHub()">⬆ Sync to Dashboard</button>
+      <button class="sync-btn" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.62rem;padding:5px 10px;" onclick="resetGhConfig()">⚙ Settings</button>
+    </div>
+  </div>
   <div class="body-layout">
     <div class="sidebar">
       <div class="sb-top">
@@ -487,7 +524,7 @@ function doLogin(){
   if(document.getElementById('pw').value==='admin'){
     document.getElementById('login-screen').style.display='none';
     document.getElementById('app').style.display='flex';
-    loadFromStorage();renderMonthList();if(activeMonth)updateBar();
+    loadFromStorage();renderMonthList();if(activeMonth)updateBar();initSyncBar();
   } else {
     var e=document.getElementById('login-err');e.classList.remove('show');void e.offsetWidth;e.classList.add('show');
   }
@@ -1194,6 +1231,127 @@ function startRename(sid,oldKey){
     else if(e.key==='Escape'){renderMonthList();}
   });
   inp.addEventListener('blur',function(){setTimeout(commit,100);});
+}
+
+// ── GITHUB SYNC ──
+function initSyncBar(){
+  var bar=document.getElementById('sync-bar');
+  if(bar)bar.style.display='flex';
+  var cfg=loadGhConfig();
+  if(cfg.token&&cfg.user&&cfg.repo){
+    showSyncReady();
+  } else {
+    document.getElementById('gh-setup-wrap').style.display='flex';
+    document.getElementById('gh-sync-wrap').style.display='none';
+  }
+}
+function loadGhConfig(){
+  try{return JSON.parse(localStorage.getItem('gh_cfg')||'{}');}catch(e){return{};}
+}
+function saveGhConfig(){
+  var token=document.getElementById('gh-token').value.trim();
+  var user=document.getElementById('gh-user').value.trim();
+  var repo=document.getElementById('gh-repo').value.trim();
+  if(!token||!user||!repo){showToast('Fill in all 3 GitHub fields',true);return;}
+  localStorage.setItem('gh_cfg',JSON.stringify({token:token,user:user,repo:repo}));
+  showToast('GitHub settings saved ✓');
+  showSyncReady();
+}
+function resetGhConfig(){
+  document.getElementById('gh-setup-wrap').style.display='flex';
+  document.getElementById('gh-sync-wrap').style.display='none';
+  var cfg=loadGhConfig();
+  if(cfg.token)document.getElementById('gh-token').value=cfg.token;
+  if(cfg.user)document.getElementById('gh-user').value=cfg.user;
+  if(cfg.repo)document.getElementById('gh-repo').value=cfg.repo;
+}
+function showSyncReady(){
+  document.getElementById('gh-setup-wrap').style.display='none';
+  document.getElementById('gh-sync-wrap').style.display='flex';
+  setSyncStatus('● Ready to sync','');
+}
+function setSyncStatus(msg,cls){
+  var el=document.getElementById('sync-status');
+  if(!el)return;
+  el.textContent=msg;
+  el.className='sync-status'+(cls?' '+cls:'');
+}
+
+async function syncToGitHub(){
+  if(!activeMonth||!reports[activeMonth]){showToast('Select a report first',true);return;}
+  var cfg=loadGhConfig();
+  if(!cfg.token||!cfg.user||!cfg.repo){showToast('Configure GitHub settings first',true);resetGhConfig();return;}
+
+  var btn=document.getElementById('sync-btn');
+  if(btn){btn.disabled=true;btn.textContent='Syncing...';}
+  setSyncStatus('● Building data...','syncing');
+
+  try{
+    // Build data.json in the shape the dashboard expects
+    var data=reports[activeMonth];
+    var payload=buildDashboardPayload(data);
+
+    // Check if file exists to get its SHA (needed for update)
+    var apiBase='https://api.github.com/repos/'+cfg.user+'/'+cfg.repo+'/contents/data.json';
+    var sha=null;
+    try{
+      var check=await fetch(apiBase,{headers:{'Authorization':'token '+cfg.token,'Accept':'application/vnd.github.v3+json'}});
+      if(check.ok){var cj=await check.json();sha=cj.sha;}
+    }catch(e){}
+
+    setSyncStatus('● Pushing to GitHub...','syncing');
+
+    // Push data.json
+    var body={message:'Update dashboard data — '+activeMonth,content:btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))))};
+    if(sha)body.sha=sha;
+
+    var res=await fetch(apiBase,{
+      method:'PUT',
+      headers:{'Authorization':'token '+cfg.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
+
+    if(!res.ok){
+      var err=await res.json();
+      throw new Error(err.message||'GitHub API error '+res.status);
+    }
+
+    setSyncStatus('✓ Synced — '+activeMonth+' · '+new Date().toLocaleTimeString(),'ok');
+    showToast('Dashboard updated! Live in ~30 seconds');
+    if(btn){btn.disabled=false;btn.textContent='⬆ Sync to Dashboard';}
+
+  }catch(e){
+    setSyncStatus('✗ Failed: '+e.message,'err');
+    showToast('Sync failed: '+e.message,true);
+    if(btn){btn.disabled=false;btn.textContent='⬆ Sync to Dashboard';}
+  }
+}
+
+function buildDashboardPayload(data){
+  // The dashboard renderDashboard() expects:
+  // { estimate:[], timesheet:[], materials:[], schedule:[], updated:'' }
+  // estimate = Cost Breakdown rows (same column structure)
+  // We map our Excel sheets directly
+  var now=new Date();
+  var updated=now.toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
+
+  // Get monday config for schedule
+  var mondayCfg={};
+  try{mondayCfg=JSON.parse(localStorage.getItem('mcmann_m8')||'{}');}catch(e){}
+
+  return {
+    estimate: data['Cost Breakdown']||[],
+    timesheet: data['Timesheet']||[],
+    materials: data['Material']||[],
+    schedule: mondayItems||[],
+    updated: updated,
+    _meta:{
+      report: activeMonth,
+      dateFrom: data.dateFrom||'',
+      dateTo: data.dateTo||'',
+      syncedAt: now.toISOString()
+    }
+  };
 }
 
 // TOAST
