@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>McMann Group Inc. — 2125 Widgeon Road</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0a1628;--navy2:#112240;--navy3:#1a3a6b;
+  --gold:#c9970a;--gold2:#f0c040;--gold-light:#fef9e7;--gold-dark:#92400e;
+  --blue:#1e6fd9;--blue2:#3b8ff5;--blue-pale:#e8f0fe;
+  --green:#10b981;--green-light:#d1fae5;--green-dark:#065f46;
+  --red:#ef4444;--red-light:#fee2e2;--red-dark:#991b1b;
+  --gray:#f2f6ff;--gray2:#e8f0fe;--gray3:rgba(30,111,217,.13);--gray4:#7b9abf;--gray5:#3d5a8a;
+  --text:#0a1628;--text2:#3d5a8a;--white:#ffffff;
+  --radius:13px;--radius-sm:7px;
+  --sh:0 2px 16px rgba(10,22,40,.09);--border:rgba(30,111,217,.13);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--gray);color:var(--text);min-height:100vh;}
+
+/* HEADER — sticky, exact PM pattern */
+.hdr{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 60%,#1a4a8a 100%);position:sticky;top:0;z-index:300;box-shadow:0 2px 24px rgba(0,0,0,.45);}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:13px 22px 10px;}
+.brand{display:flex;align-items:center;gap:14px;}
+.logo-badge{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--navy);flex-shrink:0;}
+.brand-name h1{font-size:16px;font-weight:700;color:#fff;line-height:1.15;}
+.brand-name p{font-size:10px;color:var(--gold2);letter-spacing:1.6px;font-weight:500;text-transform:uppercase;margin-top:1px;}
+.brand-sub{display:flex;align-items:center;flex-wrap:wrap;gap:2px;margin-top:5px;}
+.brand-sub-label{font-size:11px;font-weight:700;color:var(--gold2);margin-right:4px;text-transform:uppercase;letter-spacing:.5px;}
+.brand-sub-val{font-size:12px;font-weight:500;color:rgba(255,255,255,.9);margin-right:6px;}
+.hdr-right{display:flex;align-items:center;gap:8px;}
+.hdr-meta{font-size:10px;color:rgba(255,255,255,.4);text-align:right;line-height:1.9;margin-right:10px;}
+.hdr-meta b{color:var(--gold2);}
+.live-dot{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:5px;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.btn{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;padding:6px 14px;border-radius:var(--radius-sm);cursor:pointer;border:none;transition:.15s;}
+.btn-sync{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);}
+.btn-sync:hover{opacity:.88;}
+.btn-pdf{background:var(--blue);color:#fff;}
+.btn-pdf:hover{background:var(--blue2);}
+/* TABS inside header — same sticky block */
+.tabs-bar{padding:0 22px;display:flex;border-top:1px solid rgba(255,255,255,.07);overflow-x:auto;}
+.tabs-bar::-webkit-scrollbar{display:none;}
+.tab{font-size:14px;font-weight:600;color:rgba(255,255,255,.55);padding:12px 20px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;transition:color .15s,border-color .15s;}
+.tab:hover{color:rgba(255,255,255,.85);}
+.tab.active{color:#fff;border-bottom-color:var(--gold);}
+
+/* CONTENT */
+.content{padding:18px 22px 50px;max-width:1400px;margin:0 auto;}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+
+/* KPI — white card, coloured top border, PM style */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
+.kpi-card{background:var(--white);border-radius:var(--radius);padding:15px 17px;box-shadow:var(--sh);border:1px solid var(--border);border-top:3px solid var(--blue);}
+.kpi-card.blue{border-top-color:var(--blue);}
+.kpi-card.green{border-top-color:var(--green);}
+.kpi-card.red{border-top-color:var(--red);}
+.kpi-card.gold{border-top-color:var(--gold);}
+.kpi-label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--text2);margin-bottom:5px;font-weight:700;}
+.kpi-value{font-size:24px;font-weight:800;color:var(--navy);line-height:1.05;font-family:'DM Sans',sans-serif;}
+.kpi-value.green{color:var(--green);}
+.kpi-sub{font-size:10px;color:var(--gray4);margin-top:4px;}
+
+/* BUDGET PROGRESS CARD */
+.health-card{background:var(--white);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--sh);border:1px solid var(--border);margin-bottom:16px;}
+
+/* SECTION CARD */
+.section-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--sh);border:1px solid var(--border);overflow:hidden;margin-bottom:16px;}
+.section-head{padding:11px 18px;border-bottom:3px solid #c9970a;display:flex;align-items:center;justify-content:space-between;background:#112240;}
+.section-head h2{font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.8px;}
+.section-head p{font-size:10px;color:rgba(255,255,255,.5);margin-top:1px;}
+
+/* TABLE — exact PM style */
+table{width:100%;border-collapse:collapse;font-size:14px;}
+thead th{background:var(--navy);color:var(--gold2);padding:10px 14px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;white-space:nowrap;}
+thead th.r{text-align:right;}
+tbody tr:hover td{background:var(--blue-pale);}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;}
+tbody td.num{font-size:14px;font-weight:500;text-align:right;color:var(--text);}
+tbody tr:last-child td{border-bottom:none;}
+tr.cat-row{cursor:pointer;}
+tr.cat-row td{background:#fff !important;color:var(--navy);font-weight:700;}
+tr.cat-row:hover td{background:var(--blue-pale) !important;}
+tr.cat-row td.num{visibility:visible;color:var(--navy);font-weight:700;}
+tr.detail-row td{background:#f5f8ff;font-size:12px;color:var(--text2);padding:7px 12px;border-bottom:1px solid var(--border);}
+tr.detail-row.over-sub td{background:#fff1f2;}
+tr.detail-row.co-sub td{background:#fffbeb;}
+tr.detail-row.hidden{display:none;}
+tr.detail-row td:first-child{padding-left:32px;}
+tr.subtotal-row td{background:var(--navy2);font-size:12px;font-weight:700;color:var(--gold2);padding:9px 12px;border-top:1px solid var(--navy);border-bottom:2px solid var(--gold);}
+tr.subtotal-row td.num{font-size:12px;font-weight:700;text-align:right;color:var(--gold2);}
+tr.subtotal-row td.num.green{color:#6ee7b7;}
+tr.subtotal-row td.num.red{color:#fca5a5;}
+tr.subtotal-row.hidden{display:none;}
+tr.subtotal-row td:first-child{padding-left:32px;}
+tr.co-sub td{background:#fffbeb !important;}
+tr.cat-row.co-row td{background:#fffbeb;}
+tr.totals-row td{background:var(--navy);color:var(--gold2);font-weight:700;font-size:12px;border-bottom:none;}
+tr.totals-row td.num{color:var(--gold2);font-weight:700;text-align:right;}
+tr.totals-row td.num.green{color:#6ee7b7;}
+tr.totals-row td.num.red{color:#fca5a5;}
+tr.markup-row td{background:var(--gray);font-size:12px;color:var(--text2);padding:8px 12px;border-bottom:1px solid var(--border);}
+tr.markup-row td.num{text-align:right;}
+.expand-btn{background:none;border:none;cursor:pointer;font-size:10px;color:var(--gray4);padding:0;margin-right:6px;transition:transform .18s;display:inline-block;}
+.expand-btn.open{transform:rotate(90deg);}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:2px 9px;border-radius:20px;white-space:nowrap;}
+.badge.green{background:var(--green-light);color:var(--green-dark);}
+.badge.red{background:var(--red-light);color:var(--red-dark);}
+.badge.gold{background:var(--gold-light);color:var(--gold-dark);}
+.badge.gray{background:var(--gray2);color:var(--gray5);}
+.co-tag{display:inline-flex;align-items:center;font-size:11px;color:var(--gold-dark);background:var(--gold-light);padding:1px 7px;border-radius:4px;font-weight:600;border:1px solid #fcd34d;}
+.ts-date{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray4);}
+.ts-person{font-weight:600;color:var(--navy);}
+.ts-hours{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;text-align:right;}
+.invoice-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray4);}
+.vendor-name{font-weight:600;color:var(--navy);}
+.sched-task{display:flex;align-items:center;gap:12px;padding:9px 18px;border-bottom:1px solid var(--border);}
+.sched-task:last-child{border-bottom:none;}
+.sched-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.sched-date{font-size:11px;font-weight:700;color:var(--gray4);width:68px;flex-shrink:0;font-variant-numeric:tabular-nums;}
+.sched-name{flex:1;font-size:13px;color:var(--text);}
+.sched-pill{font-size:10px;font-weight:700;padding:2px 9px;border-radius:99px;}
+.sched-phase-wrap{display:flex;align-items:center;gap:12px;padding:8px 18px;border-bottom:1px solid var(--border);}
+.sched-phase-wrap:last-child{border-bottom:none;}
+.sched-phase-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.sched-phase-name{font-size:13px;font-weight:600;color:var(--navy);width:200px;flex-shrink:0;}
+.sched-phase-track{flex:1;height:18px;background:var(--blue-pale);border-radius:4px;overflow:hidden;position:relative;}
+.sched-phase-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding:0 8px;transition:width .6s ease;}
+.sched-phase-lbl{font-size:10px;font-weight:700;color:#fff;white-space:nowrap;}
+.sched-phase-dates{font-size:10px;color:var(--gray4);width:120px;text-align:right;flex-shrink:0;}
+.legend{display:flex;gap:16px;padding:10px 18px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text2);flex-wrap:wrap;}
+.legend-item{display:flex;align-items:center;gap:5px;}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);background:#112240;}.cal-dow-cell{text-align:center;padding:10px 2px;font-size:11px;font-weight:700;color:var(--gold2);text-transform:uppercase;letter-spacing:.5px;}.cal-days-grid{display:grid;grid-template-columns:repeat(7,1fr);}.cal-day{min-height:88px;padding:9px 10px;border-right:0.5px solid #eaf0fb;border-bottom:0.5px solid #eaf0fb;cursor:default;transition:background .12s;}.cal-day:nth-child(7n){border-right:none;}.cal-day.other-month{opacity:.22;}.cal-day.today-cell{background:#eff6ff;}.cal-day.has-tasks{cursor:pointer;}.cal-day.has-tasks:hover{background:var(--blue-pale);}.cal-day-num{font-size:17px;font-weight:800;color:#0a1628;margin-bottom:5px;}.today-cell .cal-day-num{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;width:30px;height:30px;border-radius:50%;font-size:13px;font-weight:800;}.task-pip{font-size:9px;font-weight:700;padding:3px 6px;border-radius:4px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#1e6fd9;color:#fff;}
+.cal-popup{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 4px 24px rgba(10,22,40,.18);overflow:hidden;margin:8px 0 0;display:none;}.cal-popup.open{display:block;}.cal-popup-hdr{background:var(--navy);padding:9px 14px;display:flex;align-items:center;justify-content:space-between;}.cal-popup-title{font-size:12px;font-weight:700;color:#fff;}.cal-popup-close{color:rgba(255,255,255,.65);font-size:16px;cursor:pointer;line-height:1;padding:0 2px;}.cal-popup-close:hover{color:#fff;}.cal-popup-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:0.5px solid var(--border);}.cal-popup-item:last-child{border-bottom:none;}.cal-popup-name{font-size:12px;font-weight:600;color:var(--navy);}.cal-popup-phase{font-size:10px;color:var(--gray4);margin-top:2px;}
+.sched-kpi-phase{border-top:3px solid var(--blue) !important;border-left:4px solid var(--blue) !important;}
+.sched-kpi-comp{border-top:3px solid var(--navy) !important;border-left:4px solid var(--navy) !important;}
+.sched-phase-val{font-size:22px;font-weight:800;color:var(--blue);margin-bottom:3px;}
+.sched-comp-val{font-size:36px;font-weight:800;color:var(--navy);line-height:1.05;margin-bottom:3px;font-family:'DM Sans',sans-serif;}
+.sched-phase-wrap{display:flex;align-items:center;gap:10px;padding:10px 18px;border-bottom:0.5px solid #eaf0fb;}
+.sched-phase-wrap:last-child{border-bottom:none;}
+.sched-phase-wrap:nth-child(even){background:#f5f9ff;}
+.sched-phase-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.sched-phase-name{font-size:12px;font-weight:700;color:var(--navy);width:175px;flex-shrink:0;}
+.sched-phase-track{flex:1;height:20px;background:#f1f5f9;border-radius:5px;overflow:hidden;position:relative;}
+.sched-phase-fill{height:100%;border-radius:5px;display:flex;align-items:center;padding:0 9px;}
+.sched-phase-lbl{font-size:9px;font-weight:800;color:#fff;white-space:nowrap;}
+.sched-phase-dates{font-size:10px;color:#8fadc9;width:110px;text-align:right;flex-shrink:0;}
+@media(max-width:600px){.sched-phase-name{width:110px;font-size:11px;}.sched-phase-dates{width:72px;font-size:9px;}.sched-comp-val{font-size:24px;}.sched-phase-val{font-size:17px;}.cal-day{min-height:56px;padding:5px 4px;}.cal-day-num{font-size:13px;font-weight:800;}.today-cell .cal-day-num{width:22px;height:22px;font-size:10px;}.task-pip{font-size:8px;padding:2px 4px;}.cal-dow-cell{font-size:9px;padding:7px 1px;letter-spacing:0;}.sched-phase-track{display:none;}.sched-phase-wrap{gap:8px;}}
+@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(2,1fr);}.content{padding:12px 14px 40px;}.hdr-top{padding:10px 14px 8px;}.tabs-bar{padding:0 10px;}.brand-divider,.brand-client,.hdr-meta{display:none;}}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr;}.content{padding:10px 8px;}.tab{font-size:13px;padding:12px 11px;}.kpi-value{font-size:20px;}.kpi-label{font-size:11px;}.brand-sub{display:none;}table{font-size:13px;}thead th{font-size:10px;padding:9px 8px;}tbody td{padding:9px 8px;font-size:13px;}tbody td.num{font-size:13px;}tr.detail-row td:first-child{padding-left:16px;}.section-head h2{font-size:12px;}.hdr-top{padding:10px 12px 8px;}}
+@media(max-width:768px){
+  /* All tables scrollable on mobile */
+  .section-card table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;}
+  /* Tighten up padding */
+  thead th{padding:8px 6px;font-size:9px;letter-spacing:.3px;white-space:nowrap;}
+  tbody td{padding:8px 6px;font-size:11px;}
+  tbody td.num{font-size:11px;white-space:nowrap;}
+  /* Fix category name column width */
+  tbody td:first-child{min-width:130px;max-width:160px;word-wrap:break-word;}
+  /* Smaller expand button */
+  .expand-btn{font-size:9px;margin-right:3px;}
+  /* Legend smaller */
+  .legend{font-size:10px;gap:8px;padding:8px 10px;}
+  /* KPI budget progress cards stack */
+  div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr !important;}
+  /* Totals rows font */
+  tr.totals-row td,tr.markup-row td{font-size:11px;padding:7px 6px;white-space:nowrap;}
+  /* Timesheet specific */
+  .ts-date{font-size:10px;}
+  .ts-person{font-size:11px;}
+  .ts-hours{font-size:11px;}
+  /* Timesheet group header fix */
+  tr.ts-group td[colspan]{white-space:normal;word-break:break-word;}
+  tr.ts-group td.num{min-width:52px;white-space:nowrap;}
+  /* Timesheet table full width scroll */
+  #tab-timesheet .section-card{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  #tab-timesheet table{min-width:100%;width:max-content;display:table;}
+  #tab-timesheet thead th{white-space:nowrap;}
+  #tab-timesheet tbody td{white-space:nowrap;}
+  /* Vendor table scroll */
+  #tab-vendors .section-card{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  #tab-vendors table{min-width:520px;display:table;}
+  #tab-vendors thead th{white-space:nowrap;}
+  #tab-vendors tbody td{white-space:nowrap;}
+  #tab-vendors tbody td:first-child{min-width:160px;white-space:normal;}
+  /* Schedule phases fix */
+  .sched-phase-wrap{flex-wrap:wrap;gap:6px;padding:10px 12px;}
+  .sched-phase-name{width:100%;font-size:12px;}
+  .sched-phase-track{width:100%;flex:none;}
+  .sched-phase-dates{width:100%;text-align:left;font-size:10px;}
+  #sched-phases .sched-phase-dot{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-top">
+    <div class="brand">
+      <div class="logo-badge">MM</div>
+      <div class="brand-name">
+        <h1>McMann Group Inc.</h1>
+        <p>Project Cost Dashboard &middot; Live Data</p>
+        <div class="brand-sub">
+          <span class="brand-sub-label">Client</span><span class="brand-sub-val">Mike &amp; Stacey Bailey</span>
+          <span class="brand-sub-label" style="margin-left:14px;">Project:</span><span class="brand-sub-val">2125 Widgeon Road</span>
+        </div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="hdr-meta">
+        <span class="live-dot"></span>LIVE DATA &middot; <b>2125 Widgeon Road</b><br>
+        Prepared <b>April 30, 2026</b>
+      </div>
+      <button class="btn btn-sync" onclick="syncData()">&#8635; Sync</button>
+      <button class="btn btn-pdf" onclick="window.print()">&#8595; Export PDF</button>
+    </div>
+  </div>
+  <div class="tabs-bar">
+    <div class="tab active"   onclick="showTab('summary',this)">Cost Breakdown</div>
+    <div class="tab"          onclick="showTab('timesheet',this)">Timesheet</div>
+    <div class="tab"          onclick="showTab('vendors',this)">Vendors</div>
+    <div class="tab"          onclick="showTab('schedule',this)">Schedule</div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ══════════ TAB 1: SUMMARY + COST BREAKDOWN ══════════ -->
+<div class="tab-panel active" id="tab-summary">
+
+  <div style="background:var(--white);border-radius:var(--radius);box-shadow:var(--sh);border:1px solid var(--border);padding:16px 20px;margin-bottom:16px;">
+
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--text2);margin-bottom:14px;">Budget Progress</div>
+
+    <!-- Big number cards -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+      <div style="background:#eff6ff;border-radius:10px;padding:14px 15px;border-left:4px solid #1e6fd9;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;color:#1e4d8c;margin-bottom:5px;">Invoiced</div>
+        <div id="h-spent" style="font-size:22px;font-weight:800;color:#1e6fd9;font-family:'DM Sans',sans-serif;line-height:1.1;">—</div>
+        <div id="h-spent-pct" style="font-size:11px;color:#3b82f6;margin-top:3px;"><span style="font-size:13px;color:#94a3b8;animation:pulse 1.5s infinite;">Loading...</span></div>
+        <div style="height:5px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;margin-top:10px;">
+          <div id="bn-bar-inv" style="height:100%;width:0%;background:#1e6fd9;border-radius:99px;transition:width .6s;"></div>
+        </div>
+      </div>
+      <div style="background:#f0fdf4;border-radius:10px;padding:14px 15px;border-left:4px solid #15803d;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;color:#14532d;margin-bottom:5px;">Remaining</div>
+        <div id="h-remaining" style="font-size:22px;font-weight:800;color:#15803d;font-family:'DM Sans',sans-serif;line-height:1.1;">—</div>
+        <div id="h-remaining-pct" style="font-size:11px;color:#16a34a;margin-top:3px;"><span style="font-size:13px;color:#94a3b8;animation:pulse 1.5s infinite;">Loading...</span></div>
+        <div style="height:5px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;margin-top:10px;">
+          <div id="bn-bar-rem" style="height:100%;width:0%;background:#15803d;border-radius:99px;transition:width .6s;"></div>
+        </div>
+      </div>
+      <div style="background:#fffbeb;border-radius:10px;padding:14px 15px;border-left:4px solid #c9970a;">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:700;color:#78350f;margin-bottom:5px;">Change Orders</div>
+        <div id="h-co" style="font-size:22px;font-weight:800;color:#c9970a;font-family:'DM Sans',sans-serif;line-height:1.1;">—</div>
+        <div style="font-size:11px;color:#d97706;margin-top:3px;">approved</div>
+        <div style="height:5px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;margin-top:10px;">
+          <div id="bn-bar-co" style="height:100%;width:0.46%;background:#c9970a;border-radius:99px;min-width:4px;transition:width .6s;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="height:1px;background:var(--border);margin-bottom:14px;"></div>
+
+    <!-- Stacked % bars -->
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px;">
+      <span style="font-size:12px;font-weight:600;color:#1e4d8c;width:110px;flex-shrink:0;">Invoiced</span>
+      <div style="flex:1;height:13px;background:var(--blue-pale);border-radius:99px;overflow:hidden;">
+        <div id="health-bar" style="height:100%;width:0%;background:#1e6fd9;border-radius:99px;transition:width .6s ease;"></div>
+      </div>
+      <span id="health-label" style="font-size:13px;font-weight:700;color:#1e6fd9;width:48px;text-align:right;flex-shrink:0;">—</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:7px;">
+      <span style="font-size:12px;font-weight:600;color:#14532d;width:110px;flex-shrink:0;">Remaining</span>
+      <div style="flex:1;height:13px;background:rgba(0,0,0,.06);border-radius:99px;overflow:hidden;">
+        <div id="bar-rem" style="height:100%;width:0%;background:#15803d;border-radius:99px;transition:width .6s ease;"></div>
+      </div>
+      <span id="lbl-rem" style="font-size:13px;font-weight:700;color:#15803d;width:48px;text-align:right;flex-shrink:0;">—</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-size:12px;font-weight:600;color:#78350f;width:110px;flex-shrink:0;">Change Orders</span>
+      <div style="flex:1;height:13px;background:rgba(0,0,0,.06);border-radius:99px;overflow:hidden;">
+        <div id="bar-co" style="height:100%;width:0.46%;background:#c9970a;border-radius:99px;min-width:8px;transition:width .6s ease;"></div>
+      </div>
+      <span id="lbl-co" style="font-size:13px;font-weight:700;color:#c9970a;width:48px;text-align:right;flex-shrink:0;">—</span>
+    </div>
+
+  </div>
+
+  <div class="section-card">
+    <div class="section-head" style="background:#112240;border-bottom:3px solid #c9970a;padding:11px 18px;"><div><h2 style="color:#fff;font-size:11px;letter-spacing:.8px;">Cost Breakdown by Category</h2><p style="color:rgba(255,255,255,.38);font-size:10px;">Click any row to expand</p></div></div>
+    <div class="legend">
+      <div class="legend-item"><div class="leg-dot" style="background:#fee2e2;border:1px solid #fca5a5"></div>Over budget</div>
+      <div class="legend-item"><div class="leg-dot" style="background:#fef3c7;border:1px solid #fcd34d"></div>Change order</div>
+      <div class="legend-item"><div class="leg-dot" style="background:#f1f5f9;border:1px solid #e2e8f0"></div>Detail row</div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th class="r">Budget</th>
+          <th class="r">Invoiced</th>
+          <th class="r">To Be Completed</th>
+          <th class="r">Over Budget</th>
+          <th class="r">Change Orders</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Design Services -->
+        <tr class="cat-row" onclick="toggleGroup('design')">
+          <td><button class="expand-btn" id="btn-design">▶</button>Design Services</td>
+          <td class="num">$800</td><td class="num">$321.75</td><td class="num" style="color:var(--green)">$478.25</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="design">
+          <td>Plan Printing &amp; Photocopying</td>
+          <td class="num">$800</td><td class="num">$321.75</td><td class="num" style="color:var(--green)">$478.25</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="subtotal-row hidden" id="sub-design"><td>Subtotal — Design Services</td><td class="num">$800</td><td class="num">$321.75</td><td class="num"><span style="color:#059669">$478.25</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Permits -->
+        <tr class="cat-row over-row" onclick="toggleGroup('permits')">
+          <td><button class="expand-btn" id="btn-permits">▶</button>Permits &amp; Home Warranty</td>
+          <td class="num">$19,790</td><td class="num">$14,725.75</td><td class="num">$11,290</td>
+          <td class="num" style="color:var(--red);font-weight:600">$6,225.75</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden over-sub" data-group="permits">
+          <td>Building Permit Fees</td>
+          <td class="num">$8,500</td><td class="num">$14,725.75</td><td class="num">—</td>
+          <td class="num" style="color:var(--red);font-weight:600">$6,225.75</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="permits">
+          <td>Home Warranty Registration &amp; Fees</td>
+          <td class="num">$11,250</td><td class="num">—</td><td class="num" style="color:var(--green)">$11,250</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="permits">
+          <td>BC Housing Registration Fee</td>
+          <td class="num">$40</td><td class="num">—</td><td class="num" style="color:var(--green)">$40</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="subtotal-row hidden" id="sub-permits"><td>Subtotal — Permits &amp; Home Warranty</td><td class="num">$19,790</td><td class="num">$14,725.75</td><td class="num"><span style="color:#059669">$11,290</span></td><td class="num"><span style="color:#dc2626;font-weight:700">$6,225.75</span></td><td class="num">—</td></tr>
+
+        <!-- Engineering -->
+        <tr class="cat-row over-row" onclick="toggleGroup('eng')">
+          <td><button class="expand-btn" id="btn-eng">▶</button>Engineering Fees</td>
+          <td class="num">$18,000</td><td class="num">$13,283.55</td><td class="num">$9,053.85</td>
+          <td class="num" style="color:var(--red);font-weight:600">$2,537.40</td>
+          <td class="num"><span class="co-tag">$1,800</span></td>
+        </tr>
+        <tr class="detail-row hidden" data-group="eng">
+          <td>Energy Advisor</td>
+          <td class="num">$2,000</td><td class="num">$975</td><td class="num" style="color:var(--green)">$1,025</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="eng">
+          <td>Land Survey</td>
+          <td class="num">$6,000</td><td class="num">$3,971.15</td><td class="num" style="color:var(--green)">$2,028.85</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden over-sub" data-group="eng">
+          <td>Geotechnical Engineer</td>
+          <td class="num">$4,000</td><td class="num">$6,537.40</td><td class="num">—</td>
+          <td class="num" style="color:var(--red);font-weight:600">$2,537.40</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="eng">
+          <td>Structural Engineering</td>
+          <td class="num">$6,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,000</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden co-sub" data-group="eng">
+          <td>⤷ Change Order #2A — Septic Drawing for BP</td>
+          <td class="num">—</td><td class="num">$1,800</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="co-tag">$1,800</span></td>
+        </tr>
+        <tr class="subtotal-row hidden" id="sub-eng"><td>Subtotal — Engineering Fees</td><td class="num">$18,000</td><td class="num">$13,283.55</td><td class="num"><span style="color:#059669">$9,053.85</span></td><td class="num"><span style="color:#dc2626;font-weight:700">$2,537.40</span></td><td class="num"><span style="color:#b45309">$1,800</span></td></tr>
+
+        <!-- Site Work -->
+        <tr class="cat-row" onclick="toggleGroup('site')">
+          <td><button class="expand-btn" id="btn-site">▶</button>Site Work</td>
+          <td class="num">$62,000</td><td class="num">$9,357.55</td><td class="num" style="color:var(--green)">$54,375</td><td class="num">—</td>
+          <td class="num"><span class="co-tag">$1,732.55</span></td>
+        </tr>
+        <tr class="detail-row hidden" data-group="site">
+          <td>Excavation, Backfill, Perimeter &amp; Drain Labour</td>
+          <td class="num">$45,000</td><td class="num">$7,625</td><td class="num" style="color:var(--green)">$37,375</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="site">
+          <td>Concrete Coring, Cutting and Removal</td>
+          <td class="num">$10,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$10,000</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="site">
+          <td>Contingency</td>
+          <td class="num">$7,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,000</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden co-sub" data-group="site">
+          <td>⤷ Change Order #2B — Septic Field Work</td>
+          <td class="num">—</td><td class="num">$1,732.55</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="co-tag">$1,732.55</span></td>
+        </tr>
+        <tr class="subtotal-row hidden" id="sub-site"><td>Subtotal — Site Work</td><td class="num">$62,000</td><td class="num">$9,357.55</td><td class="num"><span style="color:#059669">$54,375</span></td><td class="num">—</td><td class="num"><span style="color:#b45309">$1,732.55</span></td></tr>
+
+        <!-- Foundation -->
+        <tr class="cat-row" onclick="toggleGroup('found')">
+          <td><button class="expand-btn" id="btn-found">▶</button>Foundation</td>
+          <td class="num">$71,839.34</td><td class="num">—</td><td class="num" style="color:var(--green)">$71,839.34</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="found"><td>Footings &amp; Foundation Material</td><td class="num">$8,422.72</td><td class="num">—</td><td class="num" style="color:var(--green)">$8,422.72</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Footings &amp; Foundation Labour</td><td class="num">$17,635</td><td class="num">—</td><td class="num" style="color:var(--green)">$17,635</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Footings &amp; Foundation Concrete</td><td class="num">$14,800</td><td class="num">—</td><td class="num" style="color:var(--green)">$14,800</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Slab Prep Labour</td><td class="num">$1,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Slab Prep Material</td><td class="num">$405.41</td><td class="num">—</td><td class="num" style="color:var(--green)">$405.41</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Garage Concrete Slab</td><td class="num">$3,600</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,600</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Concrete Slab Skim Coat</td><td class="num">$3,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Concrete Slab Finishing Labour</td><td class="num">$4,887</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,887</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Concrete Pump Truck</td><td class="num">$4,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Damproofing</td><td class="num">$7,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="found"><td>Contingency</td><td class="num">$5,689.21</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,689.21</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-found"><td>Subtotal — Foundation</td><td class="num">$71,839.34</td><td class="num">—</td><td class="num"><span style="color:#059669">$71,839.34</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Framing -->
+        <tr class="cat-row" onclick="toggleGroup('fram')">
+          <td><button class="expand-btn" id="btn-fram">▶</button>Framing</td>
+          <td class="num">$124,747.77</td><td class="num">—</td><td class="num" style="color:var(--green)">$124,747.77</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Framing Materials</td><td class="num">$44,144.27</td><td class="num">—</td><td class="num" style="color:var(--green)">$44,144.27</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Framing Labour</td><td class="num">$45,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$45,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Roof Trusses</td><td class="num">$20,915.15</td><td class="num">—</td><td class="num" style="color:var(--green)">$20,915.15</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Engineering Parts</td><td class="num">$4,236.20</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,236.20</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Steel Beam in Garage</td><td class="num">$1,102.50</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,102.50</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Engineered Beams</td><td class="num">$2,692.58</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,692.58</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="fram"><td>Contingency</td><td class="num">$6,657.07</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,657.07</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-fram"><td>Subtotal — Framing</td><td class="num">$124,747.77</td><td class="num">—</td><td class="num"><span style="color:#059669">$124,747.77</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Windows -->
+        <tr class="cat-row" onclick="toggleGroup('win')">
+          <td><button class="expand-btn" id="btn-win">▶</button>Windows</td>
+          <td class="num">$32,181.38</td><td class="num">—</td><td class="num" style="color:var(--green)">$32,181.38</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="win"><td>Windows</td><td class="num">$29,255.80</td><td class="num">—</td><td class="num" style="color:var(--green)">$29,255.80</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="win"><td>Contingency</td><td class="num">$2,925.58</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,925.58</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-win"><td>Subtotal — Windows</td><td class="num">$32,181.38</td><td class="num">—</td><td class="num"><span style="color:#059669">$32,181.38</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Doors -->
+        <tr class="cat-row" onclick="toggleGroup('doors')">
+          <td><button class="expand-btn" id="btn-doors">▶</button>Doors</td>
+          <td class="num">$24,033.36</td><td class="num">—</td><td class="num" style="color:var(--green)">$24,033.36</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="doors"><td>Exterior &amp; Interior Doors with Hardware</td><td class="num">$8,444.31</td><td class="num">—</td><td class="num" style="color:var(--green)">$8,444.31</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="doors"><td>Garage Doors</td><td class="num">$13,404.20</td><td class="num">—</td><td class="num" style="color:var(--green)">$13,404.20</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="doors"><td>Contingency</td><td class="num">$2,184.85</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,184.85</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-doors"><td>Subtotal — Doors</td><td class="num">$24,033.36</td><td class="num">—</td><td class="num"><span style="color:#059669">$24,033.36</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Electrical -->
+        <tr class="cat-row" onclick="toggleGroup('elec')">
+          <td><button class="expand-btn" id="btn-elec">▶</button>Electrical</td>
+          <td class="num">$109,299.90</td><td class="num">$1,864.51</td><td class="num" style="color:var(--green)">$109,299.90</td><td class="num">—</td>
+          <td class="num"><span class="co-tag">$1,864.51</span></td>
+        </tr>
+        <tr class="detail-row hidden" data-group="elec"><td>Electrical Rough In</td><td class="num">$67,865</td><td class="num">—</td><td class="num" style="color:var(--green)">$67,865</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="elec"><td>Electrical Fixtures</td><td class="num">$6,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="elec"><td>Service Upgrade to 400amp</td><td class="num">$26,044</td><td class="num">—</td><td class="num" style="color:var(--green)">$26,044</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="elec"><td>Contingency</td><td class="num">$9,390.90</td><td class="num">—</td><td class="num" style="color:var(--green)">$9,390.90</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden co-sub" data-group="elec"><td>⤷ Change Order #1 — Island Electric, Underground Cable Repair</td><td class="num">—</td><td class="num">$1,864.51</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="co-tag">$1,864.51</span></td></tr>
+        <tr class="subtotal-row hidden" id="sub-elec"><td>Subtotal — Electrical</td><td class="num">$109,299.90</td><td class="num">$1,864.51</td><td class="num"><span style="color:#059669">$109,299.90</span></td><td class="num">—</td><td class="num"><span style="color:#b45309">$1,864.51</span></td></tr>
+
+        <!-- Plumbing -->
+        <tr class="cat-row" onclick="toggleGroup('plumb')">
+          <td><button class="expand-btn" id="btn-plumb">▶</button>Plumbing</td>
+          <td class="num">$49,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$49,000</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="plumb"><td>Plumbing Rough In</td><td class="num">$25,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$25,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="plumb"><td>Plumbing Fixtures</td><td class="num">$20,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$20,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="plumb"><td>Contingency</td><td class="num">$4,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-plumb"><td>Subtotal — Plumbing</td><td class="num">$49,000</td><td class="num">—</td><td class="num"><span style="color:#059669">$49,000</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- HVAC -->
+        <tr class="cat-row" onclick="toggleGroup('hvac')">
+          <td><button class="expand-btn" id="btn-hvac">▶</button>HVAC</td>
+          <td class="num">$43,937.30</td><td class="num">—</td><td class="num" style="color:var(--green)">$43,937.30</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="hvac"><td>Mechanical Rough In</td><td class="num">$31,444</td><td class="num">—</td><td class="num" style="color:var(--green)">$31,444</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hvac"><td>Fireplace Unit Wood Burning</td><td class="num">$7,399</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,399</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hvac"><td>BBQ Connection</td><td class="num">$550</td><td class="num">—</td><td class="num" style="color:var(--green)">$550</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hvac"><td>Gas/Propane Connection</td><td class="num">$550</td><td class="num">—</td><td class="num" style="color:var(--green)">$550</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hvac"><td>Contingency</td><td class="num">$3,994.30</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,994.30</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-hvac"><td>Subtotal — HVAC</td><td class="num">$43,937.30</td><td class="num">—</td><td class="num"><span style="color:#059669">$43,937.30</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Roofing -->
+        <tr class="cat-row" onclick="toggleGroup('roof')">
+          <td><button class="expand-btn" id="btn-roof">▶</button>Roofing</td>
+          <td class="num">$98,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$98,000</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="roof"><td>Roofing Supply &amp; Install</td><td class="num">$63,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$63,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="roof"><td>Metal Roof Painting</td><td class="num">$30,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$30,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="roof"><td>Contingency</td><td class="num">$5,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-roof"><td>Subtotal — Roofing</td><td class="num">$98,000</td><td class="num">—</td><td class="num"><span style="color:#059669">$98,000</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Insulation & Drywall -->
+        <tr class="cat-row" onclick="toggleGroup('insul')">
+          <td><button class="expand-btn" id="btn-insul">▶</button>Insulation &amp; Drywall</td>
+          <td class="num">$77,045.20</td><td class="num">—</td><td class="num" style="color:var(--green)">$77,045.20</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="insul"><td>Insulation</td><td class="num">$32,327.53</td><td class="num">—</td><td class="num" style="color:var(--green)">$32,327.53</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="insul"><td>Drywall</td><td class="num">$37,713.67</td><td class="num">—</td><td class="num" style="color:var(--green)">$37,713.67</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="insul"><td>Contingency</td><td class="num">$7,004</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,004</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-insul"><td>Subtotal — Insulation &amp; Drywall</td><td class="num">$77,045.20</td><td class="num">—</td><td class="num"><span style="color:#059669">$77,045.20</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Exterior Veneer -->
+        <tr class="cat-row" onclick="toggleGroup('ext')">
+          <td><button class="expand-btn" id="btn-ext">▶</button>Exterior Veneer</td>
+          <td class="num">$77,167.84</td><td class="num">—</td><td class="num" style="color:var(--green)">$77,167.84</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Siding Labour</td><td class="num">$20,790</td><td class="num">—</td><td class="num" style="color:var(--green)">$20,790</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Siding Materials</td><td class="num">$35,878.13</td><td class="num">—</td><td class="num" style="color:var(--green)">$35,878.13</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Soffit Supply &amp; Install</td><td class="num">$5,800</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,800</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Gutters Supply &amp; Install</td><td class="num">$3,948</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,948</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Trim Labour</td><td class="num">$5,370</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,370</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="ext"><td>Contingency</td><td class="num">$5,381.71</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,381.71</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-ext"><td>Subtotal — Exterior Veneer</td><td class="num">$77,167.84</td><td class="num">—</td><td class="num"><span style="color:#059669">$77,167.84</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Masonry -->
+        <tr class="cat-row" onclick="toggleGroup('mason')">
+          <td><button class="expand-btn" id="btn-mason">▶</button>Masonry</td>
+          <td class="num">$11,440</td><td class="num">—</td><td class="num" style="color:var(--green)">$11,440</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="mason"><td>Interior Masonry Supply &amp; Install</td><td class="num">$10,400</td><td class="num">—</td><td class="num" style="color:var(--green)">$10,400</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="mason"><td>Contingency</td><td class="num">$1,040</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,040</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-mason"><td>Subtotal — Masonry</td><td class="num">$11,440</td><td class="num">—</td><td class="num"><span style="color:#059669">$11,440</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Cabinetry -->
+        <tr class="cat-row" onclick="toggleGroup('cab')">
+          <td><button class="expand-btn" id="btn-cab">▶</button>Cabinetry &amp; Countertops</td>
+          <td class="num">$58,718</td><td class="num">—</td><td class="num" style="color:var(--green)">$58,718</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="cab"><td>Cabinetry Supply and Install</td><td class="num">$36,980</td><td class="num">—</td><td class="num" style="color:var(--green)">$36,980</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="cab"><td>Countertop Supply &amp; Install</td><td class="num">$10,380</td><td class="num">—</td><td class="num" style="color:var(--green)">$10,380</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="cab"><td>Walk In Closet</td><td class="num">$6,020</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,020</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="cab"><td>Contingency</td><td class="num">$5,338</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,338</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-cab"><td>Subtotal — Cabinetry &amp; Countertops</td><td class="num">$58,718</td><td class="num">—</td><td class="num"><span style="color:#059669">$58,718</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Interior Finishing -->
+        <tr class="cat-row" onclick="toggleGroup('int')">
+          <td><button class="expand-btn" id="btn-int">▶</button>Interior Finishing</td>
+          <td class="num">$52,110.60</td><td class="num">—</td><td class="num" style="color:var(--green)">$52,110.60</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="int"><td>Finishing Carpentry</td><td class="num">$18,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$18,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Interior Trim Materials</td><td class="num">$13,413.68</td><td class="num">—</td><td class="num" style="color:var(--green)">$13,413.68</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Stair System Materials</td><td class="num">$2,400</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,400</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Bathroom Hardware</td><td class="num">$500</td><td class="num">—</td><td class="num" style="color:var(--green)">$500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Shower Glass Doors</td><td class="num">$6,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Mirrors</td><td class="num">$1,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Mantle</td><td class="num">$1,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Interior Cedar Beam Wraps / False Beams</td><td class="num">$4,919.37</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,919.37</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Shiplap for Electric Fireplace</td><td class="num">$1,067.60</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,067.60</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="int"><td>Contingency</td><td class="num">$3,109.95</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,109.95</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-int"><td>Subtotal — Interior Finishing</td><td class="num">$52,110.60</td><td class="num">—</td><td class="num"><span style="color:#059669">$52,110.60</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Wood Floors -->
+        <tr class="cat-row" onclick="toggleGroup('floor')">
+          <td><button class="expand-btn" id="btn-floor">▶</button>Wood Floor Coverings</td>
+          <td class="num">$42,780</td><td class="num">—</td><td class="num" style="color:var(--green)">$42,780</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Flooring Material — Addition</td><td class="num">$7,600</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,600</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Flooring Install Labour — Addition</td><td class="num">$5,700</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,700</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Floor Sanding &amp; Prep</td><td class="num">$6,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Protective Floor Covering</td><td class="num">$500</td><td class="num">—</td><td class="num" style="color:var(--green)">$500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Old Flooring Removal — Existing House</td><td class="num">$4,800</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,800</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Flooring Material — Existing House</td><td class="num">$9,450</td><td class="num">—</td><td class="num" style="color:var(--green)">$9,450</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Flooring Installation — Existing House</td><td class="num">$6,750</td><td class="num">—</td><td class="num" style="color:var(--green)">$6,750</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="floor"><td>Contingency</td><td class="num">$1,980</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,980</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-floor"><td>Subtotal — Wood Floor Coverings</td><td class="num">$42,780</td><td class="num">—</td><td class="num"><span style="color:#059669">$42,780</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Tile -->
+        <tr class="cat-row" onclick="toggleGroup('tile')">
+          <td><button class="expand-btn" id="btn-tile">▶</button>Tile</td>
+          <td class="num">$29,575.48</td><td class="num">—</td><td class="num" style="color:var(--green)">$29,575.48</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Material — Addition</td><td class="num">$2,532</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,532</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Install Labour — Addition</td><td class="num">$2,534</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,534</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Prep</td><td class="num">$1,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Wall Tile Material (Ensuite &amp; Main Bath Shower)</td><td class="num">$2,726.70</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,726.70</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Wall Tile Labour (Ensuite &amp; Main Bath Shower)</td><td class="num">$4,070</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,070</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Backsplash Tile Material</td><td class="num">$400</td><td class="num">—</td><td class="num" style="color:var(--green)">$400</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Backsplash Tile Labour</td><td class="num">$1,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Heated Floor Prep</td><td class="num">$2,495.50</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,495.50</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Thermostats</td><td class="num">$610.42</td><td class="num">—</td><td class="num" style="color:var(--green)">$610.42</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Ensuite Shower Linear Drain</td><td class="num">$1,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Material — Existing House</td><td class="num">$3,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Installation — Existing House</td><td class="num">$5,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Floor Tile Removal — Existing House</td><td class="num">$1,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="tile"><td>Contingency</td><td class="num">$1,806.86</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,806.86</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-tile"><td>Subtotal — Tile</td><td class="num">$29,575.48</td><td class="num">—</td><td class="num"><span style="color:#059669">$29,575.48</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Paint -->
+        <tr class="cat-row" onclick="toggleGroup('paint')">
+          <td><button class="expand-btn" id="btn-paint">▶</button>Paint</td>
+          <td class="num">$45,100</td><td class="num">—</td><td class="num" style="color:var(--green)">$45,100</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="paint"><td>Interior Paint</td><td class="num">$22,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$22,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="paint"><td>Exterior Paint</td><td class="num">$8,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$8,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="paint"><td>Door Painting &amp; Staining</td><td class="num">$2,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="paint"><td>Interior Staining T&amp;G and Beams</td><td class="num">$8,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$8,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="paint"><td>Contingency</td><td class="num">$4,100</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,100</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-paint"><td>Subtotal — Paint</td><td class="num">$45,100</td><td class="num">—</td><td class="num"><span style="color:#059669">$45,100</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Exterior Hardscape -->
+        <tr class="cat-row" onclick="toggleGroup('hard')">
+          <td><button class="expand-btn" id="btn-hard">▶</button>Exterior Hardscape</td>
+          <td class="num">$21,425</td><td class="num">—</td><td class="num" style="color:var(--green)">$21,425</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="hard"><td>Patio Driveway Stone Removal</td><td class="num">$5,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hard"><td>New Concrete Driveway Material</td><td class="num">$8,600</td><td class="num">—</td><td class="num" style="color:var(--green)">$8,600</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hard"><td>New Concrete Driveway Finishing</td><td class="num">$4,825</td><td class="num">—</td><td class="num" style="color:var(--green)">$4,825</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="hard"><td>Forming Driveway Labour</td><td class="num">$3,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-hard"><td>Subtotal — Exterior Hardscape</td><td class="num">$21,425</td><td class="num">—</td><td class="num"><span style="color:#059669">$21,425</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Construction Clean Up -->
+        <tr class="cat-row" onclick="toggleGroup('clean')">
+          <td><button class="expand-btn" id="btn-clean">▶</button>Construction Clean Up</td>
+          <td class="num">$19,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$19,500</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="clean"><td>Clean Up Labour</td><td class="num">$10,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$10,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="clean"><td>Disposal &amp; Dump Fees</td><td class="num">$5,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="clean"><td>Dumpster Rental</td><td class="num">$1,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="clean"><td>Final Site Clean</td><td class="num">$2,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-clean"><td>Subtotal — Construction Clean Up</td><td class="num">$19,500</td><td class="num">—</td><td class="num"><span style="color:#059669">$19,500</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Jobsite Facilities -->
+        <tr class="cat-row" onclick="toggleGroup('job')">
+          <td><button class="expand-btn" id="btn-job">▶</button>Jobsite Facilities</td>
+          <td class="num">$7,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$7,200</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="job"><td>Portable Washroom</td><td class="num">$1,200</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,200</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="job"><td>Site Signage</td><td class="num">$1,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="job"><td>Tool &amp; Rental Equipment</td><td class="num">$1,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$1,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="job"><td>Scaffolding</td><td class="num">$3,500</td><td class="num">—</td><td class="num" style="color:var(--green)">$3,500</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-job"><td>Subtotal — Jobsite Facilities</td><td class="num">$7,200</td><td class="num">—</td><td class="num"><span style="color:#059669">$7,200</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Project Management -->
+        <tr class="cat-row" onclick="toggleGroup('pm')">
+          <td><button class="expand-btn" id="btn-pm">▶</button>Project Management</td>
+          <td class="num">$37,800</td><td class="num">$5,906.20</td><td class="num" style="color:var(--green)">$31,893.80</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="pm"><td>Management &amp; Supervision</td><td class="num">$25,200</td><td class="num">$10,186.20</td><td class="num" style="color:var(--green)">$15,013.80</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden co-sub" data-group="pm"><td>Credit — Management Billing as per Pricing Contract</td><td class="num">—</td><td class="num" style="color:var(--green)">-$5,000</td><td class="num">$5,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="pm"><td>Accounting &amp; Admin</td><td class="num">$12,600</td><td class="num">$720</td><td class="num" style="color:var(--green)">$11,880</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-pm"><td>Subtotal — Project Management</td><td class="num">$37,800</td><td class="num">$5,906.20</td><td class="num"><span style="color:#059669">$31,893.80</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- Miscellaneous -->
+        <tr class="cat-row" onclick="toggleGroup('misc')">
+          <td><button class="expand-btn" id="btn-misc">▶</button>Miscellaneous</td>
+          <td class="num">$39,028.48</td><td class="num">$435.60</td><td class="num" style="color:var(--green)">$38,592.88</td><td class="num">—</td><td class="num">—</td>
+        </tr>
+        <tr class="detail-row hidden" data-group="misc"><td>Travel</td><td class="num">$8,628.48</td><td class="num">$435.60</td><td class="num" style="color:var(--green)">$8,192.88</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="misc"><td>Deficiencies</td><td class="num">$5,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$5,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="misc"><td>Demolition</td><td class="num">$23,400</td><td class="num">—</td><td class="num" style="color:var(--green)">$23,400</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="detail-row hidden" data-group="misc"><td>Demolition Debris Removal Labour</td><td class="num">$2,000</td><td class="num">—</td><td class="num" style="color:var(--green)">$2,000</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr class="subtotal-row hidden" id="sub-misc"><td>Subtotal — Miscellaneous</td><td class="num">$39,028.48</td><td class="num">$435.60</td><td class="num"><span style="color:#059669">$38,592.88</span></td><td class="num">—</td><td class="num">—</td></tr>
+
+        <!-- TOTALS -->
+        <tr class="totals-row" id="row-subtotal">
+          <td>Project Subtotal</td>
+          <td class="num" id="tot-sub-b">—</td><td class="num" id="tot-sub-inv">—</td>
+          <td class="num" id="tot-sub-tbc">—</td>
+          <td class="num" id="tot-sub-ob">—</td>
+          <td class="num" id="tot-sub-co">—</td>
+        </tr>
+        <tr class="markup-row" id="row-markup">
+          <td style="padding-left:20px;">15% Markup</td>
+          <td class="num" id="tot-mu-b">—</td><td class="num" id="tot-mu-inv">—</td>
+          <td class="num" id="tot-mu-tbc">—</td><td class="num" id="tot-mu-ob">—</td><td class="num" id="tot-mu-co">—</td>
+        </tr>
+        <tr class="markup-row" id="row-gst">
+          <td style="padding-left:20px;">GST (5%)</td>
+          <td class="num" id="tot-gst-b">—</td><td class="num" id="tot-gst-inv">—</td>
+          <td class="num" id="tot-gst-tbc">—</td><td class="num" id="tot-gst-ob">—</td><td class="num" id="tot-gst-co">—</td>
+        </tr>
+        <tr class="totals-row" id="row-total">
+          <td>Project Total</td>
+          <td class="num" id="tot-proj-b">—</td><td class="num" id="tot-proj-inv">—</td>
+          <td class="num" id="tot-proj-tbc">—</td>
+          <td class="num" id="tot-proj-ob">—</td>
+          <td class="num" id="tot-proj-co">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ TAB 2: TIMESHEET ══════════ -->
+<div class="tab-panel" id="tab-timesheet" style="display:none;">
+  <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="kpi-card blue"><div class="kpi-label">Total Hours Logged</div><div class="kpi-value" id="kpi-ts-total">118.02</div><div class="kpi-sub">All staff combined</div></div>
+    <div class="kpi-card blue"><div class="kpi-label">Project Management</div><div class="kpi-value" id="kpi-ts-pm">113.18</div><div class="kpi-sub">Supervision hours</div></div>
+    <div class="kpi-card gold"><div class="kpi-label">Travel</div><div class="kpi-value" id="kpi-ts-travel">4.84</div><div class="kpi-sub">Travel time hours</div></div>
+  </div>
+  <div class="section-card">
+    <div class="section-head" style="background:#112240;border-bottom:3px solid #c9970a;padding:11px 18px;">
+      <div><h2 style="color:#fff;font-size:11px;letter-spacing:.8px;">Timesheet Log</h2><p style="color:rgba(255,255,255,.38);font-size:10px;">Click a group to expand</p></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <label style="font-size:11px;color:var(--text2);font-weight:600;">Filter by month:</label>
+        <select id="ts-month-filter" onchange="filterByMonth('ts')" style="font-family:'DM Sans',sans-serif;font-size:12px;padding:5px 10px;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);background:var(--white);cursor:pointer;outline:none;">
+          <option value="all">All Months</option>
+          <option value="May 2025">May 2025</option>
+          <option value="Jun 2025">Jun 2025</option>
+          <option value="Sep 2025">Sep 2025</option>
+          <option value="Oct 2025">Oct 2025</option>
+          <option value="Nov 2025">Nov 2025</option>
+          <option value="Dec 2025">Dec 2025</option>
+          <option value="Feb 2026">Feb 2026</option>
+          <option value="Apr 2026">Apr 2026</option>
+        </select>
+      </div>
+    </div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;">
+    <table>
+      <thead><tr><th>Date</th><th>Staff Member</th><th>Notes</th><th class="r">Hours</th></tr></thead>
+      <tbody>
+
+        <!-- GROUP: Project Management -->
+        <tr class="cat-row ts-group" id="cat-ts-pm" onclick="toggleGroup('ts-pm')" style="background:var(--gray2)">
+          <td colspan="3"><button class="expand-btn" id="btn-ts-pm">▶</button><strong>Project Management &amp; Supervision</strong></td>
+          <td class="num" style="font-weight:600;visibility:visible">113.18</td>
+        </tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 2, 2025</td><td class="ts-person">Russell McMann</td><td></td><td class="ts-hours">3.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 10, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.50</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 17, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.50</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 26, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">4.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 29, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.68</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 30, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">5.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 31, 2025</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">4.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 31, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">3.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="May 2025"><td class="ts-date">May 31, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 1, 2025</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">5.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 1, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 12, 2025</td><td class="ts-person">Russell McMann</td><td></td><td class="ts-hours">3.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 14, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">4.50</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 18, 2025</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">5.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 23, 2025</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">4.83</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Jun 2025"><td class="ts-date">Jun 23, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">3.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Sep 2025"><td class="ts-date">Sep 20, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">3.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Sep 2025"><td class="ts-date">Sep 27, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">5.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 3, 2025</td><td class="ts-person">Russell McMann</td><td></td><td class="ts-hours">2.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 4, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">2.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 10, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 10, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">5.83</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 12, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">1.83</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Oct 2025"><td class="ts-date">Oct 17, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Nov 2025"><td class="ts-date">Nov 8, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Nov 2025"><td class="ts-date">Nov 13, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">0.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Nov 2025"><td class="ts-date">Nov 28, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">6.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Dec 2025"><td class="ts-date">Dec 4, 2025</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Dec 2025"><td class="ts-date">Dec 7, 2025</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">4.50</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Dec 2025"><td class="ts-date">Dec 11, 2025</td><td class="ts-person">Kevin Mammen</td><td></td><td class="ts-hours">3.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Feb 2026"><td class="ts-date">Feb 17, 2026</td><td class="ts-person">Abdullah Ibn Alamir</td><td></td><td class="ts-hours">0.67</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 8, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">3.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 11, 2026</td><td class="ts-person">Russell McMann</td><td></td><td class="ts-hours">2.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 11, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.00</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 13, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.50</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 19, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.08</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 20, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">2.25</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-pm" data-month="Apr 2026"><td class="ts-date">Apr 21, 2026</td><td class="ts-person">James McMann</td><td></td><td class="ts-hours">1.16</td></tr>
+
+        <!-- GROUP: Travel -->
+        <tr class="cat-row ts-group" id="cat-ts-travel" onclick="toggleGroup('ts-travel')" style="background:#fffbeb">
+          <td colspan="3"><button class="expand-btn" id="btn-ts-travel">▶</button><strong>Miscellaneous — Travel Time</strong></td>
+          <td class="num" style="font-weight:600;color:var(--gold-dark);visibility:visible">4.84</td>
+        </tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-travel" data-month="Apr 2026"><td class="ts-date">Apr 8, 2026</td><td class="ts-person">James McMann</td><td>Travel</td><td class="ts-hours">1.33</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-travel" data-month="Apr 2026"><td class="ts-date">Apr 11, 2026</td><td class="ts-person">James McMann</td><td>Travel</td><td class="ts-hours">1.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-travel" data-month="Apr 2026"><td class="ts-date">Apr 13, 2026</td><td class="ts-person">James McMann</td><td>Travel</td><td class="ts-hours">1.17</td></tr>
+        <tr class="detail-row hidden ts-row" data-group="ts-travel" data-month="Apr 2026"><td class="ts-date">Apr 21, 2026</td><td class="ts-person">James McMann</td><td>Travel</td><td class="ts-hours">1.17</td></tr>
+
+        <tr class="totals-row"><td colspan="3"><strong>Total Hours</strong></td><td class="num">118.02</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 3: VENDORS ══════════ -->
+<div class="tab-panel" id="tab-vendors" style="display:none;">
+  <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="kpi-card blue"><div class="kpi-label">Total Vendor Spend</div><div class="kpi-value" id="kpi-v-total">$39,553</div><div class="kpi-sub">7 vendors · 11 invoices</div></div>
+    <div class="kpi-card red"><div class="kpi-label">Largest Invoice</div><div class="kpi-value">$14,726</div><div class="kpi-sub">Regional District of Nanaimo</div></div>
+    <div class="kpi-card green"><div class="kpi-label">Most Recent Invoice</div><div class="kpi-value">Apr 21, 2026</div><div class="kpi-sub">Island Electric · $1,864.51</div></div>
+  </div>
+  <div class="section-card">
+    <div class="section-head" style="background:#112240;border-bottom:3px solid #c9970a;padding:11px 18px;">
+      <div><h2 style="color:#fff;font-size:11px;letter-spacing:.8px;">Vendor Summary</h2><p style="color:rgba(255,255,255,.38);font-size:10px;">Click a vendor to expand</p></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <label style="font-size:11px;color:var(--text2);font-weight:600;">Filter by month:</label>
+        <select id="v-month-filter" onchange="filterByMonth('v')" style="font-family:'DM Sans',sans-serif;font-size:12px;padding:5px 10px;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);background:var(--white);cursor:pointer;outline:none;">
+          <option value="all">All Months</option>
+          <option value="Nov 2025">Nov 2025</option>
+          <option value="Jan 2026">Jan 2026</option>
+          <option value="Feb 2026">Feb 2026</option>
+          <option value="Mar 2026">Mar 2026</option>
+          <option value="Apr 2026">Apr 2026</option>
+        </select>
+      </div>
+    </div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;">
+    <table>
+      <thead><tr><th>Vendor / Description</th><th class="r" style="width:110px">Receipt #</th><th class="r" style="width:100px">Date</th><th class="r" style="width:100px">Amount</th></tr></thead>
+      <tbody>
+        <tr class="cat-row v-group" onclick="toggleGroup('v-rdn')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-rdn">▶</button><span class="vendor-name">Regional District of Nanaimo</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">2 invoices</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-rdn" data-month="Jan 2026"><td style="padding-left:32px">Building Permit Fees</td><td class="num"><span class="invoice-num">2182719713</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Jan 7, 2026</td><td class="num">$1,025.00</td></tr>
+        <tr class="detail-row hidden v-row" data-group="v-rdn" data-month="Mar 2026"><td style="padding-left:32px">Building Permit</td><td class="num"><span class="invoice-num">PR20250000587</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Mar 15, 2026</td><td class="num">$13,700.75</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-rdn"><td colspan="3">Subtotal — Regional District of Nanaimo</td><td class="num">$14,725.75</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-kiv')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-kiv">▶</button><span class="vendor-name">Kivela Contracting Ltd.</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">3 invoices</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-kiv" data-month="Feb 2026"><td style="padding-left:32px">Septic Design and Permit</td><td class="num"><span class="invoice-num">2658</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Feb 6, 2026</td><td class="num">$1,800.00</td></tr>
+        <tr class="detail-row hidden v-row" data-group="v-kiv" data-month="Apr 2026"><td style="padding-left:32px">Site Work</td><td class="num"><span class="invoice-num">2694</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Apr 21, 2026</td><td class="num">$7,625.00</td></tr>
+        <tr class="detail-row hidden co-sub v-row" data-group="v-kiv" data-month="Apr 2026"><td style="padding-left:32px">⤷ Change Order — Septic Field Work</td><td class="num"><span class="invoice-num">2694</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Apr 21, 2026</td><td class="num">$1,732.55</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-kiv"><td colspan="3">Subtotal — Kivela Contracting Ltd.</td><td class="num">$11,157.55</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-lew')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-lew">▶</button><span class="vendor-name">Lewkowich Engineering Associates Ltd.</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">3 invoices</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-lew" data-month="Nov 2025"><td style="padding-left:32px">Geotechnical Assessment Report</td><td class="num"><span class="invoice-num">102800</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Nov 8, 2025</td><td class="num">$3,760.00</td></tr>
+        <tr class="detail-row hidden v-row" data-group="v-lew" data-month="Feb 2026"><td style="padding-left:32px">Geotechnical Assessment Report</td><td class="num"><span class="invoice-num">103557</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Feb 1, 2026</td><td class="num">$300.00</td></tr>
+        <tr class="detail-row hidden v-row" data-group="v-lew" data-month="Mar 2026"><td style="padding-left:32px">Geotechnical Engineering</td><td class="num"><span class="invoice-num">104422</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Mar 31, 2026</td><td class="num">$2,477.40</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-lew"><td colspan="3">Subtotal — Lewkowich Engineering Associates Ltd.</td><td class="num">$6,537.40</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-je')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-je">▶</button><span class="vendor-name">JE Anderson &amp; Associates</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">2 invoices</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-je" data-month="Nov 2025"><td style="padding-left:32px">Land Survey</td><td class="num"><span class="invoice-num">0066328</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Nov 28, 2025</td><td class="num">$3,760.40</td></tr>
+        <tr class="detail-row hidden v-row" data-group="v-je" data-month="Feb 2026"><td style="padding-left:32px">Land Survey</td><td class="num"><span class="invoice-num">0067130</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Feb 1, 2026</td><td class="num">$210.75</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-je"><td colspan="3">Subtotal — JE Anderson &amp; Associates</td><td class="num">$3,971.15</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-isle')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-isle">▶</button><span class="vendor-name">Island Electric Company</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">1 invoice</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden co-sub v-row" data-group="v-isle" data-month="Apr 2026"><td style="padding-left:32px">⤷ Change Order — Underground Cable Replacement</td><td class="num"><span class="invoice-num">1189-1</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Apr 21, 2026</td><td class="num">$1,864.51</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-isle"><td colspan="3">Subtotal — Island Electric Company</td><td class="num">$1,864.51</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-eco')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-eco">▶</button><span class="vendor-name">Ecolibrium Energy Solutions Inc.</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">1 invoice</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-eco" data-month="Jan 2026"><td style="padding-left:32px">Energy Advisor Report</td><td class="num"><span class="invoice-num">2344</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Jan 28, 2026</td><td class="num">$975.00</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-eco"><td colspan="3">Subtotal — Ecolibrium Energy Solutions Inc.</td><td class="num">$975.00</td></tr>
+
+        <tr class="cat-row v-group" onclick="toggleGroup('v-p3')">
+          <td colspan="3"><button class="expand-btn" id="btn-v-p3">▶</button><span class="vendor-name">Print Three Nanaimo</span><span style="font-size:10px;color:var(--gray4);font-weight:500;margin-left:10px;">1 invoice</span></td>
+          <td class="num" style="color:var(--gray4);font-weight:400;"></td>
+        </tr>
+        <tr class="detail-row hidden v-row" data-group="v-p3" data-month="Apr 2026"><td style="padding-left:32px">Revised Plan Printing</td><td class="num"><span class="invoice-num">5-36986</span></td><td class="num" style="font-size:11px;color:var(--gray4);font-family:'DM Mono',monospace;">Apr 7, 2026</td><td class="num">$321.75</td></tr>
+        <tr class="subtotal-row hidden" id="sub-v-p3"><td colspan="3">Subtotal — Print Three Nanaimo</td><td class="num">$321.75</td></tr>
+
+        <tr class="totals-row"><td colspan="3"><strong>Total Vendor Spend</strong> &nbsp;&middot;&nbsp; 7 vendors &nbsp;&middot;&nbsp; 11 invoices</td><td class="num">$39,553.11</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 4: SCHEDULE ══════════ -->
+<div class="tab-panel" id="tab-schedule" style="display:none;">
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px;">
+    <div class="kpi-card sched-kpi-phase">
+      <div class="kpi-label">Current Phase</div>
+      <div id="sched-phase" class="sched-phase-val">Foundation</div>
+      <div class="kpi-sub">Active now</div>
+    </div>
+    <div class="kpi-card sched-kpi-comp">
+      <div class="kpi-label">Est. Completion</div>
+      <div id="sched-completion" class="sched-comp-val">—</div>
+      <div id="sched-completion-sub" class="kpi-sub">Last task in Monday</div>
+    </div>
+  </div>
+
+  <div class="section-card" style="margin-bottom:16px;">
+    <div class="section-head" style="background:#112240;border-bottom:3px solid #c9970a;padding:11px 18px;"><h2 style="color:#fff;font-size:11px;letter-spacing:.8px;">Construction Phases</h2><p style="color:rgba(255,255,255,.38);font-size:10px;">Live · Monday.com</p></div>
+    <div id="sched-phases" style="padding:6px 0;"></div>
+  </div>
+
+  <div class="section-card">
+    <div style="background:#112240;border-bottom:3px solid #c9970a;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;">
+      <span id="cal-month-label" style="font-size:13px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:1px;">-- 2026</span>
+      <div style="display:flex;gap:7px;">
+        <button onclick="calNav(-1)" style="font-size:14px;font-weight:700;padding:5px 13px;border:0.5px solid rgba(255,255,255,.25);border-radius:7px;background:transparent;color:#fff;cursor:pointer;">&#8249;</button>
+        <button onclick="calNav(1)"  style="font-size:14px;font-weight:700;padding:5px 13px;border:0.5px solid rgba(255,255,255,.25);border-radius:7px;background:transparent;color:#fff;cursor:pointer;">&#8250;</button>
+      </div>
+    </div>
+    <div class="cal-dow-row"><div class="cal-dow-cell">Sun</div><div class="cal-dow-cell">Mon</div><div class="cal-dow-cell">Tue</div><div class="cal-dow-cell">Wed</div><div class="cal-dow-cell">Thu</div><div class="cal-dow-cell">Fri</div><div class="cal-dow-cell">Sat</div></div>
+    <div id="cal-days-grid" class="cal-days-grid"></div>
+    <div id="cal-popup" class="cal-popup">
+      <div class="cal-popup-hdr"><span id="cal-popup-title" class="cal-popup-title"></span><span class="cal-popup-close" onclick="closeCalPopup()">&#x2715;</span></div>
+      <div id="cal-popup-body"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function $(id){return document.getElementById(id);}
+function setText(id,v){var e=$(id);if(e)e.textContent=v;}
+
+function pN(v){
+  var n=parseFloat(String(v===null||v===undefined?'':v).replace(/[$,\s]/g,''));
+  return isNaN(n)?0:n;
+}
+function fC(n){
+  n=pN(n);
+  if(n===0)return '—';
+  return '$'+Math.abs(n).toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+
+// Map: Summary sheet category label -> table group id
+var CAT_MAP = [
+  ['DESIGN SERVICES',           'design'],
+  ['PERMITS & HOME WARRANTY',   'permits'],
+  ['ENGINEERING FEES',          'eng'],
+  ['SITE WORK',                 'site'],
+  ['FOUNDATION',                'found'],
+  ['FRAMING',                   'fram'],
+  ['WINDOWS',                   'win'],
+  ['DOORS',                     'doors'],
+  ['ELECTRICAL',                'elec'],
+  ['PLUMBING',                  'plumb'],
+  ['HVAC',                      'hvac'],
+  ['ROOFING',                   'roof'],
+  ['INSULATION & DRYWALL',      'insul'],
+  ['EXTERIOR VENEER',           'ext'],
+  ['MASONRY',                   'mason'],
+  ['CABINETRY & COUNTERTOPS',   'cab'],
+  ['INTERIOR FINISHING',        'int'],
+  ['WOOD FLOOR COVERINGS',      'floor'],
+  ['TILE',                      'tile'],
+  ['PAINT',                     'paint'],
+  ['EXTERIOR HARDSCAPE',        'hard'],
+  ['CONSTRUCTION CLEAN UP',     'clean'],
+  ['JOBSITE FACILITIES',        'job'],
+  ['PROJECT MANAGEMENT',        'pm'],
+  ['MISCELLANEOUS',             'misc']
+];
+
+function updateCatRow(groupId, b, inv, tbc, ob, co) {
+  var btn = $('btn-'+groupId);
+  if (!btn) return;
+  var tr = btn.closest('tr');
+  if (!tr) return;
+  var tds = tr.querySelectorAll('td.num');
+  // Table cols: Budget | Invoiced | To Be Completed | Over Budget | Change Orders
+  if (tds[0]) tds[0].textContent = fC(b);
+  if (tds[1]) { tds[1].textContent = fC(inv); tds[1].style.color=''; }
+  if (tds[2]) { tds[2].textContent = fC(tbc); tds[2].style.color = tbc>0?'var(--green)':''; }
+  if (tds[3]) {
+    tds[3].textContent = ob<0 ? fC(ob) : '—';
+    tds[3].style.color = ob<0 ? 'var(--red)' : '';
+    tds[3].style.fontWeight = ob<0 ? '600' : '';
+  }
+  if (tds[4]) {
+    tds[4].innerHTML = co>0 ? '<span class="co-tag">'+fC(co)+'</span>' : '—';
+  }
+  // Subtotal row
+  var sub = $('sub-'+groupId);
+  if (sub) {
+    var stds = sub.querySelectorAll('td.num');
+    if (stds[0]) stds[0].textContent = fC(b);
+    if (stds[1]) stds[1].textContent = fC(inv);
+    if (stds[2]) stds[2].innerHTML = tbc>0?'<span style="color:#059669">'+fC(tbc)+'</span>':'—';
+    if (stds[3]) stds[3].innerHTML = ob<0?'<span style="color:#dc2626;font-weight:700">'+fC(ob)+'</span>':'—';
+    if (stds[4]) stds[4].innerHTML = co>0?'<span style="color:#b45309">'+fC(co)+'</span>':'—';
+  }
+}
+
+function renderDashboard(data) {
+  if (!data || data.error) { console.error('renderDashboard: no data', data); return; }
+
+  // ── Source of truth: Estimate vs. Actual sheet ──────────────────────────
+  // Cols: 0=Label, 1=Budget, 2=Prev Invoiced, 3=Current Invoice,
+  //       4=Total Invoiced, 5=To Be Completed, 6=Over Budget, 7=Change Orders
+  //
+  // Row types:
+  //   Category header  → ALL CAPS, no numbers  e.g. "  DESIGN SERVICES"
+  //   Detail row       → leading spaces + mixed case  e.g. "   Plan Printing..."
+  //   Change Order row → starts with "Change Order" or "Credit"
+  //   Subtotal row     → ends with "— Subtotal" or "— SUBTOTAL"
+  //   Grand total rows → "ORIGINAL PROJECT TOTAL", "15% Mark-up", "GST (5%)"
+
+  var est = data.estimate || [];
+
+  // Map: CAT_MAP lookup by UPPERCASE label → group id
+  var catLookup = {};
+  CAT_MAP.forEach(function(pair) { catLookup[pair[0].toUpperCase()] = pair[1]; });
+
+  // Map: detail row label → { groupId, trIndex }
+  // We'll find detail <tr> elements by matching their first-cell text
+  function normLabel(s) { return String(s||'').replace(/\s+/g,' ').trim().toLowerCase(); }
+
+  var currentGroupId = '';
+  var currentGroupLabelUC = '';
+
+  est.forEach(function(r) {
+    var raw   = String(r[0]||'');
+    var lbl   = raw.trim();
+    var lblUC = lbl.toUpperCase();
+    if (!lbl) return;
+
+  // ── Helper to write a totals/markup row ──────────────────────────────
+  function writeTotRow(prefix, b, inv, tbc, ob, co) {
+    setText(prefix+'-b',   fC(b));
+    setText(prefix+'-inv', fC(inv));
+    var tbcEl = $(prefix+'-tbc');
+    if (tbcEl) { tbcEl.textContent = fC(tbc); tbcEl.style.color = tbc>0 ? 'var(--green)' : ''; }
+    var obEl  = $(prefix+'-ob');
+    if (obEl)  { obEl.textContent  = ob<0 ? fC(ob) : '—'; obEl.style.color = ob<0 ? 'var(--red)' : ''; obEl.style.fontWeight = ob<0 ? '700' : ''; }
+    setText(prefix+'-co',  co>0 ? fC(co) : '—');
+  }
+
+    // ── Original Project Subtotal ─────────────────────────────────────────
+    if (lblUC === 'ORIGINAL PROJECT SUBTOTAL') {
+      writeTotRow('tot-sub', pN(r[1]), pN(r[4]), pN(r[5]), pN(r[6]), pN(r[7]));
+      return;
+    }
+
+    // ── 15% Mark-up ───────────────────────────────────────────────────────
+    if (lblUC.indexOf('MARK-UP') !== -1 || lblUC.indexOf('MARKUP') !== -1) {
+      writeTotRow('tot-mu', pN(r[1]), pN(r[4]), pN(r[5]), pN(r[6]), pN(r[7]));
+      return;
+    }
+
+    // ── GST ───────────────────────────────────────────────────────────────
+    if (lblUC.indexOf('GST') !== -1) {
+      writeTotRow('tot-gst', pN(r[1]), pN(r[4]), pN(r[5]), pN(r[6]), pN(r[7]));
+      return;
+    }
+
+    // ── Grand total rows ──────────────────────────────────────────────────
+    if (lblUC === 'ORIGINAL PROJECT TOTAL' || lblUC === 'PROJECT TOTAL') {
+      var b   = pN(r[1]);
+      var inv = pN(r[4]);
+      var tbc = pN(r[5]);
+      var co  = pN(r[7]);
+      writeTotRow('tot-proj', b, inv, tbc, pN(r[6]), co);
+      var pctS = b>0 ? ((inv/b)*100).toFixed(1) : '0';
+      var pctR = b>0 ? ((tbc/b)*100).toFixed(1) : '0';
+      setText('h-spent',          fC(inv));
+      setText('h-remaining',      fC(tbc));
+      setText('h-co',             fC(co));
+      setText('h-spent-pct',      pctS+'% of budget');
+      setText('h-remaining-pct',  pctR+'% of budget');
+      setText('health-label',     pctS+'%');
+      setText('lbl-rem',          pctR+'%');
+      setText('lbl-co',           b>0 ? ((co/b)*100).toFixed(1)+'%' : '0%');
+      var bar=$('health-bar'); if(bar) bar.style.width=Math.min(parseFloat(pctS),100)+'%';
+      var barR=$('bar-rem');   if(barR) barR.style.width=Math.min(parseFloat(pctR),100)+'%';
+      var barC=$('bar-co');    if(barC) barC.style.width=Math.min(co/b*100,100)+'%';
+      var bnI=$('bn-bar-inv'); if(bnI) bnI.style.width=Math.min(parseFloat(pctS),100)+'%';
+      var bnR=$('bn-bar-rem'); if(bnR) bnR.style.width=Math.min(parseFloat(pctR),100)+'%';
+      var bnC=$('bn-bar-co');  if(bnC) bnC.style.width=Math.min(co/b*100,100)+'%';
+      return;
+    }
+
+    // ── Subtotal rows → update category header + subtotal bar ─────────────
+    if (lblUC.indexOf('— SUBTOTAL') !== -1 || lblUC.indexOf('- SUBTOTAL') !== -1 ||
+        lblUC.indexOf('— SUBTOTAL') !== -1) {
+      if (currentGroupId) {
+        var b   = pN(r[1]);
+        var inv = pN(r[4]);
+        var tbc = pN(r[5]);
+        var ob  = pN(r[6]);
+        var co  = pN(r[7]);
+        updateCatRow(currentGroupId, b, inv, tbc, ob, co);
+      }
+      return;
+    }
+
+    // ── Category header rows (ALL CAPS, no budget value) ─────────────────
+    if (lblUC === lbl.toUpperCase() && lblUC === lblUC &&
+        !pN(r[1]) && !pN(r[3]) && !pN(r[4]) &&
+        lblUC.indexOf('CHANGE ORDER') === -1 &&
+        lblUC.indexOf('CREDIT') === -1 &&
+        lblUC.indexOf('MARK-UP') === -1 &&
+        lblUC.indexOf('GST') === -1 &&
+        lblUC.indexOf('SUBTOTAL') === -1 &&
+        lblUC.indexOf('PROJECT') === -1 &&
+        lblUC.indexOf('COLOUR') === -1 &&
+        lblUC.indexOf('LINE ITEM') === -1 &&
+        lblUC.indexOf('CATEGORY') === -1) {
+      currentGroupLabelUC = lblUC;
+      currentGroupId = catLookup[lblUC] || '';
+      return;
+    }
+
+    // ── Detail rows → find matching <tr> and update it ────────────────────
+    if (!currentGroupId) return;
+    // Skip CO rows and credit rows here — handled separately below
+    if (lblUC.indexOf('CHANGE ORDER') !== -1 || lblUC.indexOf('CREDIT') !== -1) return;
+
+    var b   = pN(r[1]);
+    var inv = pN(r[4]);
+    var tbc = pN(r[5]);
+    var ob  = pN(r[6]);
+    var co  = pN(r[7]);
+    var normLbl = normLabel(lbl);
+
+    // Find all detail rows for this group and match by label text
+    var detailRows = document.querySelectorAll('tr.detail-row[data-group="'+currentGroupId+'"]');
+    detailRows.forEach(function(tr) {
+      var firstCell = tr.querySelector('td:first-child');
+      if (!firstCell) return;
+      if (normLabel(firstCell.textContent) !== normLbl) return;
+      var tds = tr.querySelectorAll('td.num');
+      if (tds[0]) tds[0].textContent = fC(b);
+      if (tds[1]) { tds[1].textContent = fC(inv); tds[1].style.color = ''; }
+      if (tds[2]) {
+        tds[2].textContent = fC(tbc);
+        tds[2].style.color = tbc>0 ? 'var(--green)' : '';
+      }
+      if (tds[3]) {
+        tds[3].textContent = ob<0 ? fC(ob) : '—';
+        tds[3].style.color = ob<0 ? 'var(--red)' : '';
+        tds[3].style.fontWeight = ob<0 ? '600' : '';
+      }
+      if (tds[4]) {
+        tds[4].innerHTML = co>0 ? '<span class="co-tag">'+fC(co)+'</span>' : '—';
+      }
+      // Apply over-budget styling to the row itself
+      tr.classList.toggle('over-sub', ob<0);
+    });
+  });
+
+  // ── Timesheet KPIs ────────────────────────────────────────────────────
+  var ts = data.timesheet || [];
+  ts.forEach(function(r) {
+    var lbl = String(r[0]||'').trim().toUpperCase();
+    var hrs = pN(r[4]);
+    if (lbl.indexOf('TOTAL TIMESHEET') !== -1) setText('kpi-ts-total',  hrs.toFixed(2));
+    if (lbl.indexOf('TOTAL 24')        !== -1) setText('kpi-ts-pm',     hrs.toFixed(2));
+    if (lbl.indexOf('TOTAL 25')        !== -1) setText('kpi-ts-travel', hrs.toFixed(2));
+  });
+
+  // ── Vendor total ──────────────────────────────────────────────────────
+  var mat = data.materials || [];
+  mat.forEach(function(r) {
+    var lbl = String(r[0]||'').trim().toUpperCase();
+    if (lbl.indexOf('TOTAL VENDOR') !== -1) setText('kpi-v-total', fC(pN(r[5])));
+  });
+}
+
+function filterByMonth(prefix){
+  const val = document.getElementById(prefix+'-month-filter').value;
+  const rows = document.querySelectorAll('.'+prefix+'-row');
+  rows.forEach(r=>{
+    const match = val==='all' || r.dataset.month===val;
+    if(!match){ r.classList.add('hidden'); }
+    else {
+      const group = r.dataset.group;
+      const btn = document.getElementById('btn-'+group);
+      if(btn && btn.classList.contains('open')) r.classList.remove('hidden');
+    }
+  });
+  if(val!=='all'){
+    document.querySelectorAll('.'+prefix+'-group').forEach(g=>{
+      const group = g.querySelector('.expand-btn').id.replace('btn-','');
+      const hasMatch = Array.from(document.querySelectorAll('[data-group="'+group+'"].'+prefix+'-row'))
+        .some(r=>r.dataset.month===val);
+      g.style.display = hasMatch ? '' : 'none';
+    });
+  } else {
+    document.querySelectorAll('.'+prefix+'-group').forEach(g=>g.style.display='');
+  }
+}
+function renderSchedule(items) {
+  if (!items || !items.length) return;
+  var today = new Date(); today.setHours(0,0,0,0);
+  var done=0, weekCount=0;
+  var upcoming = [];
+
+  items.forEach(function(it) {
+    var st = (it.status||'').toLowerCase();
+    if (st === 'done') { done++; return; }
+    if (!it.timeline) return;
+    // timeline format: "2026-05-28 - 2026-05-29"
+    var parts = it.timeline.split(' - ');
+    if (!parts[0]) return;
+    var d = new Date(parts[0]);
+    if (isNaN(d)) return;
+    var diff = Math.round((d - today) / 86400000);
+    if (diff >= 0 && diff <= 7) weekCount++;
+    if (diff >= -3 && diff <= 30) upcoming.push({ name: it.name, date: d, diff: diff, status: it.status });
+  });
+
+  // Sort by date
+  upcoming.sort(function(a,b){ return a.date - b.date; });
+
+  setText('sched-done', String(done));
+  setText('sched-done-sub', 'of ' + items.length + ' total tasks');
+  setText('sched-week', String(weekCount));
+
+  // Build group stats + Est Completion + live phase bars from Monday data
+  var groups={},groupOrder=[],latestEnd='';
+  var _pm=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  items.forEach(function(it){var g=it.group;if(!groups[g]){groups[g]={total:0,done:0,start:'',end:''};groupOrder.push(g);}groups[g].total++;if((it.status||'').toLowerCase()==='done')groups[g].done++;if(it.timeline){var p=it.timeline.split(' - ');if(p[0]&&(!groups[g].start||p[0]<groups[g].start))groups[g].start=p[0];if(p[1]&&(!groups[g].end||p[1]>groups[g].end))groups[g].end=p[1];}});
+  groupOrder.forEach(function(g){if(groups[g].end>latestEnd)latestEnd=groups[g].end;});
+  if(latestEnd){var ld=new Date(latestEnd);setText('sched-completion',_pm[ld.getMonth()]+' '+ld.getDate()+', '+ld.getFullYear());}
+  var phaseEl=document.getElementById('sched-phases');
+  if(phaseEl){var ph='';groupOrder.forEach(function(g){var grp=groups[g];if(!grp.start)return;var pct=grp.total>0?Math.round((grp.done/grp.total)*100):0,color=pct===100?'#15803d':pct>0?'#1e6fd9':'#9ca3af',sd=new Date(grp.start),ed=new Date(grp.end),ds=_pm[sd.getMonth()]+' '+sd.getFullYear()+' - '+_pm[ed.getMonth()]+' '+ed.getFullYear();var trackContent=pct>0?'<div class="sched-phase-fill" style="width:'+pct+'%;background:'+color+';"><span class="sched-phase-lbl">'+(pct===100?'Complete':pct+'%')+'</span></div>':'<span style="position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:9px;color:#94a3b8;font-weight:700;letter-spacing:.3px;">SCHEDULED</span>';ph+='<div class="sched-phase-wrap"><div class="sched-phase-dot" style="background:'+color+'"></div><div class="sched-phase-name">'+g+'</div><div class="sched-phase-track">'+trackContent+'</div><div class="sched-phase-dates">'+ds+'</div></div>';});phaseEl.innerHTML=ph;}
+
+  window._calItems = items;
+  var _now = new Date(); window._calYear = _now.getFullYear(); window._calMonth = _now.getMonth();
+  renderCalendar();
+}
+var _MOS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function renderCalendar() {
+  var its = window._calItems||[], yr = window._calYear, mo = window._calMonth, dm = {}, td = new Date(); td.setHours(0,0,0,0);
+  var lbl = document.getElementById('cal-month-label'); if (lbl) lbl.textContent = _MOS[mo]+' '+yr;
+  its.forEach(function(it) { if (!it.timeline) return; var p = it.timeline.split(' - '), d = new Date(p[0]); if (isNaN(d)||d.getFullYear()!==yr||d.getMonth()!==mo) return; if (!dm[p[0]]) dm[p[0]]=[]; dm[p[0]].push(it); });
+  var fd=new Date(yr,mo,1).getDay(), dim=new Date(yr,mo+1,0).getDate(), pd=new Date(yr,mo,0).getDate(), h='', cc=0;
+  for (var i=fd-1;i>=0;i--) { h+='<div class="cal-day other-month"><div class="cal-day-num">'+(pd-i)+'</div></div>'; cc++; }
+  for (var d2=1;d2<=dim;d2++) {
+    var mm=String(mo+1).padStart(2,'0'), dd2=String(d2).padStart(2,'0'), k=yr+'-'+mm+'-'+dd2;
+    var ts2=dm[k]||[], isT=(new Date(yr,mo,d2).getTime()===td.getTime()), pips='';
+    var cl='cal-day'+(isT?' today-cell':'')+(ts2.length?' has-tasks':'');
+    ts2.slice(0,2).forEach(function(t) { var s=(t.status||'').toLowerCase(),bg=s==='done'?'#d1fae5':'#dbeafe',co2=s==='done'?'#065f46':'#1e40af',lb=t.name.length>16?t.name.slice(0,14)+'...':t.name; pips+='<div class="task-pip" style="background:'+bg+';color:'+co2+';">'+lb+'</div>'; });
+    if (ts2.length>2) pips+='<div class="task-pip" style="background:#f1f5f9;color:#475569;">+'+(ts2.length-2)+' more</div>';
+    var oc = ts2.length ? ' onclick="openCalPopup(this)" data-key="'+k+'" data-day="'+d2+'"' : '';
+    h += '<div class="'+cl+'"'+oc+'><div class="cal-day-num">'+d2+'</div>'+pips+'</div>'; cc++;
+  }
+  var tr2=(7-(cc%7))%7; for (var t2=1;t2<=tr2;t2++) h+='<div class="cal-day other-month"><div class="cal-day-num">'+t2+'</div></div>';
+  var g=document.getElementById('cal-days-grid'); if(g) g.innerHTML=h; closeCalPopup();
+}
+function calNav(dir) { window._calMonth+=dir; if(window._calMonth>11){window._calMonth=0;window._calYear++;} if(window._calMonth<0){window._calMonth=11;window._calYear--;} renderCalendar(); }
+function openCalPopup(el) {
+  var k=el.dataset.key, dayNum=el.dataset.day, its=window._calItems||[];
+  var ts=its.filter(function(it){return it.timeline&&it.timeline.split(' - ')[0]===k;});
+  if (!ts.length) return;
+  var te=document.getElementById('cal-popup-title'); if(te) te.textContent=_MOS[window._calMonth]+' '+dayNum+', '+window._calYear+' -- '+ts.length+' task'+(ts.length>1?'s':'');
+  var bd=document.getElementById('cal-popup-body');
+  if (bd) { var h=''; ts.forEach(function(t){var s=(t.status||'').toLowerCase(),bg=s==='done'?'#d1fae5':s.indexOf('progress')>-1?'#dbeafe':'#f1f5f9',co2=s==='done'?'#065f46':s.indexOf('progress')>-1?'#1e40af':'#475569'; h+='<div class="cal-popup-item"><div style="flex:1"><div class="cal-popup-name">'+t.name+'</div><div class="cal-popup-phase">'+t.group+'</div></div><span style="font-size:10px;font-weight:600;padding:2px 9px;border-radius:99px;background:'+bg+';color:'+co2+';">'+(t.status||'Scheduled')+'</span></div>';}); bd.innerHTML=h; }
+  var pp=document.getElementById('cal-popup'); if(pp) pp.classList.add('open');
+}
+function closeCalPopup() { var pp=document.getElementById('cal-popup'); if(pp) pp.classList.remove('open'); }
+
+function showTab(id,el){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');p.style.display='none';});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  var panel=document.getElementById('tab-'+id);
+  panel.classList.add('active');
+  panel.style.display='block';
+  el.classList.add('active');
+  var d=window.__SHEET_DATA__;
+  if(!d) return;
+  if(id==='timesheet'){
+    var tb=document.getElementById('ts-tbody');
+    if(tb && tb.rows.length<=1 && tb.rows[0] && tb.rows[0].cells[0] && tb.rows[0].cells[0].colSpan>1){
+      renderTimesheetTable(d.timesheet||[]);
+    }
+  }
+  if(id==='vendors'){
+    var vb=document.getElementById('v-tbody');
+    if(vb && vb.rows.length<=1 && vb.rows[0] && vb.rows[0].cells[0] && vb.rows[0].cells[0].colSpan>1){
+      renderVendorTable(d.materials||[]);
+    }
+  }
+  if(id==='schedule'){
+    renderSchedule(d.schedule||[]);
+  }
+}
+var GAS_URL='https://script.google.com/macros/s/AKfycbx1XdpPdTRjbpv4AvOSlgoQWC7oUt2Hyu-i0zoBWbDjt6fX9K0QbJRbGpFk6CrT_cct/exec';
+
+function syncData(){
+  const btn=document.querySelector('button[onclick="syncData()"]');
+  if(btn){btn.textContent='Syncing...';btn.disabled=true;}
+  fetch(GAS_URL+'?format=json&nocache=1')
+    .then(function(r){return r.json();})
+    .then(function(data){
+      window.__SHEET_DATA__=data;
+      if(btn){btn.textContent='\u21bb Sync';btn.disabled=false;}
+      renderDashboard(data);
+    })
+    .catch(function(err){
+      if(btn){btn.textContent='\u21bb Sync';btn.disabled=false;}
+      console.error('Sync failed:',err);
+    });
+}
+function toggleGroup(group){
+  const rows=document.querySelectorAll('[data-group="'+group+'"]');
+  const btn=document.getElementById('btn-'+group);
+  const isOpen=btn.classList.contains('open');
+  rows.forEach(r=>r.classList.toggle('hidden',isOpen));
+  btn.classList.toggle('open',!isOpen);
+  const catRow=btn.closest('tr');
+  catRow.querySelectorAll('td').forEach(td=>{ td.style.background=''; });
+  catRow.querySelectorAll('td.num').forEach(td=>td.style.visibility=isOpen?'visible':'hidden');
+  catRow.classList.toggle('open-row',!isOpen);
+  const sub=document.getElementById('sub-'+group);
+  if(sub)sub.classList.toggle('hidden',isOpen);
+}
+// Load live data on page open
+fetch(GAS_URL+'?format=json')
+  .then(function(r){return r.json();})
+  .then(function(data){
+    window.__SHEET_DATA__=data;
+    renderDashboard(data);
+  })
+  .catch(function(err){
+    console.error('Initial load failed:',err);
+  });
+</script>
+</body>
+</html>
+
