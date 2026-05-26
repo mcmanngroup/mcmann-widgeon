@@ -102,7 +102,7 @@
             "curInv": 6537.4,
             "totInv": 6537.4,
             "tbc": 0,
-            "ob": -2537.3999999999996,
+            "ob": -2537.4,
             "co": 0
           },
           {
@@ -132,7 +132,7 @@
           "curInv": 13283.55,
           "totInv": 13283.55,
           "tbc": 9053.85,
-          "ob": -2537.3999999999996,
+          "ob": -2537.4,
           "co": 1800
         }
       },
@@ -306,10 +306,10 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34000000001,
+          "budget": 71839.34,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 71839.34000000001,
+          "tbc": 71839.34,
           "ob": 0,
           "co": 0
         }
@@ -390,10 +390,10 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.76999999999,
+          "budget": 124747.77,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 124747.76999999999,
+          "tbc": 124747.77,
           "ob": 0,
           "co": 0
         }
@@ -424,10 +424,10 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.379999999997,
+          "budget": 32181.38,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.379999999997,
+          "tbc": 32181.38,
           "ob": 0,
           "co": 0
         }
@@ -802,10 +802,10 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84000000001,
+          "budget": 77167.84,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84000000001,
+          "tbc": 77167.84,
           "ob": 0,
           "co": 0
         }
@@ -1523,8 +1523,8 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "curInv": 5906.200000000001,
-          "totInv": 5906.200000000001,
+          "curInv": 5906.2,
+          "totInv": 5906.2,
           "tbc": 31893.8,
           "ob": 0,
           "co": 0
@@ -1572,11 +1572,21 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
+          },
+          {
+            "label": "COLOUR LEGEND",
+            "type": "detail",
+            "budget": 0,
+            "curInv": 0,
+            "totInv": 0,
+            "tbc": 0,
+            "ob": 0,
+            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.479999999996,
+          "budget": 39028.48,
           "curInv": 435.6,
           "totInv": 435.6,
           "tbc": 38592.88,
@@ -1597,30 +1607,30 @@
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.94749999998,
-        "curInv": 1504999.1039999998,
-        "totInv": 1504999.1039999998,
-        "tbc": 171111.7425,
-        "ob": -1500374.6099999999,
-        "co": 809.5590000000001
+        "budget": 175877.95,
+        "curInv": 1504999.1,
+        "totInv": 1504999.1,
+        "tbc": 171111.74,
+        "ob": -1500374.61,
+        "co": 809.56
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.879875,
-        "curInv": 577544.7007,
-        "totInv": 577544.7007,
-        "tbc": 65592.834625,
-        "ob": -575454.888,
-        "co": 310.33095000000003
+        "budget": 67419.88,
+        "curInv": 577544.7,
+        "totInv": 577544.7,
+        "tbc": 65592.83,
+        "ob": -575454.89,
+        "co": 310.33
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.477375,
-        "curInv": 12128438.7147,
-        "totInv": 12128438.7147,
-        "tbc": 1377449.5271249998,
-        "ob": -12084552.648,
-        "co": 6516.94995
+        "budget": 1415817.48,
+        "curInv": 12128438.71,
+        "totInv": 12128438.71,
+        "tbc": 1377449.53,
+        "ob": -12084552.65,
+        "co": 6516.95
       }
     ]
   },
@@ -1630,308 +1640,308 @@
         "label": "Project Managment",
         "items": [
           {
-            "date": "May 5, 2025",
+            "date": "45783",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 270
           },
           {
-            "date": "May 13, 2025",
+            "date": "45791",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 135
           },
           {
-            "date": "May 20, 2025",
+            "date": "45798",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 135
           },
           {
-            "date": "May 29, 2025",
+            "date": "45807",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 4,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 360
           },
           {
-            "date": "Jun 1, 2025",
+            "date": "45810",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.68,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 151.2
           },
           {
-            "date": "Jun 2, 2025",
+            "date": "45811",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 5.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 465.3
           },
           {
-            "date": "Jun 3, 2025",
+            "date": "45812",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 360
           },
           {
-            "date": "Jun 3, 2025",
+            "date": "45812",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 299.7
           },
           {
-            "date": "Jun 3, 2025",
+            "date": "45812",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 150.29999999999998
           },
           {
-            "date": "Jun 4, 2025",
+            "date": "45813",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 450
           },
           {
-            "date": "Jun 4, 2025",
+            "date": "45813",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 195.29999999999998
           },
           {
-            "date": "Jun 15, 2025",
+            "date": "45824",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 270
           },
           {
-            "date": "Jun 17, 2025",
+            "date": "45826",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 4.5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 405
           },
           {
-            "date": "Jun 21, 2025",
+            "date": "45830",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 5.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 510.3
           },
           {
-            "date": "Jun 26, 2025",
+            "date": "45835",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4.83,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 434.7
           },
           {
-            "date": "Jun 26, 2025",
+            "date": "45835",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 3.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 330.3
           },
           {
-            "date": "Sep 24, 2025",
+            "date": "45925",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 270
           },
           {
-            "date": "Oct 1, 2025",
+            "date": "45932",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 5.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 510.3
           },
           {
-            "date": "Oct 7, 2025",
+            "date": "45938",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 180
           },
           {
-            "date": "Oct 8, 2025",
+            "date": "45939",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 2.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 240.29999999999998
           },
           {
-            "date": "Oct 14, 2025",
+            "date": "45945",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 209.70000000000002
           },
           {
-            "date": "Oct 14, 2025",
+            "date": "45945",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 5.83,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 524.7
           },
           {
-            "date": "Oct 16, 2025",
+            "date": "45947",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 1.83,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 164.70000000000002
           },
           {
-            "date": "Oct 21, 2025",
+            "date": "45952",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 209.70000000000002
           },
           {
-            "date": "Nov 12, 2025",
+            "date": "45974",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 195.29999999999998
           },
           {
-            "date": "Nov 17, 2025",
+            "date": "45979",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 0.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 29.700000000000003
           },
           {
-            "date": "Dec 2, 2025",
+            "date": "45994",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 6.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 569.7
           },
           {
-            "date": "Dec 8, 2025",
+            "date": "46000",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 105.3
           },
           {
-            "date": "Dec 11, 2025",
+            "date": "46003",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4.5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 405
           },
           {
-            "date": "Dec 15, 2025",
+            "date": "46007",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 3.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 330.3
           },
           {
-            "date": "Jan 20, 2026",
+            "date": "46043",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 0.67,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 60.300000000000004
           },
           {
-            "date": "Apr 16, 2026",
+            "date": "46129",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 270
           },
           {
-            "date": "Apr 19, 2026",
+            "date": "46132",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 180
           },
           {
-            "date": "Apr 19, 2026",
+            "date": "46132",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 180
           },
           {
-            "date": "Apr 21, 2026",
+            "date": "46134",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 135
           },
           {
-            "date": "Apr 27, 2026",
+            "date": "46140",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.08,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 187.20000000000002
           },
           {
-            "date": "Apr 28, 2026",
+            "date": "46141",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.25,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 202.5
           },
           {
-            "date": "Apr 29, 2026",
+            "date": "46142",
             "name": "James McMann",
             "status": "Unbilled",
-            "hours": 1.16,
-            "rate": 0,
-            "amount": 0
+            "hours": 1.1600000000000001,
+            "rate": 90,
+            "amount": 104.4
           }
         ],
         "total_hours": 113.18,
@@ -1941,36 +1951,36 @@
         "label": "Travel Time",
         "items": [
           {
-            "date": "Apr 16, 2026",
+            "date": "46129",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.33,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 119.7
           },
           {
-            "date": "Apr 19, 2026",
+            "date": "46132",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 105.3
           },
           {
-            "date": "Apr 21, 2026",
+            "date": "46134",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 105.3
           },
           {
-            "date": "Apr 29, 2026",
+            "date": "46142",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 0,
-            "amount": 0
+            "rate": 90,
+            "amount": 105.3
           }
         ],
         "total_hours": 4.84,
@@ -2709,10 +2719,10 @@
   ],
   "_meta": {
     "report": "April 2026",
-    "dateFrom": "2026-04-01",
-    "dateTo": "2026-04-30",
+    "dateFrom": "",
+    "dateTo": "",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-05-26T16:07:02.025Z"
+    "syncedAt": "2026-05-26T16:10:46.961Z"
   }
 }
