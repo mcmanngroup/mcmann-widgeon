@@ -102,7 +102,7 @@
             "curInv": 6537.4,
             "totInv": 6537.4,
             "tbc": 0,
-            "ob": -2537.3999999999996,
+            "ob": -2537.4,
             "co": 0
           },
           {
@@ -132,7 +132,7 @@
           "curInv": 13283.55,
           "totInv": 13283.55,
           "tbc": 9053.85,
-          "ob": -2537.3999999999996,
+          "ob": -2537.4,
           "co": 1800
         }
       },
@@ -306,10 +306,10 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34000000001,
+          "budget": 71839.34,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 71839.34000000001,
+          "tbc": 71839.34,
           "ob": 0,
           "co": 0
         }
@@ -390,10 +390,10 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.76999999999,
+          "budget": 124747.77,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 124747.76999999999,
+          "tbc": 124747.77,
           "ob": 0,
           "co": 0
         }
@@ -424,10 +424,10 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.379999999997,
+          "budget": 32181.38,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.379999999997,
+          "tbc": 32181.38,
           "ob": 0,
           "co": 0
         }
@@ -802,10 +802,10 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84000000001,
+          "budget": 77167.84,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84000000001,
+          "tbc": 77167.84,
           "ob": 0,
           "co": 0
         }
@@ -1523,8 +1523,8 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "curInv": 5906.200000000001,
-          "totInv": 5906.200000000001,
+          "curInv": 5906.2,
+          "totInv": 5906.2,
           "tbc": 31893.8,
           "ob": 0,
           "co": 0
@@ -1572,11 +1572,21 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
+          },
+          {
+            "label": "COLOUR LEGEND",
+            "type": "detail",
+            "budget": 0,
+            "curInv": 0,
+            "totInv": 0,
+            "tbc": 0,
+            "ob": 0,
+            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.479999999996,
+          "budget": 39028.48,
           "curInv": 435.6,
           "totInv": 435.6,
           "tbc": 38592.88,
@@ -1597,30 +1607,30 @@
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.94749999998,
-        "curInv": 1504999.1039999998,
-        "totInv": 1504999.1039999998,
-        "tbc": 171111.7425,
-        "ob": -1500374.6099999999,
-        "co": 809.5590000000001
+        "budget": 175877.95,
+        "curInv": 1504999.1,
+        "totInv": 1504999.1,
+        "tbc": 171111.74,
+        "ob": -1500374.61,
+        "co": 809.56
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.879875,
-        "curInv": 577544.7007,
-        "totInv": 577544.7007,
-        "tbc": 65592.834625,
-        "ob": -575454.888,
-        "co": 310.33095000000003
+        "budget": 67419.88,
+        "curInv": 577544.7,
+        "totInv": 577544.7,
+        "tbc": 65592.83,
+        "ob": -575454.89,
+        "co": 310.33
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.477375,
-        "curInv": 12128438.7147,
-        "totInv": 12128438.7147,
-        "tbc": 1377449.5271249998,
-        "ob": -12084552.648,
-        "co": 6516.94995
+        "budget": 1415817.48,
+        "curInv": 12128438.71,
+        "totInv": 12128438.71,
+        "tbc": 1377449.53,
+        "ob": -12084552.65,
+        "co": 6516.95
       }
     ]
   },
@@ -1935,7 +1945,7 @@
           }
         ],
         "total_hours": 113.18,
-        "total_amount": 10186.2
+        "total_amount": 0
       },
       {
         "label": "Travel Time",
@@ -1974,11 +1984,11 @@
           }
         ],
         "total_hours": 4.84,
-        "total_amount": 435.6
+        "total_amount": 0
       }
     ],
     "totalHours": 118.02000000000001,
-    "totalAmount": 10621.800000000001
+    "totalAmount": 0
   },
   "materials": {
     "vendors": [
@@ -2107,11 +2117,11 @@
   },
   "schedule": [],
   "_meta": {
-    "report": "2125_Widgeon_Rd_2026_04_30__4_.xlsx",
+    "report": "April 2026",
     "dateFrom": "2026-04-01",
     "dateTo": "2026-04-30",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-05-26T15:47:25.345Z"
+    "syncedAt": "2026-05-26T16:04:29.127Z"
   }
 }
