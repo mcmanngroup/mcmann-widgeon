@@ -75,20 +75,46 @@ html,body{font-family:'DM Sans',sans-serif;background:var(--gray);color:var(--te
 .tab{font-size:14px;font-weight:600;color:rgba(255,255,255,.55);padding:12px 20px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;transition:color .15s,border-color .15s;}
 .tab:hover{color:rgba(255,255,255,.85);}
 .tab.active{color:#fff;border-bottom-color:var(--gold);}
-/* GITHUB SYNC */
-.sync-bar{background:var(--navy2);border-bottom:2px solid var(--gold);padding:8px 22px;display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.sync-status{font-family:'DM Mono',monospace;font-size:.62rem;color:rgba(255,255,255,.5);flex:1;}
-.sync-status.ok{color:#6ee7b7;}
-.sync-status.err{color:#fca5a5;}
-.sync-status.syncing{color:var(--gold2);}
-.sync-btn{padding:7px 18px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:var(--radius-sm);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:opacity .15s;display:flex;align-items:center;gap:6px;}
-.sync-btn:hover{opacity:.88;}
-.sync-btn:disabled{opacity:.4;cursor:not-allowed;}
-.gh-setup{display:flex;align-items:center;gap:8px;}
-.gh-input{font-family:'DM Mono',monospace;font-size:.7rem;padding:6px 10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:4px;outline:none;width:220px;}
-.gh-input:focus{border-color:var(--gold2);}
-.gh-input::placeholder{color:rgba(255,255,255,.3);font-size:.65rem;}
-.gh-lbl{font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;}
+/* JOB SELECTOR */
+.job-sel-wrap{display:flex;align-items:center;gap:8px;margin-left:16px;padding-left:16px;border-left:1px solid rgba(255,255,255,.15)}
+.job-sel-lbl{font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.job-sel{font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 28px 6px 10px;border-radius:var(--radius-sm);outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23ffffff' d='M5 7L0 2h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;transition:all .15s;max-width:180px}
+.job-sel:hover{background-color:rgba(255,255,255,.15);border-color:var(--gold2)}
+.job-sel option{background:var(--navy);color:#fff}
+.btn-add-job{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gold2);background:rgba(240,192,64,.1);border:1px solid rgba(240,192,64,.3);padding:5px 10px;border-radius:4px;cursor:pointer;white-space:nowrap;transition:all .15s}
+.btn-add-job:hover{background:rgba(240,192,64,.2)}
+.btn-gh-set{font-family:'DM Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:4px;cursor:pointer;white-space:nowrap;transition:all .15s}
+.btn-gh-set:hover{background:rgba(255,255,255,.12)}
+/* SYNC BAR */
+.sync-bar{background:var(--navy2);border-bottom:2px solid var(--gold);padding:8px 22px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+.sync-status{font-family:'DM Mono',monospace;font-size:.62rem;color:rgba(255,255,255,.5);flex:1}
+.sync-status.ok{color:#6ee7b7}.sync-status.err{color:#fca5a5}.sync-status.syncing{color:var(--gold2)}
+.sync-btn{padding:7px 18px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:var(--radius-sm);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:opacity .15s;white-space:nowrap}
+.sync-btn:hover{opacity:.88}.sync-btn:disabled{opacity:.4;cursor:not-allowed}
+.sync-job-nm{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--gold2);font-weight:600}
+/* JOB/GH MODALS */
+.jmodal-overlay{position:fixed;inset:0;background:rgba(10,22,40,.55);display:flex;align-items:center;justify-content:center;z-index:400;opacity:0;pointer-events:none;transition:opacity .2s}
+.jmodal-overlay.show{opacity:1;pointer-events:all}
+.jmodal{background:#fff;border-radius:var(--radius);box-shadow:0 16px 60px rgba(10,22,40,.3);border:1px solid var(--border);border-top:3px solid var(--gold);width:460px;overflow:hidden}
+.jmodal-head{background:var(--navy2);padding:13px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold)}
+.jmodal-head h3{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.8px}
+.jmodal-close{background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;font-size:18px;line-height:1}
+.jmodal-body{padding:18px}
+.jm-field{margin-bottom:12px}
+.jm-field label{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gray4);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px}
+.jm-input{width:100%;padding:9px 11px;background:#f8faff;border:1.5px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-family:'DM Mono',monospace;font-size:.78rem;outline:none;transition:border-color .15s}
+.jm-input:focus{border-color:var(--blue)}.jm-input::placeholder{color:rgba(123,154,191,.4)}
+.jm-hint{font-family:'DM Mono',monospace;font-size:.52rem;color:var(--gray4);margin-top:3px;line-height:1.7}
+.jmodal-actions{display:flex;gap:8px;justify-content:flex-end;padding:12px 18px;border-top:1px solid var(--border);background:#f8faff}
+.jmbtn{padding:8px 18px;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;cursor:pointer;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--gray);color:var(--text2);transition:all .15s}
+.jmbtn:hover{background:var(--blue-pale);color:var(--blue)}
+.jmbtn.prim{background:linear-gradient(135deg,var(--gold),var(--gold2));border-color:var(--gold);color:var(--navy)}
+.jmbtn.prim:hover{opacity:.88}
+.job-item-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:#f8faff;margin-bottom:7px}
+.ji-name{font-weight:700;font-size:.85rem;color:var(--navy);flex:1}
+.ji-repo{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gray4)}
+.ji-del{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--gray4);background:none;border:1px solid transparent;padding:3px 7px;border-radius:3px;cursor:pointer}
+.ji-del:hover{color:var(--red);border-color:var(--red);background:var(--red-light)}
 /* REPORT BAR */
 .report-bar{background:var(--white);border-bottom:1px solid var(--border);padding:9px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(10,22,40,.06);flex-shrink:0;}
 .rb-left{display:flex;align-items:center;gap:16px;}
@@ -414,6 +440,12 @@ tr:hover .ra{opacity:1;}
         <div class="logo-badge">MM</div>
         <div class="brand-name"><h1>McMann Group Inc.</h1><p>Project Admin Panel · Live Data</p></div>
         <span class="admin-badge">● Admin Mode</span>
+      <div class="job-sel-wrap">
+        <span class="job-sel-lbl">Job:</span>
+        <select class="job-sel" id="job-select" onchange="switchJob(this.value)"></select>
+        <button class="btn-add-job" onclick="openJobModal()">＋ Job</button>
+        <button class="btn-gh-set" onclick="openGhModal()">⚙ GitHub</button>
+      </div>
       </div>
       <div class="hdr-right">
         <div class="hdr-meta"><span class="live-dot"></span>ADMIN ACCESS<br>User: <b>A. McMann</b></div>
@@ -456,28 +488,13 @@ tr:hover .ra{opacity:1;}
       <div class="rb-badge">✓ 2125 Widgeon Rd</div>
     </div>
   </div>
-  <!-- GITHUB SYNC BAR -->
-  <div class="sync-bar" id="sync-bar" style="display:none">
-    <div id="gh-setup-wrap" style="display:flex;align-items:center;gap:10px">
-      <div>
-        <div class="gh-lbl">GitHub Token</div>
-        <input class="gh-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx" style="width:180px"/>
-      </div>
-      <div>
-        <div class="gh-lbl">GitHub Username</div>
-        <input class="gh-input" id="gh-user" type="text" placeholder="your-username" style="width:140px"/>
-      </div>
-      <div>
-        <div class="gh-lbl">Repo Name</div>
-        <input class="gh-input" id="gh-repo" type="text" placeholder="mcmann-widgeon" style="width:140px"/>
-      </div>
-      <button class="sync-btn" onclick="saveGhConfig()" style="margin-top:16px">Save Settings</button>
+  <div class="sync-bar">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span style="font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em">Sync to:</span>
+      <span class="sync-job-nm" id="sync-job-nm">—</span>
     </div>
-    <div id="gh-sync-wrap" style="display:none;align-items:center;gap:12px;flex:1">
-      <div class="sync-status" id="sync-status">● Ready to sync</div>
-      <button class="sync-btn" id="sync-btn" onclick="syncToGitHub()">⬆ Sync to Dashboard</button>
-      <button class="sync-btn" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.62rem;padding:5px 10px;" onclick="resetGhConfig()">⚙ Settings</button>
-    </div>
+    <div class="sync-status" id="sync-status">● Click ⚙ GitHub to configure</div>
+    <button class="sync-btn" id="sync-btn" onclick="syncToGitHub()">⬆ Sync to Dashboard</button>
   </div>
   <div class="body-layout">
     <div class="sidebar">
@@ -524,7 +541,7 @@ function doLogin(){
   if(document.getElementById('pw').value==='admin'){
     document.getElementById('login-screen').style.display='none';
     document.getElementById('app').style.display='flex';
-    loadFromStorage();renderMonthList();if(activeMonth)updateBar();initSyncBar();
+    loadFromStorage();renderMonthList();if(activeMonth)updateBar();initJobs();
   } else {
     var e=document.getElementById('login-err');e.classList.remove('show');void e.offsetWidth;e.classList.add('show');
   }
@@ -541,10 +558,14 @@ function exitAdmin(){
 (function tick(){var n=new Date(),t=n.toTimeString().slice(0,8);document.getElementById('login-clock').textContent=t;setTimeout(tick,1000);})();
 
 // STORAGE
-function save(){try{localStorage.setItem('mcmann_r8',JSON.stringify(reports));localStorage.setItem('mcmann_m8',JSON.stringify(mondayConfig));}catch(e){}}
+function save(){
+  if(!activeJobId)return;
+  try{localStorage.setItem('mcmann_r8_'+activeJobId,JSON.stringify(reports));localStorage.setItem('mcmann_m8',JSON.stringify(mondayConfig));}catch(e){}
+}
 function loadFromStorage(){
-  try{var d=localStorage.getItem('mcmann_r8');if(d)reports=JSON.parse(d);}catch(e){reports={};}
-  try{var m=localStorage.getItem('mcmann_m8');if(m)mondayConfig=JSON.parse(m);}catch(e){}
+  var jid=activeJobId||'widgeon';
+  try{var d=localStorage.getItem('mcmann_r8_'+jid);if(d)reports=JSON.parse(d);else reports={};}catch(e){reports={};}
+  try{var m=localStorage.getItem('mcmann_m8');if(m)mondayConfig=JSON.parse(m);}catch(e){mondayConfig={};}
 }
 
 // UPLOAD
@@ -617,10 +638,9 @@ function renderContent(){
 
 // HELPERS
 var fmtM=function(v){return typeof v==='number'?'$'+v.toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';};
-var fmtN=function(v){return typeof v==='number'?v:0;};
+var fmtN=function(v){if(typeof v==='number')return v;var p=parseFloat(String(v).replace(/[$,]/g,''));return isNaN(p)?0:p;};
 var fmtD=function(v){if(!v||v==='')return'—';if(v instanceof Date)return v.toLocaleDateString('en-CA');if(typeof v==='number'){var d=new Date(Math.round((v-25569)*86400*1000));return d.toLocaleDateString('en-CA');}return v;};
 
-// EXPAND/COLLAPSE ALL
 function expandAll(tableId){
   document.querySelectorAll('#'+tableId+' .cat-row').forEach(function(row){
     var btn=row.querySelector('.expand-btn');
@@ -652,7 +672,6 @@ function toggleGroup(group){
   catRow.classList.toggle('open-row',!isOpen);
   var sub=document.getElementById('sub-'+group);
   if(sub)sub.classList.toggle('hidden',isOpen);
-  // Hide total in group header when expanded, show when collapsed
   var hdrTotal=document.getElementById('tssec-h-'+group)||document.getElementById('vsec-amt-'+group);
   if(hdrTotal){hdrTotal.style.visibility=isOpen?'visible':'hidden';}
 }
@@ -673,7 +692,6 @@ function delCol(idx,tableId){
   showToast('Column deleted');
 }
 
-// ── COSTS ──
 function renderCosts(data){
   if(!data['Cost Breakdown']){document.getElementById('main-content').innerHTML='<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-title">No Cost Breakdown data</div></div>';return;}
   var rows=data['Cost Breakdown'];
@@ -717,8 +735,8 @@ function renderCosts(data){
     var label=(r[0]||'').toString().trim();
     if(!label)return;
     var isSub=label.indexOf('Subtotal')>-1;
-    var isSection=r[1]===''&&!isSub&&label.indexOf('Change Order')<0&&label.indexOf('Mark-up')<0&&label.indexOf('GST')<0&&label.indexOf('PROJECT')<0&&label.indexOf('Project')<0;
     var isTotal=label.indexOf('PROJECT TOTAL')>-1||label.indexOf('Project Subtotal')>-1||label.indexOf('15% Mark')>-1||label.indexOf('GST')>-1;
+    var isSection=r[1]===''&&!isSub&&!isTotal&&label.indexOf('Change Order')<0&&label.indexOf('Credit')<0&&label.indexOf('COLOUR')<0&&label!=='LINE ITEM';
     var over=fmtN(r[6]),co=fmtN(r[7]);
 
     if(isSection){
@@ -776,7 +794,6 @@ function addCostRow(){
   tbody.appendChild(tr);tr.querySelector('input').focus();showToast('Row added');
 }
 
-// ── TIMESHEET ──
 function renderTimesheet(data){
   if(!data['Timesheet']){document.getElementById('main-content').innerHTML='<div class="empty-state"><div class="empty-icon">⏱</div><div class="empty-title">No Timesheet data</div></div>';return;}
   var rows=data['Timesheet'];
@@ -821,7 +838,6 @@ function renderTimesheet(data){
     if(isHeader){
       tsSecId++;tsCurrent='ts'+tsSecId;
       var secHours=0;
-      // calculate total hours for this section from remaining rows
       html+='<tr class="cat-row open-row" onclick="toggleGroup(\''+tsCurrent+'\')">'
         +'<td colspan="3"><button class="expand-btn open" id="btn-'+tsCurrent+'">▶</button><strong>'+col0+'</strong></td>'
         +'<td class="num" id="tssec-h-'+tsCurrent+'" style="font-weight:700;font-size:14px;visibility:hidden">—</td>'
@@ -848,7 +864,6 @@ function renderTimesheet(data){
     +'</div>';
   document.getElementById('main-content').innerHTML=html;
 
-  // Calculate section totals
   document.querySelectorAll('#ts-tbody .cat-row').forEach(function(catRow){
     var btn=catRow.querySelector('.expand-btn');if(!btn)return;
     var g=btn.id.replace('btn-','');
@@ -866,7 +881,6 @@ function addTsRow(){
   tbody.appendChild(tr);tr.querySelector('input').focus();showToast('Row added');
 }
 
-// ── MATERIALS ──
 function renderMaterials(data){
   if(!data['Material']){document.getElementById('main-content').innerHTML='<div class="empty-state"><div class="empty-icon">🏢</div><div class="empty-title">No Materials data</div></div>';return;}
   var rows=data['Material'];
@@ -937,7 +951,6 @@ function renderMaterials(data){
     +'</div>';
   document.getElementById('main-content').innerHTML=html;
 
-  // Calculate vendor totals
   document.querySelectorAll('#mat-tbody .cat-row').forEach(function(catRow){
     var btn=catRow.querySelector('.expand-btn');if(!btn)return;
     var g=btn.id.replace('btn-','');
@@ -955,7 +968,6 @@ function addMatRow(){
   tbody.appendChild(tr);tr.querySelector('input').focus();showToast('Row added');
 }
 
-// ── SCHEDULE ──
 function renderSchedule(){
   var savedKey=mondayConfig.apiKey||'',savedBoard=mondayConfig.boardId||'';
   var html='<div class="monday-card"><h3>Connect monday.com</h3>'
@@ -973,7 +985,6 @@ function renderSchedule(){
   if(mondayItems.length>0)buildGantt(mondayItems);
 }
 
-// ── CALENDAR TAB (standalone) ──
 function renderCalendarTab(){
   var html='<div class="monday-card" id="cal-connect-card">'
     +'<h3>monday.com Calendar</h3>'
@@ -1066,7 +1077,6 @@ function openCalPopup(el){
 }
 function closeCalPopup(){var pp=document.getElementById('cal-popup');if(pp)pp.classList.remove('open');}
 
-// ── GANTT / SCHEDULE ──
 async function connectMonday(){
   var apiKey=document.getElementById('monday-api').value.trim();
   var boardId=document.getElementById('monday-board').value.trim();
@@ -1116,7 +1126,6 @@ function buildGantt(items,boardName){
   var days=[];var d=new Date(minDate);while(d<=maxDate){days.push(new Date(d));d.setDate(d.getDate()+1);}
   var totalDays=days.length;
 
-  // Build phase bars (from original code style)
   var groups={},groupOrder=[];
   parsed.forEach(function(p){var g=p.group||'General';if(!groups[g]){groups[g]={total:0,done:0,start:'',end:''};groupOrder.push(g);}groups[g].total++;if((p.status||'').toLowerCase()==='done')groups[g].done++;if(p.tl){var ss=p.tl.start.toISOString().split('T')[0],ee=p.tl.end.toISOString().split('T')[0];if(!groups[g].start||ss<groups[g].start)groups[g].start=ss;if(!groups[g].end||ee>groups[g].end)groups[g].end=ee;}});
 
@@ -1138,11 +1147,9 @@ function buildGantt(items,boardName){
   });
   phaseHTML+='</div></div>';
 
-  // Only show phase bars — no Gantt table
   document.getElementById('gantt-area').innerHTML=phaseHTML;
 }
 
-// ── REPORT BAR ──
 function updateBar(){
   var bar=document.getElementById('report-bar');
   if(!activeMonth||!reports[activeMonth]){if(bar)bar.style.display='none';return;}
@@ -1174,10 +1181,8 @@ function autoDetectDates(data){
       r.forEach(function(cell){
         if(typeof cell!=='string'&&typeof cell!=='number')return;
         var s=String(cell).trim();
-        // ISO date
         var m1=s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
         if(m1){var d=new Date(m1[1],m1[2]-1,m1[3]);if(!isNaN(d))dates.push(d);return;}
-        // "Apr 8, 2026" or "Apr 8 2026"
         var m2=s.match(/^([A-Z][a-z]{2})\s+(\d{1,2}),?\s+(\d{4})$/);
         if(m2&&monthMap[m2[1]]!==undefined){var d=new Date(+m2[3],monthMap[m2[1]],+m2[2]);if(!isNaN(d))dates.push(d);}
       });
@@ -1207,7 +1212,6 @@ function saveDates(){
   document.getElementById('rb-auto').style.display='none';
   save();
 }
-// ── SIDEBAR RENAME ──
 function startRename(sid,oldKey){
   var nameEl=document.getElementById('mn-'+sid);
   if(!nameEl)return;
@@ -1233,126 +1237,197 @@ function startRename(sid,oldKey){
   inp.addEventListener('blur',function(){setTimeout(commit,100);});
 }
 
-// ── GITHUB SYNC ──
-function initSyncBar(){
-  var bar=document.getElementById('sync-bar');
-  if(bar)bar.style.display='flex';
-  var cfg=loadGhConfig();
-  if(cfg.token&&cfg.user&&cfg.repo){
-    showSyncReady();
-  } else {
-    document.getElementById('gh-setup-wrap').style.display='flex';
-    document.getElementById('gh-sync-wrap').style.display='none';
+function getJobs(){try{return JSON.parse(localStorage.getItem('mm_jobs')||'[]')}catch(e){return[]}}
+function saveJobs(j){localStorage.setItem('mm_jobs',JSON.stringify(j))}
+function getGhCfg(){try{return JSON.parse(localStorage.getItem('mm_gh')||'{}')}catch(e){return{}}}
+function saveGhCfg(g){localStorage.setItem('mm_gh',JSON.stringify(g))}
+
+function initJobs(){
+  var jobs=getJobs();
+  if(!jobs.length){
+    jobs=[{id:'widgeon',name:'2125 Widgeon Rd',repo:'mcmann-widgeon',url:'mmg-widgeon.mcmanngroup.com',client:'Mike and Stacey Bailey'}];
+    saveJobs(jobs);
   }
+  populateJobSel(jobs);
+  var sel=document.getElementById('job-select');
+  if(sel&&sel.value)switchJob(sel.value,true);
+  var gh=getGhCfg();
+  if(gh.token)document.getElementById('gh-token').value=gh.token;
+  if(gh.user)document.getElementById('gh-user').value=gh.user;
+  updateSyncBar();
 }
-function loadGhConfig(){
-  try{return JSON.parse(localStorage.getItem('gh_cfg')||'{}');}catch(e){return{};}
+
+function populateJobSel(jobs){
+  var sel=document.getElementById('job-select');if(!sel)return;
+  var prev=sel.value;
+  sel.innerHTML=jobs.map(function(j){return'<option value="'+j.id+'">'+j.name+'</option>'}).join('');
+  if(prev&&jobs.find(function(j){return j.id===prev}))sel.value=prev;
 }
+
+function switchJob(jobId,skipRender){
+  var jobs=getJobs();
+  var job=jobs.find(function(j){return j.id===jobId})||jobs[0];
+  if(!job)return;
+  activeJobId=jobId;
+  activeJob=job;
+  loadFromStorage();
+  document.getElementById('sync-job-nm').textContent=job.name+' → '+job.repo;
+  if(document.getElementById('rb-badge'))document.getElementById('rb-badge').textContent='✓ '+job.name;
+  activeMonth=null;
+  renderMonthList();
+  if(!skipRender)showEmpty();
+  if(document.getElementById('report-bar'))document.getElementById('report-bar').style.display='none';
+  updateSyncBar();
+}
+
+function openJobModal(){
+  var jobs=getJobs();
+  var wrap=document.getElementById('job-list-wrap');
+  if(!jobs.length){
+    wrap.innerHTML='<div style="font-family:var(--mono);font-size:.6rem;color:var(--gray4);padding:8px">No jobs yet</div>';
+  } else {
+    var html='';
+    jobs.forEach(function(j){
+      html+='<div class="job-item-row">';
+      html+='<div><div class="ji-name">'+j.name+'</div>';
+      html+='<div class="ji-repo">github: '+j.repo+' · '+j.url+'</div></div>';
+      html+='<button class="ji-del" data-id="'+j.id+'" onclick="deleteJob(this.dataset.id)">✕</button>';
+      html+='</div>';
+    });
+    wrap.innerHTML=html;
+  }
+  document.getElementById('job-modal').classList.add('show');
+}
+function closeJobModal(){document.getElementById('job-modal').classList.remove('show')}
+
+function addJob(){
+  var name=document.getElementById('nj-name').value.trim();
+  var repo=document.getElementById('nj-repo').value.trim();
+  var url=document.getElementById('nj-url').value.trim();
+  var client=document.getElementById('nj-client').value.trim();
+  if(!name||!repo){showToast('Enter job name and repo',true);return;}
+  var id=name.toLowerCase().replace(/[^a-z0-9]+/g,'_');
+  var jobs=getJobs();
+  if(jobs.find(function(j){return j.id===id})){showToast('Job already exists',true);return;}
+  jobs.push({id:id,name:name,repo:repo,url:url,client:client});
+  saveJobs(jobs);
+  populateJobSel(jobs);
+  closeJobModal();
+  showToast('Job added: '+name);
+  ['nj-name','nj-repo','nj-url','nj-client'].forEach(function(i){document.getElementById(i).value='';});
+}
+
+function deleteJob(jobId){
+  var jobs=getJobs().filter(function(j){return j.id!==jobId});
+  saveJobs(jobs);populateJobSel(jobs);
+  if(activeJobId===jobId&&jobs.length)switchJob(jobs[0].id);
+  openJobModal();showToast('Job removed');
+}
+
+function openGhModal(){
+  var gh=getGhCfg();
+  document.getElementById('gh-token').value=gh.token||'';
+  document.getElementById('gh-user').value=gh.user||'';
+  document.getElementById('gh-modal').classList.add('show');
+}
+function closeGhModal(){document.getElementById('gh-modal').classList.remove('show')}
+
 function saveGhConfig(){
   var token=document.getElementById('gh-token').value.trim();
   var user=document.getElementById('gh-user').value.trim();
-  var repo=document.getElementById('gh-repo').value.trim();
-  if(!token||!user||!repo){showToast('Fill in all 3 GitHub fields',true);return;}
-  localStorage.setItem('gh_cfg',JSON.stringify({token:token,user:user,repo:repo}));
-  showToast('GitHub settings saved ✓');
-  showSyncReady();
+  if(!token||!user){showToast('Enter both token and username',true);return;}
+  saveGhCfg({token:token,user:user});
+  closeGhModal();updateSyncBar();showToast('GitHub settings saved ✓');
 }
-function resetGhConfig(){
-  document.getElementById('gh-setup-wrap').style.display='flex';
-  document.getElementById('gh-sync-wrap').style.display='none';
-  var cfg=loadGhConfig();
-  if(cfg.token)document.getElementById('gh-token').value=cfg.token;
-  if(cfg.user)document.getElementById('gh-user').value=cfg.user;
-  if(cfg.repo)document.getElementById('gh-repo').value=cfg.repo;
-}
-function showSyncReady(){
-  document.getElementById('gh-setup-wrap').style.display='none';
-  document.getElementById('gh-sync-wrap').style.display='flex';
-  setSyncStatus('● Ready to sync','');
-}
-function setSyncStatus(msg,cls){
-  var el=document.getElementById('sync-status');
-  if(!el)return;
-  el.textContent=msg;
-  el.className='sync-status'+(cls?' '+cls:'');
+
+function updateSyncBar(){
+  var gh=getGhCfg();var s=document.getElementById('sync-status');if(!s)return;
+  if(gh.token&&gh.user){s.textContent='● Ready · '+gh.user;s.className='sync-status ok';}
+  else{s.textContent='● Click ⚙ GitHub to configure sync';s.className='sync-status';}
 }
 
 async function syncToGitHub(){
-  if(!activeMonth||!reports[activeMonth]){showToast('Select a report first',true);return;}
-  var cfg=loadGhConfig();
-  if(!cfg.token||!cfg.user||!cfg.repo){showToast('Configure GitHub settings first',true);resetGhConfig();return;}
-
+  if(!activeJob){showToast('Select a job first',true);return;}
+  if(!activeMonth){showToast('Select a report first',true);return;}
+  var gh=getGhCfg();
+  if(!gh.token||!gh.user){showToast('Configure GitHub first (⚙ GitHub)',true);openGhModal();return;}
   var btn=document.getElementById('sync-btn');
+  var status=document.getElementById('sync-status');
   if(btn){btn.disabled=true;btn.textContent='Syncing...';}
-  setSyncStatus('● Building data...','syncing');
-
+  if(status){status.textContent='● Building data.json...';status.className='sync-status syncing';}
   try{
-    // Build data.json in the shape the dashboard expects
     var data=reports[activeMonth];
+    if(!data)throw new Error('No data for '+activeMonth);
     var payload=buildDashboardPayload(data);
-
-    // Check if file exists to get its SHA (needed for update)
-    var apiBase='https://api.github.com/repos/'+cfg.user+'/'+cfg.repo+'/contents/data.json';
+    var apiBase='https://api.github.com/repos/'+gh.user+'/'+activeJob.repo+'/contents/data.json';
     var sha=null;
-    try{
-      var check=await fetch(apiBase,{headers:{'Authorization':'token '+cfg.token,'Accept':'application/vnd.github.v3+json'}});
-      if(check.ok){var cj=await check.json();sha=cj.sha;}
-    }catch(e){}
-
-    setSyncStatus('● Pushing to GitHub...','syncing');
-
-    // Push data.json
-    var body={message:'Update dashboard data — '+activeMonth,content:btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))))};
+    try{var check=await fetch(apiBase,{headers:{'Authorization':'token '+gh.token,'Accept':'application/vnd.github.v3+json'}});if(check.ok){var cj=await check.json();sha=cj.sha;}}catch(e){}
+    if(status)status.textContent='● Pushing to '+activeJob.repo+'...';
+    var body={message:'Update '+activeJob.name+' — '+activeMonth,content:btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))))};
     if(sha)body.sha=sha;
-
-    var res=await fetch(apiBase,{
-      method:'PUT',
-      headers:{'Authorization':'token '+cfg.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
-      body:JSON.stringify(body)
-    });
-
-    if(!res.ok){
-      var err=await res.json();
-      throw new Error(err.message||'GitHub API error '+res.status);
-    }
-
-    setSyncStatus('✓ Synced — '+activeMonth+' · '+new Date().toLocaleTimeString(),'ok');
-    showToast('Dashboard updated! Live in ~30 seconds');
+    var res=await fetch(apiBase,{method:'PUT',headers:{'Authorization':'token '+gh.token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!res.ok){var err=await res.json();throw new Error(err.message||'GitHub error '+res.status);}
+    if(status){status.textContent='✓ Synced to '+activeJob.repo+' · '+new Date().toLocaleTimeString();status.className='sync-status ok';}
+    showToast(activeJob.name+' dashboard live in ~30 seconds ✓');
     if(btn){btn.disabled=false;btn.textContent='⬆ Sync to Dashboard';}
-
   }catch(e){
-    setSyncStatus('✗ Failed: '+e.message,'err');
+    if(status){status.textContent='✗ Failed: '+e.message;status.className='sync-status err';}
     showToast('Sync failed: '+e.message,true);
     if(btn){btn.disabled=false;btn.textContent='⬆ Sync to Dashboard';}
   }
 }
 
 function buildDashboardPayload(data){
-  // The dashboard renderDashboard() expects:
-  // { estimate:[], timesheet:[], materials:[], schedule:[], updated:'' }
-  // estimate = Cost Breakdown rows (same column structure)
-  // We map our Excel sheets directly
+  function n(v){return typeof v==='number'?v:parseFloat(v)||0;}
+  function s(v){return String(v||'').trim();}
+  function fd(v){
+    if(!v||s(v)===''||s(v)==='nan')return'';
+    var ms=s(v).match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(ms){var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return mo[+ms[2]-1]+' '+parseInt(ms[3])+', '+ms[1];}
+    return s(v);
+  }
+  var categories=[],projectTotals=[],cur=null;
+  (data['Cost Breakdown']||[]).forEach(function(r){
+    var label=s(r[0]);if(!label||label==='LINE ITEM'||label==='COLOUR LEGEND')return;
+    var b=n(r[1]),curInv=n(r[3]),totInv=n(r[4]),tbc=n(r[5]),ob=n(r[6]),co=n(r[7]);
+    if(label==='Project Subtotal'||label.indexOf('Mark-up')>-1||label.indexOf('GST')>-1||label==='PROJECT TOTAL'){projectTotals.push({label:label,budget:b,curInv:curInv,totInv:totInv,tbc:tbc,ob:ob,co:co});return;}
+    if(label===label.toUpperCase()&&!b&&!totInv){cur={label:label,items:[],subtotal:{}};categories.push(cur);return;}
+    if(label.indexOf('Subtotal')>-1||label.indexOf('SUBTOTAL')>-1){if(cur)cur.subtotal={label:label,budget:b,curInv:curInv,totInv:totInv,tbc:tbc,ob:ob,co:co};return;}
+    if(cur){var type='detail';if(label.indexOf('Change Order')>-1||label.indexOf('Credit')>-1)type='co';cur.items.push({label:label,type:type,budget:b,curInv:curInv,totInv:totInv,tbc:tbc,ob:ob,co:co});}
+  });
+  var tsGroups=[],curTs=null,tsTotH=0,tsTotA=0;
+  (data['Timesheet']||[]).forEach(function(r){
+    var label=s(r[0]),name=s(r[2]),hours=n(r[4]),amount=n(r[6]);
+    if(!label&&!name)return;if(label==='LINE ITEM')return;
+    if(label==='Total Timesheet'){tsTotH=hours;tsTotA=amount;return;}
+    if(label&&!name){if(label.startsWith('Total')){if(curTs){curTs.total_hours=hours;curTs.total_amount=amount;}}else{curTs={label:label,items:[],total_hours:0,total_amount:0};tsGroups.push(curTs);}}
+    else if(name&&curTs){curTs.items.push({date:fd(r[1]),name:name,status:s(r[3]),hours:hours,rate:n(r[5]),amount:amount});}
+  });
+  var vendors=[],curV=null,grandTotal=0;
+  (data['Material']||[]).forEach(function(r){
+    var c0=r[0],c0s=(c0===null||c0===undefined||String(c0)==='nan')?'':s(String(c0));
+    var type=s(r[1]);var isBill=(c0===null||c0===undefined||c0s==='')&&type==='Bill';
+    if(['Vendor Detail','PROJECT','CLIENT','DATE / PREP','LINE ITEM'].some(function(x){return c0s.startsWith(x)}))return;
+    if(!c0s&&!isBill)return;
+    if(c0s.startsWith('Total Vendor')){grandTotal=n(r[5]);return;}
+    if(c0s.startsWith('Total ')&&!isBill){if(curV)curV.total=n(r[5]);return;}
+    if(c0s&&!isBill&&!c0s.startsWith('Total')){curV={name:c0s,bills:[],total:0};vendors.push(curV);return;}
+    if(isBill&&curV){curV.bills.push({date:fd(r[2]),num:s(r[3]),memo:s(r[4]),amount:n(r[5])});}
+  });
   var now=new Date();
-  var updated=now.toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'});
-
-  // Get monday config for schedule
-  var mondayCfg={};
-  try{mondayCfg=JSON.parse(localStorage.getItem('mcmann_m8')||'{}');}catch(e){}
-
-  return {
-    estimate: data['Cost Breakdown']||[],
-    timesheet: data['Timesheet']||[],
-    materials: data['Material']||[],
-    schedule: mondayItems||[],
-    updated: updated,
-    _meta:{
-      report: activeMonth,
-      dateFrom: data.dateFrom||'',
-      dateTo: data.dateTo||'',
-      syncedAt: now.toISOString()
-    }
+  return{
+    job:activeJob.name,client:activeJob.client||'',
+    updated:now.toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'}),
+    costBreakdown:{categories:categories,totals:projectTotals},
+    timesheet:{groups:tsGroups,totalHours:tsTotH||tsGroups.reduce(function(s,g){return s+g.total_hours},0),totalAmount:tsTotA},
+    materials:{vendors:vendors,grandTotal:grandTotal},
+    schedule:mondayItems||[],
+    _meta:{report:activeMonth,dateFrom:data.dateFrom||'',dateTo:data.dateTo||'',jobId:activeJob.id,jobRepo:activeJob.repo,syncedAt:now.toISOString()}
   };
 }
+
+var activeJobId = 'widgeon';
+var activeJob = {id:'widgeon',name:'2125 Widgeon Rd',repo:'mcmann-widgeon',url:'mmg-widgeon.mcmanngroup.com',client:'Mike and Stacey Bailey'};
 
 // TOAST
 function showToast(msg,isErr){
@@ -1372,5 +1447,42 @@ zone.addEventListener('drop',function(e){
   if(f){var dt=new DataTransfer();dt.items.add(f);document.getElementById('file-input').files=dt.files;handleUpload({target:{files:dt.files,value:''}});}
 });
 </script>
+
+<!-- JOB MODAL -->
+<div class="jmodal-overlay" id="job-modal">
+  <div class="jmodal">
+    <div class="jmodal-head"><h3>Manage Jobs</h3><button class="jmodal-close" onclick="closeJobModal()">×</button></div>
+    <div class="jmodal-body">
+      <div id="job-list-wrap" style="margin-bottom:14px"></div>
+      <div style="border-top:1px solid var(--border);padding-top:14px">
+        <div style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gray4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Add New Job</div>
+        <div class="jm-field"><label>Job Name</label><input class="jm-input" id="nj-name" placeholder="e.g. Dorman Residence"/><div class="jm-hint">Shown in the job selector dropdown</div></div>
+        <div class="jm-field"><label>GitHub Repo</label><input class="jm-input" id="nj-repo" placeholder="e.g. mcmann-dorman"/><div class="jm-hint">mcmanngroup/<strong>mcmann-dorman</strong></div></div>
+        <div class="jm-field"><label>Dashboard URL</label><input class="jm-input" id="nj-url" placeholder="e.g. mmg-dorman.mcmanngroup.com"/></div>
+        <div class="jm-field"><label>Client Name</label><input class="jm-input" id="nj-client" placeholder="e.g. John and Jane Dorman"/></div>
+      </div>
+    </div>
+    <div class="jmodal-actions">
+      <button class="jmbtn" onclick="closeJobModal()">Cancel</button>
+      <button class="jmbtn prim" onclick="addJob()">Add Job</button>
+    </div>
+  </div>
+</div>
+
+<!-- GH MODAL -->
+<div class="jmodal-overlay" id="gh-modal">
+  <div class="jmodal">
+    <div class="jmodal-head"><h3>GitHub Sync Settings</h3><button class="jmodal-close" onclick="closeGhModal()">×</button></div>
+    <div class="jmodal-body">
+      <p style="font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gray4);line-height:1.9;margin-bottom:14px">Shared across all jobs. Token needs <strong>repo</strong> scope.<br>Get at: github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)</p>
+      <div class="jm-field"><label>GitHub Token</label><input class="jm-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxx"/></div>
+      <div class="jm-field"><label>GitHub Username / Org</label><input class="jm-input" id="gh-user" placeholder="mcmanngroup"/></div>
+    </div>
+    <div class="jmodal-actions">
+      <button class="jmbtn" onclick="closeGhModal()">Cancel</button>
+      <button class="jmbtn prim" onclick="saveGhConfig()">Save</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
