@@ -2708,11 +2708,11 @@
     }
   ],
   "_meta": {
-    "report": "May 2026",
+    "report": "April 2026",
     "dateFrom": "2026-04-01",
-    "dateTo": "2026-05-30",
+    "dateTo": "2026-04-30",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-05-26T07:13:32.922Z"
+    "syncedAt": "2026-05-26T07:17:01.702Z"
   }
 }
