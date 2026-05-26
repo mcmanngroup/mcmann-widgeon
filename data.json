@@ -102,7 +102,7 @@
             "curInv": 6537.4,
             "totInv": 6537.4,
             "tbc": 0,
-            "ob": -2537.4,
+            "ob": -2537.3999999999996,
             "co": 0
           },
           {
@@ -132,7 +132,7 @@
           "curInv": 13283.55,
           "totInv": 13283.55,
           "tbc": 9053.85,
-          "ob": -2537.4,
+          "ob": -2537.3999999999996,
           "co": 1800
         }
       },
@@ -306,10 +306,10 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34,
+          "budget": 71839.34000000001,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 71839.34,
+          "tbc": 71839.34000000001,
           "ob": 0,
           "co": 0
         }
@@ -390,10 +390,10 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.77,
+          "budget": 124747.76999999999,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 124747.77,
+          "tbc": 124747.76999999999,
           "ob": 0,
           "co": 0
         }
@@ -424,10 +424,10 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.38,
+          "budget": 32181.379999999997,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.38,
+          "tbc": 32181.379999999997,
           "ob": 0,
           "co": 0
         }
@@ -802,10 +802,10 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84,
+          "budget": 77167.84000000001,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84,
+          "tbc": 77167.84000000001,
           "ob": 0,
           "co": 0
         }
@@ -1523,8 +1523,8 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "curInv": 5906.2,
-          "totInv": 5906.2,
+          "curInv": 5906.200000000001,
+          "totInv": 5906.200000000001,
           "tbc": 31893.8,
           "ob": 0,
           "co": 0
@@ -1572,21 +1572,11 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
-          },
-          {
-            "label": "COLOUR LEGEND",
-            "type": "detail",
-            "budget": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 0,
-            "ob": 0,
-            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.48,
+          "budget": 39028.479999999996,
           "curInv": 435.6,
           "totInv": 435.6,
           "tbc": 38592.88,
@@ -1607,30 +1597,30 @@
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.95,
-        "curInv": 1504999.1,
-        "totInv": 1504999.1,
-        "tbc": 171111.74,
-        "ob": -1500374.61,
-        "co": 809.56
+        "budget": 175877.94749999998,
+        "curInv": 1504999.1039999998,
+        "totInv": 1504999.1039999998,
+        "tbc": 171111.7425,
+        "ob": -1500374.6099999999,
+        "co": 809.5590000000001
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.88,
-        "curInv": 577544.7,
-        "totInv": 577544.7,
-        "tbc": 65592.83,
-        "ob": -575454.89,
-        "co": 310.33
+        "budget": 67419.879875,
+        "curInv": 577544.7007,
+        "totInv": 577544.7007,
+        "tbc": 65592.834625,
+        "ob": -575454.888,
+        "co": 310.33095000000003
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.48,
-        "curInv": 12128438.71,
-        "totInv": 12128438.71,
-        "tbc": 1377449.53,
-        "ob": -12084552.65,
-        "co": 6516.95
+        "budget": 1415817.477375,
+        "curInv": 12128438.7147,
+        "totInv": 12128438.7147,
+        "tbc": 1377449.5271249998,
+        "ob": -12084552.648,
+        "co": 6516.94995
       }
     ]
   },
@@ -1640,308 +1630,308 @@
         "label": "Project Managment",
         "items": [
           {
-            "date": "45783",
+            "date": "May 5, 2025",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 90,
-            "amount": 270
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45791",
+            "date": "May 13, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 90,
-            "amount": 135
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45798",
+            "date": "May 20, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 90,
-            "amount": 135
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45807",
+            "date": "May 29, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 4,
-            "rate": 90,
-            "amount": 360
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45810",
+            "date": "Jun 1, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.68,
-            "rate": 90,
-            "amount": 151.2
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45811",
+            "date": "Jun 2, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 5.17,
-            "rate": 90,
-            "amount": 465.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45812",
+            "date": "Jun 3, 2025",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4,
-            "rate": 90,
-            "amount": 360
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45812",
+            "date": "Jun 3, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3.33,
-            "rate": 90,
-            "amount": 299.7
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45812",
+            "date": "Jun 3, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.67,
-            "rate": 90,
-            "amount": 150.29999999999998
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45813",
+            "date": "Jun 4, 2025",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 5,
-            "rate": 90,
-            "amount": 450
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45813",
+            "date": "Jun 4, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.17,
-            "rate": 90,
-            "amount": 195.29999999999998
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45824",
+            "date": "Jun 15, 2025",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 90,
-            "amount": 270
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45826",
+            "date": "Jun 17, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 4.5,
-            "rate": 90,
-            "amount": 405
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45830",
+            "date": "Jun 21, 2025",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 5.67,
-            "rate": 90,
-            "amount": 510.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45835",
+            "date": "Jun 26, 2025",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4.83,
-            "rate": 90,
-            "amount": 434.7
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45835",
+            "date": "Jun 26, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 3.67,
-            "rate": 90,
-            "amount": 330.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45925",
+            "date": "Sep 24, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 90,
-            "amount": 270
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45932",
+            "date": "Oct 1, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 5.67,
-            "rate": 90,
-            "amount": 510.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45938",
+            "date": "Oct 7, 2025",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 90,
-            "amount": 180
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45939",
+            "date": "Oct 8, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 2.67,
-            "rate": 90,
-            "amount": 240.29999999999998
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45945",
+            "date": "Oct 14, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.33,
-            "rate": 90,
-            "amount": 209.70000000000002
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45945",
+            "date": "Oct 14, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 5.83,
-            "rate": 90,
-            "amount": 524.7
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45947",
+            "date": "Oct 16, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 1.83,
-            "rate": 90,
-            "amount": 164.70000000000002
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45952",
+            "date": "Oct 21, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.33,
-            "rate": 90,
-            "amount": 209.70000000000002
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45974",
+            "date": "Nov 12, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.17,
-            "rate": 90,
-            "amount": 195.29999999999998
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45979",
+            "date": "Nov 17, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 0.33,
-            "rate": 90,
-            "amount": 29.700000000000003
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "45994",
+            "date": "Dec 2, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 6.33,
-            "rate": 90,
-            "amount": 569.7
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46000",
+            "date": "Dec 8, 2025",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 90,
-            "amount": 105.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46003",
+            "date": "Dec 11, 2025",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 4.5,
-            "rate": 90,
-            "amount": 405
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46007",
+            "date": "Dec 15, 2025",
             "name": "Kevin Mammen",
             "status": "Unbilled",
             "hours": 3.67,
-            "rate": 90,
-            "amount": 330.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46043",
+            "date": "Jan 20, 2026",
             "name": "Abdullah Ibn Alamir",
             "status": "Unbilled",
             "hours": 0.67,
-            "rate": 90,
-            "amount": 60.300000000000004
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46129",
+            "date": "Apr 16, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 3,
-            "rate": 90,
-            "amount": 270
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46132",
+            "date": "Apr 19, 2026",
             "name": "Russell McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 90,
-            "amount": 180
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46132",
+            "date": "Apr 19, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2,
-            "rate": 90,
-            "amount": 180
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46134",
+            "date": "Apr 21, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.5,
-            "rate": 90,
-            "amount": 135
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46140",
+            "date": "Apr 27, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.08,
-            "rate": 90,
-            "amount": 187.20000000000002
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46141",
+            "date": "Apr 28, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 2.25,
-            "rate": 90,
-            "amount": 202.5
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46142",
+            "date": "Apr 29, 2026",
             "name": "James McMann",
             "status": "Unbilled",
-            "hours": 1.1600000000000001,
-            "rate": 90,
-            "amount": 104.4
+            "hours": 1.16,
+            "rate": 0,
+            "amount": 0
           }
         ],
         "total_hours": 113.18,
@@ -1951,36 +1941,36 @@
         "label": "Travel Time",
         "items": [
           {
-            "date": "46129",
+            "date": "Apr 16, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.33,
-            "rate": 90,
-            "amount": 119.7
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46132",
+            "date": "Apr 19, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 90,
-            "amount": 105.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46134",
+            "date": "Apr 21, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 90,
-            "amount": 105.3
+            "rate": 0,
+            "amount": 0
           },
           {
-            "date": "46142",
+            "date": "Apr 29, 2026",
             "name": "James McMann",
             "status": "Unbilled",
             "hours": 1.17,
-            "rate": 90,
-            "amount": 105.3
+            "rate": 0,
+            "amount": 0
           }
         ],
         "total_hours": 4.84,
@@ -2115,13 +2105,614 @@
     ],
     "grandTotal": 39553.11
   },
-  "schedule": [],
+  "schedule": [
+    {
+      "name": "Building Permit Application",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Complete WCB NOP & Post On Site",
+      "group": "Pre-Construction",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Full Size, Waterproof, Colour Plans Printed for Site",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Portable Washroom Rental",
+      "group": "Pre-Construction",
+      "status": "Working on it",
+      "timeline": ""
+    },
+    {
+      "name": "Private Pole Installation",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Lot Clearing",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "McMann Group Start Excavation Layout Checklist",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Excavation",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": "2026-04-22 - 2026-04-30"
+    },
+    {
+      "name": "Schedule Backfill & Slab Prep",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": "2026-05-18 - 2026-05-18"
+    },
+    {
+      "name": "McMann Group Backfill Checklist",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-05-23 - 2026-05-23"
+    },
+    {
+      "name": "Backfill",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-06-19 - 2026-06-21"
+    },
+    {
+      "name": "Septic Field Install",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-05-28 - 2026-05-29"
+    },
+    {
+      "name": "Complete Footings Material Take Offs & Order Materials",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-04-30 - 2026-04-30"
+    },
+    {
+      "name": "Book Footings Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Footings Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-07"
+    },
+    {
+      "name": "Footings Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-08 - 2026-05-08"
+    },
+    {
+      "name": "McMann Group Footings Checklist",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-07 - 2026-05-07"
+    },
+    {
+      "name": "Book Footings Inspection & Engineer Field Review",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Schedule Foundation Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Schedule Foundation Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-07 - 2026-05-07"
+    },
+    {
+      "name": "Foundation Wall Forming Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-11 - 2026-05-20"
+    },
+    {
+      "name": "Foundation Wall Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "McMann Group Foundation Inspection Checklist",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-20 - 2026-05-20"
+    },
+    {
+      "name": "Invoice Foundation Draw As Per Contract",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Schedule Damproofing",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Damproofing",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-27 - 2026-05-27"
+    },
+    {
+      "name": "Schedule Perimeter Drain & RWL",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Perimeter Drain & RWL Install",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-28 - 2026-05-29"
+    },
+    {
+      "name": "McMann Group Services Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-01 - 2026-06-01"
+    },
+    {
+      "name": "Book Drainage Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Drainage, Storm & Sewer Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Plumbing Underslab",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-11 - 2026-06-11"
+    },
+    {
+      "name": "Schedule Underslab Plumbing Labour",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-28 - 2026-05-28"
+    },
+    {
+      "name": "McMann Group Underslab Plumbing & Poly Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Book Underslab Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-11 - 2026-06-11"
+    },
+    {
+      "name": "McMann Group Slab Prep Checklist",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-17 - 2026-06-17"
+    },
+    {
+      "name": "Slab Prep",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-08 - 2026-06-08"
+    },
+    {
+      "name": "Schedule Slab / Ground Seal Concrete Pour",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-10 - 2026-06-10"
+    },
+    {
+      "name": "Pour Concrete Slab / Ground Seal",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-18 - 2026-06-18"
+    },
+    {
+      "name": "Book Slab Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-17 - 2026-06-17"
+    },
+    {
+      "name": "Order Any Required Engineering Components",
+      "group": "Framing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Crawl Space Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-15"
+    },
+    {
+      "name": "Crawl Space Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-22 - 2026-06-23"
+    },
+    {
+      "name": "Order Main Floor Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-24 - 2026-06-24"
+    },
+    {
+      "name": "Main Floor Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-24 - 2026-07-08"
+    },
+    {
+      "name": "Install Timber Frame",
+      "group": "Framing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Second Floor Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-09 - 2026-07-09"
+    },
+    {
+      "name": "Second Floor Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-09 - 2026-07-12"
+    },
+    {
+      "name": "Schedule Roof Truss & Floor System Delivery",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-13 - 2026-07-13"
+    },
+    {
+      "name": "Roof System Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-13 - 2026-07-20"
+    },
+    {
+      "name": "McMann Group Framing & Rough Ins Inspection",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Schedule Engineer Framing Field Review",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Book Framing Inspection",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-08-15 - 2026-08-15"
+    },
+    {
+      "name": "Invoice Framing Draw As Per Contract",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-22 - 2026-07-22"
+    },
+    {
+      "name": "Order Skylights",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-23 - 2026-07-23"
+    },
+    {
+      "name": "Order Windows",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Install Windows",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-30 - 2026-07-30"
+    },
+    {
+      "name": "Order & Schedule Exterior Doors Delivery",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Install Exterior Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-31 - 2026-07-31"
+    },
+    {
+      "name": "Order Garage Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Schedule Garage Door Installation",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Install Garage Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-09-25 - 2026-09-25"
+    },
+    {
+      "name": "Order & Schedule Interior Doors Delivery",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-05-29 - 2026-05-29"
+    },
+    {
+      "name": "Install Interior Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-10-18 - 2026-10-18"
+    },
+    {
+      "name": "Install Door Hardware",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-11-16 - 2026-11-16"
+    },
+    {
+      "name": "Schedule Walkthrough with Clients to Confirm Location of Plugs, Lights, Switches",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Schedule Electrical Rough In",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Electrical Rough In",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-08-07 - 2026-08-14"
+    },
+    {
+      "name": "Select Light Fixtures with Clients & Order",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-08-15 - 2026-08-15"
+    },
+    {
+      "name": "Schedule Electrical Finish",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Electrical Finish",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Electrician Has Called for Final Inspection",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Electrical Final Inspection",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Fixture Package Selection Meeting with Clients, Place Order",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-05-20 - 2026-05-20"
+    },
+    {
+      "name": "Schedule Plumbing Rough In",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-07-22 - 2026-07-22"
+    },
+    {
+      "name": "Plumbing Rough In",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-07-28 - 2026-08-01"
+    },
+    {
+      "name": "Book Plumbing Rough In Inspection",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Plumbing Rough In Inspection",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Water Treatment System",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Plumbing Finish",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Plumbing Finish",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Fireplace Selection with Clients, Place Order",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Mechanical Rough In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-07-23 - 2026-07-23"
+    },
+    {
+      "name": "Mechanical Rough In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-06"
+    },
+    {
+      "name": "Install Fireplace",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Schedule Mechanical Finish",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Gas Fitters for Gas Hook Up",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Call Fortis BC to Schedule Gas Tie In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Gas / Propane Final Tie In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Mechanical Finish",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Gas Final Permit Has Been Filed / Called For",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Insulation & Vapour Barrier Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Insulation & Vapour Barrier Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-23 - 2026-08-25"
+    },
+    {
+      "name": "Book Insulation & Vapour Barrier Inspection",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-25 - 2026-08-25"
+    },
+    {
+      "name": "Schedule Drywall Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-19 - 2026-08-19"
+    },
+    {
+      "name": "Drywall Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-26 - 2026-09-10"
+    },
+    {
+      "name": "McMann Group Drywall Inspection",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Invoice Drywall Draw As Per Contract",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-09-14 - 2026-09-14"
+    },
+    {
+      "name": "Have Clients Select Roofing",
+      "group": "Roofing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Roofers",
+      "group": "Roofing",
+      "status": "",
+      "timeline": "2026-07-14 - 2026-07-14"
+    }
+  ],
   "_meta": {
     "report": "April 2026",
     "dateFrom": "2026-04-01",
     "dateTo": "2026-04-30",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-05-26T16:04:29.127Z"
+    "syncedAt": "2026-05-26T16:07:02.025Z"
   }
 }
