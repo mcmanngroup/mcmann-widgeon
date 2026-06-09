@@ -50,10 +50,10 @@
             "label": "Home Warranty Registration & Fees",
             "type": "detail",
             "budget": 11250,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 11250,
-            "ob": 0,
+            "curInv": 1000000,
+            "totInv": 1000000,
+            "tbc": 0,
+            "ob": -988750,
             "co": 0
           },
           {
@@ -70,10 +70,10 @@
         "subtotal": {
           "label": "PERMITS & HOME WARRANTY — Subtotal",
           "budget": 19790,
-          "curInv": 14725.75,
-          "totInv": 14725.75,
-          "tbc": 11290,
-          "ob": -6225.75,
+          "curInv": 1014725.75,
+          "totInv": 1014725.75,
+          "tbc": 40,
+          "ob": -994975.75,
           "co": 0
         }
       },
@@ -1604,37 +1604,37 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "curInv": 45894.91,
-        "totInv": 45894.91,
-        "tbc": 1140784.95,
-        "ob": -8763.15,
+        "curInv": 1045894.91,
+        "totInv": 1045894.91,
+        "tbc": 1129534.95,
+        "ob": -997513.15,
         "co": 5397.06
       },
       {
         "label": "15% Mark-up",
         "budget": 175877.95,
-        "curInv": 4999.1,
-        "totInv": 4999.1,
-        "tbc": 171117.74,
-        "ob": -380.61,
+        "curInv": 154999.1,
+        "totInv": 154999.1,
+        "tbc": 169430.24,
+        "ob": -148693.11,
         "co": 809.56
       },
       {
         "label": "GST (5%)",
         "budget": 67419.88,
-        "curInv": 2544.7,
-        "totInv": 2544.7,
-        "tbc": 65595.13,
-        "ob": -457.19,
+        "curInv": 60044.7,
+        "totInv": 60044.7,
+        "tbc": 64948.26,
+        "ob": -57310.31,
         "co": 310.33
       },
       {
         "label": "PROJECT TOTAL",
         "budget": 1415817.48,
-        "curInv": 53438.71,
-        "totInv": 53438.71,
-        "tbc": 1377497.83,
-        "ob": -9600.95,
+        "curInv": 1260938.71,
+        "totInv": 1260938.71,
+        "tbc": 1363913.45,
+        "ob": -1203516.57,
         "co": 6516.95
       }
     ]
@@ -2127,6 +2127,6 @@
     "dateTo": "",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-09T22:01:57.312Z"
+    "syncedAt": "2026-06-09T22:04:54.504Z"
   }
 }
