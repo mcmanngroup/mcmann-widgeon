@@ -5,7 +5,7 @@
   "clientPhone": "",
   "projectAddress": "",
   "projectManager": "A. McMann",
-  "reportLabel": "",
+  "reportLabel": "October 1, 2025 – May 31, 2026",
   "updated": "June 16, 2026",
   "costBreakdown": {
     "categories": [
@@ -2262,7 +2262,1004 @@
     ],
     "grandTotal": 39553.11
   },
-  "schedule": [],
+  "schedule": [
+    {
+      "name": "Building Permit Application",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Complete WCB NOP & Post On Site",
+      "group": "Pre-Construction",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Full Size, Waterproof, Colour Plans Printed for Site",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Portable Washroom Rental",
+      "group": "Pre-Construction",
+      "status": "Working on it",
+      "timeline": ""
+    },
+    {
+      "name": "Private Pole Installation",
+      "group": "Pre-Construction",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Lot Clearing",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "McMann Group Start Excavation Layout Checklist",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": ""
+    },
+    {
+      "name": "Excavation",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": "2026-04-22 - 2026-04-30"
+    },
+    {
+      "name": "Schedule Backfill & Slab Prep",
+      "group": "Excavation",
+      "status": "Done",
+      "timeline": "2026-05-18 - 2026-05-18"
+    },
+    {
+      "name": "McMann Group Backfill Checklist",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-06-12 - 2026-06-12"
+    },
+    {
+      "name": "Backfill",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-06-19 - 2026-06-21"
+    },
+    {
+      "name": "Septic Field Install",
+      "group": "Excavation",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-16"
+    },
+    {
+      "name": "Complete Footings Material Take Offs & Order Materials",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-04-30 - 2026-04-30"
+    },
+    {
+      "name": "Book Footings Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Footings Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-07"
+    },
+    {
+      "name": "Footings Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-08 - 2026-05-08"
+    },
+    {
+      "name": "McMann Group Footings Checklist",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-07 - 2026-05-07"
+    },
+    {
+      "name": "Book Footings Inspection & Engineer Field Review",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Schedule Foundation Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-06 - 2026-05-06"
+    },
+    {
+      "name": "Schedule Foundation Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-07 - 2026-05-07"
+    },
+    {
+      "name": "Foundation Wall Forming Labour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-11 - 2026-05-20"
+    },
+    {
+      "name": "Foundation Wall Concrete Pour",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "McMann Group Foundation Inspection Checklist",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-20 - 2026-05-20"
+    },
+    {
+      "name": "Invoice Foundation Draw As Per Contract",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Schedule Damproofing",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Damproofing",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-27 - 2026-05-27"
+    },
+    {
+      "name": "Schedule Perimeter Drain & RWL",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-21 - 2026-05-21"
+    },
+    {
+      "name": "Perimeter Drain & RWL Install",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-05-28 - 2026-06-03"
+    },
+    {
+      "name": "McMann Group Services Inspection",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-06-01 - 2026-06-01"
+    },
+    {
+      "name": "Book Drainage Inspection",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-06-03 - 2026-06-03"
+    },
+    {
+      "name": "Drainage, Storm & Sewer Inspection",
+      "group": "Foundation",
+      "status": "Done",
+      "timeline": "2026-06-04 - 2026-06-04"
+    },
+    {
+      "name": "Plumbing Underslab",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-12 - 2026-06-12"
+    },
+    {
+      "name": "Schedule Underslab Plumbing Labour",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-09 - 2026-06-09"
+    },
+    {
+      "name": "McMann Group Underslab Plumbing & Poly Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-12 - 2026-06-12"
+    },
+    {
+      "name": "Book Underslab Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-11 - 2026-06-11"
+    },
+    {
+      "name": "McMann Group Slab Prep Checklist",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-17 - 2026-06-17"
+    },
+    {
+      "name": "Slab Prep",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-15"
+    },
+    {
+      "name": "Schedule Slab / Ground Seal Concrete Pour",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-13 - 2026-06-13"
+    },
+    {
+      "name": "Pour Concrete Slab / Ground Seal",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-18 - 2026-06-18"
+    },
+    {
+      "name": "Book Slab Inspection",
+      "group": "Foundation",
+      "status": "",
+      "timeline": "2026-06-17 - 2026-06-17"
+    },
+    {
+      "name": "Order Any Required Engineering Components",
+      "group": "Framing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Crawl Space Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-15"
+    },
+    {
+      "name": "Crawl Space Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-22 - 2026-06-23"
+    },
+    {
+      "name": "Order Main Floor Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-24 - 2026-06-24"
+    },
+    {
+      "name": "Main Floor Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-06-24 - 2026-07-08"
+    },
+    {
+      "name": "Install Timber Frame",
+      "group": "Framing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Second Floor Framing Package",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-09 - 2026-07-09"
+    },
+    {
+      "name": "Second Floor Framing Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-09 - 2026-07-12"
+    },
+    {
+      "name": "Schedule Roof Truss & Floor System Delivery",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-13 - 2026-07-13"
+    },
+    {
+      "name": "Roof System Labour",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-13 - 2026-07-20"
+    },
+    {
+      "name": "McMann Group Framing & Rough Ins Inspection",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Schedule Engineer Framing Field Review",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Book Framing Inspection",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-08-15 - 2026-08-15"
+    },
+    {
+      "name": "Invoice Framing Draw As Per Contract",
+      "group": "Framing",
+      "status": "",
+      "timeline": "2026-07-22 - 2026-07-22"
+    },
+    {
+      "name": "Order Skylights",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-23 - 2026-07-23"
+    },
+    {
+      "name": "Order Windows",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-15"
+    },
+    {
+      "name": "Install Windows",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-30 - 2026-07-30"
+    },
+    {
+      "name": "Order & Schedule Exterior Doors Delivery",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-06-15 - 2026-06-15"
+    },
+    {
+      "name": "Install Exterior Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-31 - 2026-07-31"
+    },
+    {
+      "name": "Order Garage Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-06-22 - 2026-06-22"
+    },
+    {
+      "name": "Schedule Garage Door Installation",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Install Garage Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-09-25 - 2026-09-25"
+    },
+    {
+      "name": "Order & Schedule Interior Doors Delivery",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-07-13 - 2026-07-13"
+    },
+    {
+      "name": "Install Interior Doors",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-10-18 - 2026-10-18"
+    },
+    {
+      "name": "Install Door Hardware",
+      "group": "Windows & Doors",
+      "status": "",
+      "timeline": "2026-11-16 - 2026-11-16"
+    },
+    {
+      "name": "Schedule Walkthrough with Clients to Confirm Location of Plugs, Lights, Switches",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Schedule Electrical Rough In",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Electrical Rough In",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-08-07 - 2026-08-14"
+    },
+    {
+      "name": "Select Light Fixtures with Clients & Order",
+      "group": "Electrical",
+      "status": "",
+      "timeline": "2026-08-15 - 2026-08-15"
+    },
+    {
+      "name": "Schedule Electrical Finish",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Electrical Finish",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Electrician Has Called for Final Inspection",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Electrical Final Inspection",
+      "group": "Electrical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Fixture Package Selection Meeting with Clients, Place Order",
+      "group": "Plumbing",
+      "status": "Done",
+      "timeline": "2026-05-20 - 2026-05-20"
+    },
+    {
+      "name": "Schedule Plumbing Rough In",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-07-22 - 2026-07-22"
+    },
+    {
+      "name": "Plumbing Rough In",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-07-28 - 2026-08-01"
+    },
+    {
+      "name": "Book Plumbing Rough In Inspection",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Plumbing Rough In Inspection",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Water Treatment System",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Plumbing Finish",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Plumbing Finish",
+      "group": "Plumbing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Fireplace Selection with Clients, Place Order",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Mechanical Rough In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-07-23 - 2026-07-23"
+    },
+    {
+      "name": "Mechanical Rough In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-06"
+    },
+    {
+      "name": "Install Fireplace",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Schedule Mechanical Finish",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Gas Fitters for Gas Hook Up",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Call Fortis BC to Schedule Gas Tie In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Gas / Propane Final Tie In",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Mechanical Finish",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Confirm Gas Final Permit Has Been Filed / Called For",
+      "group": "HVAC/Mechanical",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Insulation & Vapour Barrier Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-07-21 - 2026-07-21"
+    },
+    {
+      "name": "Insulation & Vapour Barrier Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-23 - 2026-08-25"
+    },
+    {
+      "name": "Book Insulation & Vapour Barrier Inspection",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-25 - 2026-08-25"
+    },
+    {
+      "name": "Schedule Drywall Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-19 - 2026-08-19"
+    },
+    {
+      "name": "Drywall Install",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-08-26 - 2026-09-10"
+    },
+    {
+      "name": "McMann Group Drywall Inspection",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-09-11 - 2026-09-11"
+    },
+    {
+      "name": "Invoice Drywall Draw As Per Contract",
+      "group": "Insulation & Drywall",
+      "status": "",
+      "timeline": "2026-09-14 - 2026-09-14"
+    },
+    {
+      "name": "Have Clients Select Roofing",
+      "group": "Roofing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Roofers",
+      "group": "Roofing",
+      "status": "",
+      "timeline": "2026-07-14 - 2026-07-14"
+    },
+    {
+      "name": "Roofing Install",
+      "group": "Roofing",
+      "status": "",
+      "timeline": "2026-07-28 - 2026-08-01"
+    },
+    {
+      "name": "Confirm Stone Selection with Clients",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Building Paper & Rainscreen Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-17 - 2026-08-17"
+    },
+    {
+      "name": "Building Paper & Rainscreen Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-24 - 2026-08-26"
+    },
+    {
+      "name": "McMann Group Paper & Flashing Inspection",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-01 - 2026-08-01"
+    },
+    {
+      "name": "Confirm Exterior Cladding Selection with Client",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Soffit & Gutters Installation",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-16 - 2026-08-16"
+    },
+    {
+      "name": "Soffit & Gutters Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Book Building Envelope Inspection",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Exterior Trim & Flashing Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-09-07 - 2026-09-07"
+    },
+    {
+      "name": "Schedule Main Cladding Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-08-02 - 2026-08-02"
+    },
+    {
+      "name": "Main Cladding Install",
+      "group": "Exterior Veneer",
+      "status": "",
+      "timeline": "2026-09-08 - 2026-09-23"
+    },
+    {
+      "name": "Confirm Deck Selections with Client",
+      "group": "Decking",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Client Meeting with Painter to Select Exterior Colours",
+      "group": "Painting & Staining",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Exterior Painting / Staining",
+      "group": "Painting & Staining",
+      "status": "",
+      "timeline": "2026-09-27 - 2026-10-03"
+    },
+    {
+      "name": "Schedule Client Meeting with Painter to Select Interior Colours",
+      "group": "Painting & Staining",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Interior Painting / Staining",
+      "group": "Painting & Staining",
+      "status": "",
+      "timeline": "2026-09-17 - 2026-10-21"
+    },
+    {
+      "name": "Schedule Selection Meeting with Clients to Confirm Flooring",
+      "group": "Flooring",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Floorcoverings",
+      "group": "Flooring",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Flooring Installer",
+      "group": "Flooring",
+      "status": "",
+      "timeline": "2026-10-05 - 2026-10-05"
+    },
+    {
+      "name": "Install Flooring",
+      "group": "Flooring",
+      "status": "",
+      "timeline": "2026-10-12 - 2026-10-17"
+    },
+    {
+      "name": "Schedule Selection Meeting with Clients to Confirm Tile & Grout",
+      "group": "Tile",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Tile Installer",
+      "group": "Tile",
+      "status": "",
+      "timeline": "2026-09-28 - 2026-09-28"
+    },
+    {
+      "name": "Install Floor Tile",
+      "group": "Tile",
+      "status": "",
+      "timeline": "2026-10-01 - 2026-10-05"
+    },
+    {
+      "name": "Install Shower Tile",
+      "group": "Tile",
+      "status": "",
+      "timeline": "2026-10-07 - 2026-10-11"
+    },
+    {
+      "name": "Schedule Backspalsh Install",
+      "group": "Tile",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Install Tile Backsplash",
+      "group": "Tile",
+      "status": "",
+      "timeline": "2026-12-01 - 2026-12-01"
+    },
+    {
+      "name": "Schedule Client Meeting with Cabinet Supplier to Confirm Layouts/Design",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Cabinets",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-08-03 - 2026-08-03"
+    },
+    {
+      "name": "Schedule Cabinet Install with Supplier",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-01 - 2026-11-01"
+    },
+    {
+      "name": "Cabinetry Install",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-01 - 2026-11-10"
+    },
+    {
+      "name": "Order Countertops",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-11 - 2026-11-11"
+    },
+    {
+      "name": "Schedule Countertop Measure",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-04 - 2026-11-04"
+    },
+    {
+      "name": "Countertop Measure",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-11 - 2026-11-11"
+    },
+    {
+      "name": "Countertop Install",
+      "group": "Cabinetry & Countertops",
+      "status": "",
+      "timeline": "2026-11-30 - 2026-11-30"
+    },
+    {
+      "name": "Confirm Interior Stone Selection with Clients",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Interior Masonry / Feature Wall Install",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Interior Stone Masonry Install",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Baseboard & Casing Materials",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-10-15 - 2026-10-15"
+    },
+    {
+      "name": "Schedule Interior Finishing Carpenter",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-10-19 - 2026-10-19"
+    },
+    {
+      "name": "Interior Baseboard & Casing Install",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-10-26 - 2026-11-12"
+    },
+    {
+      "name": "Confirm Custom Closet Shelving / Configurations with Clients",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Order Closet Organizers / Shelving",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Install Closet Shelving / Racks",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-11-13 - 2026-11-13"
+    },
+    {
+      "name": "Install Custom Mantle",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-11-14 - 2026-11-14"
+    },
+    {
+      "name": "Schedule Measure for Mirrors & Shower Glass Doors",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Shower Glass & Mirrors Installation",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Shower Glass & Mirror Install",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-11-17 - 2026-11-17"
+    },
+    {
+      "name": "Bathroom Hardware Install",
+      "group": "Interior Finishing",
+      "status": "",
+      "timeline": "2026-11-18 - 2026-11-18"
+    },
+    {
+      "name": "Confirm Appliance Selections with Clients",
+      "group": "Appliances",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Schedule Appliance Install",
+      "group": "Appliances",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Appliance Installation",
+      "group": "Appliances",
+      "status": "",
+      "timeline": "2026-12-02 - 2026-12-02"
+    },
+    {
+      "name": "Confirm Concrete finish, Map Out & Have Client Approve Prior to Forming",
+      "group": "Exterior Hardscaping & Landscaping",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Form Driveway & Walkways",
+      "group": "Exterior Hardscaping & Landscaping",
+      "status": "",
+      "timeline": "2026-11-23 - 2026-11-23"
+    },
+    {
+      "name": "Pour Driveway & Walkways",
+      "group": "Exterior Hardscaping & Landscaping",
+      "status": "",
+      "timeline": "2026-11-25 - 2026-11-25"
+    },
+    {
+      "name": "McMann Group Concrete Patio & Driveway Inspection",
+      "group": "Exterior Hardscaping & Landscaping",
+      "status": "",
+      "timeline": "2026-11-24 - 2026-11-24"
+    },
+    {
+      "name": "Schedule Final House Clean",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Final House Clean",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": "2026-12-14 - 2026-12-14"
+    },
+    {
+      "name": "Request Schedule C-B from Engineer",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": "2026-12-15 - 2026-12-15"
+    },
+    {
+      "name": "Schedule Energy Advisor to Test & Report",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "McMann Group Occupancy Inspection",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Book Occupancy Inspection",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": "2026-12-16 - 2026-12-16"
+    },
+    {
+      "name": "Occupancy Inspection",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": "2026-12-17 - 2026-12-17"
+    },
+    {
+      "name": "Schedule Client Deficiency Walkthrough",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": ""
+    },
+    {
+      "name": "Client Deficiency Walkthrough",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": "2026-12-17 - 2026-12-17"
+    },
+    {
+      "name": "Invoice Final Draw as per Contract",
+      "group": "Project Close Out",
+      "status": "",
+      "timeline": ""
+    }
+  ],
   "_schema": {
     "costBreakdown": {
       "columns": [
@@ -2297,7 +3294,7 @@
           "visible": true
         },
         {
-          "key": "budget_6",
+          "key": "ob",
           "label": "OVER BUDGET",
           "visible": true
         },
@@ -2311,10 +3308,10 @@
   },
   "_meta": {
     "report": "April 2026",
-    "dateFrom": "",
-    "dateTo": "",
+    "dateFrom": "2025-10-01",
+    "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-16T19:22:11.337Z"
+    "syncedAt": "2026-06-17T00:30:04.976Z"
   }
 }
