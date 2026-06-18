@@ -6,7 +6,7 @@
   "projectAddress": "",
   "projectManager": "A. McMann",
   "reportLabel": "October 1, 2025 – May 31, 2026",
-  "updated": "June 16, 2026",
+  "updated": "June 18, 2026",
   "costBreakdown": {
     "categories": [
       {
@@ -16,10 +16,10 @@
             "label": "Plan Printing & Photocopying",
             "type": "detail",
             "budget": 800,
-            "prevInv": 0,
-            "curInv": 321.75,
-            "totInv": 321.75,
-            "tbc": 478.25,
+            "prevInv": 321.75,
+            "curInv": 71.16,
+            "totInv": 392.90999999999997,
+            "tbc": 407.09000000000003,
             "ob": 0,
             "co": 0
           }
@@ -27,10 +27,10 @@
         "subtotal": {
           "label": "DESIGN SERVICES — Subtotal",
           "budget": 800,
-          "prevInv": 0,
-          "curInv": 321.75,
-          "totInv": 321.75,
-          "tbc": 478.25,
+          "prevInv": 321.75,
+          "curInv": 71.16,
+          "totInv": 392.90999999999997,
+          "tbc": 407.09000000000003,
           "ob": 0,
           "co": 0
         }
@@ -42,11 +42,11 @@
             "label": "Building Permit Fees",
             "type": "detail",
             "budget": 8500,
-            "prevInv": 0,
-            "curInv": 14725.75,
-            "totInv": 14725.75,
+            "prevInv": 14725.75,
+            "curInv": 128.13,
+            "totInv": 14853.88,
             "tbc": 0,
-            "ob": -6225.75,
+            "ob": -6353.879999999999,
             "co": 0
           },
           {
@@ -75,11 +75,11 @@
         "subtotal": {
           "label": "PERMITS & HOME WARRANTY — Subtotal",
           "budget": 19790,
-          "prevInv": 0,
-          "curInv": 14725.75,
-          "totInv": 14725.75,
+          "prevInv": 14725.75,
+          "curInv": 128.13,
+          "totInv": 14853.88,
           "tbc": 11290,
-          "ob": -6225.75,
+          "ob": -6353.879999999999,
           "co": 0
         }
       },
@@ -90,8 +90,8 @@
             "label": "Energy Advisor",
             "type": "detail",
             "budget": 2000,
-            "prevInv": 0,
-            "curInv": 975,
+            "prevInv": 975,
+            "curInv": 0,
             "totInv": 975,
             "tbc": 1025,
             "ob": 0,
@@ -101,10 +101,10 @@
             "label": "Land Survey",
             "type": "detail",
             "budget": 6000,
-            "prevInv": 0,
-            "curInv": 3971.15,
-            "totInv": 3971.15,
-            "tbc": 2028.85,
+            "prevInv": 3971.15,
+            "curInv": 892.5,
+            "totInv": 4863.65,
+            "tbc": 1136.3500000000004,
             "ob": 0,
             "co": 0
           },
@@ -112,11 +112,11 @@
             "label": "Geotechnical Engineer",
             "type": "detail",
             "budget": 4000,
-            "prevInv": 0,
-            "curInv": 6537.4,
-            "totInv": 6537.4,
+            "prevInv": 6537.4,
+            "curInv": 352.4,
+            "totInv": 6889.799999999999,
             "tbc": 0,
-            "ob": -2537.3999999999996,
+            "ob": -2889.7999999999993,
             "co": 0
           },
           {
@@ -134,8 +134,8 @@
             "label": "Change Order #2A Septic Drawing for BP",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
-            "curInv": 1800,
+            "prevInv": 1800,
+            "curInv": 0,
             "totInv": 1800,
             "tbc": 0,
             "ob": 0,
@@ -145,11 +145,11 @@
         "subtotal": {
           "label": "ENGINEERING FEES — Subtotal",
           "budget": 18000,
-          "prevInv": 0,
-          "curInv": 13283.55,
-          "totInv": 13283.55,
-          "tbc": 9053.85,
-          "ob": -2537.3999999999996,
+          "prevInv": 13283.55,
+          "curInv": 1244.9,
+          "totInv": 14528.449999999999,
+          "tbc": 8161.35,
+          "ob": -2889.7999999999993,
           "co": 1800
         }
       },
@@ -160,8 +160,8 @@
             "label": "Excavation, Backfill, Perimeter & Drain Labour",
             "type": "detail",
             "budget": 45000,
-            "prevInv": 0,
-            "curInv": 7625,
+            "prevInv": 7625,
+            "curInv": 0,
             "totInv": 7625,
             "tbc": 37375,
             "ob": 0,
@@ -193,8 +193,8 @@
             "label": "Change Order #2B Septic Field Work",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
-            "curInv": 1732.55,
+            "prevInv": 1732.55,
+            "curInv": 0,
             "totInv": 1732.55,
             "tbc": 0,
             "ob": 0,
@@ -204,8 +204,8 @@
         "subtotal": {
           "label": "SITE WORK — Subtotal",
           "budget": 62000,
-          "prevInv": 0,
-          "curInv": 9357.55,
+          "prevInv": 9357.55,
+          "curInv": 0,
           "totInv": 9357.55,
           "tbc": 54375,
           "ob": 0,
@@ -220,9 +220,9 @@
             "type": "detail",
             "budget": 8422.72,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 8422.72,
+            "curInv": 8280.42,
+            "totInv": 8280.42,
+            "tbc": 142.29999999999927,
             "ob": 0,
             "co": 0
           },
@@ -231,20 +231,31 @@
             "type": "detail",
             "budget": 17635,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 17635,
+            "curInv": 17635,
+            "totInv": 17635,
+            "tbc": 0,
             "ob": 0,
             "co": 0
+          },
+          {
+            "label": "Change Order #1 JXN Solutions: Footings and Foundation Labour",
+            "type": "co",
+            "budget": 0,
+            "prevInv": 0,
+            "curInv": 11431.25,
+            "totInv": 11431.25,
+            "tbc": 0,
+            "ob": 0,
+            "co": 11431.25
           },
           {
             "label": "Footings & Foundation Concrete",
             "type": "detail",
             "budget": 14800,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 14800,
+            "curInv": 13806.21,
+            "totInv": 13806.21,
+            "tbc": 993.7900000000009,
             "ob": 0,
             "co": 0
           },
@@ -308,9 +319,9 @@
             "type": "detail",
             "budget": 4500,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 4500,
+            "curInv": 3232.88,
+            "totInv": 3232.88,
+            "tbc": 1267.12,
             "ob": 0,
             "co": 0
           },
@@ -319,9 +330,9 @@
             "type": "detail",
             "budget": 7500,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 7500,
+            "curInv": 2735.6,
+            "totInv": 2735.6,
+            "tbc": 4764.4,
             "ob": 0,
             "co": 0
           },
@@ -341,11 +352,11 @@
           "label": "FOUNDATION — Subtotal",
           "budget": 71839.34000000001,
           "prevInv": 0,
-          "curInv": 0,
-          "totInv": 0,
-          "tbc": 71839.34000000001,
+          "curInv": 57121.35999999999,
+          "totInv": 57121.35999999999,
+          "tbc": 26149.229999999996,
           "ob": 0,
-          "co": 0
+          "co": 11431.25
         }
       },
       {
@@ -389,9 +400,9 @@
             "type": "detail",
             "budget": 4236.2,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 4236.2,
+            "curInv": 637.91,
+            "totInv": 637.91,
+            "tbc": 3598.29,
             "ob": 0,
             "co": 0
           },
@@ -433,9 +444,9 @@
           "label": "FRAMING — Subtotal",
           "budget": 124747.76999999999,
           "prevInv": 0,
-          "curInv": 0,
-          "totInv": 0,
-          "tbc": 124747.76999999999,
+          "curInv": 637.91,
+          "totInv": 637.91,
+          "tbc": 124109.85999999999,
           "ob": 0,
           "co": 0
         }
@@ -576,8 +587,8 @@
             "label": "Change Order #1 Island Electric - Electrical Underground Cable Repair",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
-            "curInv": 1864.51,
+            "prevInv": 1864.51,
+            "curInv": 0,
             "totInv": 1864.51,
             "tbc": 0,
             "ob": 0,
@@ -587,8 +598,8 @@
         "subtotal": {
           "label": "ELECTRICAL — Subtotal",
           "budget": 109299.9,
-          "prevInv": 0,
-          "curInv": 1864.51,
+          "prevInv": 1864.51,
+          "curInv": 0,
           "totInv": 1864.51,
           "tbc": 109299.9,
           "ob": 0,
@@ -1579,9 +1590,9 @@
             "type": "detail",
             "budget": 1200,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 1200,
+            "curInv": 97.58,
+            "totInv": 97.58,
+            "tbc": 1102.42,
             "ob": 0,
             "co": 0
           },
@@ -1623,9 +1634,9 @@
           "label": "JOBSITE FACILITIES — Subtotal",
           "budget": 7200,
           "prevInv": 0,
-          "curInv": 0,
-          "totInv": 0,
-          "tbc": 7200,
+          "curInv": 97.58,
+          "totInv": 97.58,
+          "tbc": 7102.42,
           "ob": 0,
           "co": 0
         }
@@ -1637,10 +1648,10 @@
             "label": "Management & Supervision",
             "type": "detail",
             "budget": 25200,
-            "prevInv": 0,
-            "curInv": 10186.2,
-            "totInv": 10186.2,
-            "tbc": 15013.8,
+            "prevInv": 10186.2,
+            "curInv": 1549.8,
+            "totInv": 11736,
+            "tbc": 13464,
             "ob": 0,
             "co": 0
           },
@@ -1648,8 +1659,8 @@
             "label": "Credit - Management Billing as per Pricing Contract",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
-            "curInv": -5000,
+            "prevInv": -5000,
+            "curInv": 0,
             "totInv": -5000,
             "tbc": 5000,
             "ob": 0,
@@ -1659,10 +1670,10 @@
             "label": "Accounting & Admin",
             "type": "detail",
             "budget": 12600,
-            "prevInv": 0,
-            "curInv": 720,
-            "totInv": 720,
-            "tbc": 11880,
+            "prevInv": 720,
+            "curInv": 900,
+            "totInv": 1620,
+            "tbc": 10980,
             "ob": 0,
             "co": 0
           }
@@ -1670,10 +1681,10 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "prevInv": 0,
-          "curInv": 5906.200000000001,
-          "totInv": 5906.200000000001,
-          "tbc": 31893.8,
+          "prevInv": 5906.200000000001,
+          "curInv": 2449.8,
+          "totInv": 8356,
+          "tbc": 29444,
           "ob": 0,
           "co": 0
         }
@@ -1685,10 +1696,10 @@
             "label": "Travel",
             "type": "detail",
             "budget": 8628.48,
-            "prevInv": 0,
-            "curInv": 435.6,
-            "totInv": 435.6,
-            "tbc": 8192.88,
+            "prevInv": 435.6,
+            "curInv": 737.1,
+            "totInv": 1172.7,
+            "tbc": 7455.78,
             "ob": 0,
             "co": 0
           },
@@ -1729,10 +1740,10 @@
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
           "budget": 39028.479999999996,
-          "prevInv": 0,
-          "curInv": 435.6,
-          "totInv": 435.6,
-          "tbc": 38592.88,
+          "prevInv": 435.6,
+          "curInv": 737.1,
+          "totInv": 1172.7,
+          "tbc": 37855.78,
           "ob": 0,
           "co": 0
         }
@@ -1742,42 +1753,42 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "prevInv": 0,
-        "curInv": 45894.909999999996,
-        "totInv": 45894.909999999996,
-        "tbc": 1140784.95,
-        "ob": -8763.15,
-        "co": 5397.06
+        "prevInv": 45894.909999999996,
+        "curInv": 62487.94,
+        "totInv": 108382.84999999999,
+        "tbc": 1090208.7899999998,
+        "ob": -9243.679999999998,
+        "co": 16828.309999999998
       },
       {
         "label": "15% Mark-up",
         "budget": 175877.94749999998,
-        "prevInv": 0,
-        "curInv": 4999.103999999999,
-        "totInv": 4999.103999999999,
-        "tbc": 171117.7425,
-        "ob": -380.6099999999999,
-        "co": 809.5590000000001
+        "prevInv": 4979.884499999999,
+        "curInv": 8895.156,
+        "totInv": 13875.0405,
+        "tbc": 163531.31849999996,
+        "ob": -433.4699999999998,
+        "co": 2524.2464999999997
       },
       {
         "label": "GST (5%)",
         "budget": 67419.879875,
-        "prevInv": 0,
-        "curInv": 2544.7007,
-        "totInv": 2544.7007,
-        "tbc": 65595.13462499999,
-        "ob": -457.18800000000005,
-        "co": 310.33095000000003
+        "prevInv": 2543.739725,
+        "curInv": 3569.1548000000003,
+        "totInv": 6112.894525,
+        "tbc": 62687.005424999996,
+        "ob": -483.8574999999999,
+        "co": 967.627825
       },
       {
         "label": "PROJECT TOTAL",
         "budget": 1415817.477375,
-        "prevInv": 0,
-        "curInv": 53438.7147,
-        "totInv": 53438.7147,
-        "tbc": 1377497.8271249998,
-        "ob": -9600.948,
-        "co": 6516.94995
+        "prevInv": 53418.534224999996,
+        "curInv": 74952.25080000001,
+        "totInv": 128370.78502499999,
+        "tbc": 1316427.113925,
+        "ob": -10161.007499999998,
+        "co": 20320.184325
       }
     ]
   },
@@ -2089,9 +2100,105 @@
             "hours": 1.1600000000000001,
             "rate": 90,
             "amount": 104.4
+          },
+          {
+            "date": "46146",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1,
+            "rate": 90,
+            "amount": 90
+          },
+          {
+            "date": "46148",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.67,
+            "rate": 90,
+            "amount": 60.300000000000004
+          },
+          {
+            "date": "46148",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.41,
+            "rate": 90,
+            "amount": 36.9
+          },
+          {
+            "date": "46153",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.58,
+            "rate": 90,
+            "amount": 142.20000000000002
+          },
+          {
+            "date": "46156",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.83,
+            "rate": 90,
+            "amount": 164.70000000000002
+          },
+          {
+            "date": "46156",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.58,
+            "rate": 90,
+            "amount": 52.199999999999996
+          },
+          {
+            "date": "46161",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 3.58,
+            "rate": 90,
+            "amount": 322.2
+          },
+          {
+            "date": "46163",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.25,
+            "rate": 90,
+            "amount": 22.5
+          },
+          {
+            "date": "46163",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.33,
+            "rate": 90,
+            "amount": 29.700000000000003
+          },
+          {
+            "date": "46167",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.08,
+            "rate": 90,
+            "amount": 97.2
+          },
+          {
+            "date": "46170",
+            "name": "Russell McMann",
+            "status": "Unbilled",
+            "hours": 3,
+            "rate": 90,
+            "amount": 270
+          },
+          {
+            "date": "46170",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.91,
+            "rate": 90,
+            "amount": 261.90000000000003
           }
         ],
-        "total_hours": 113.18,
+        "total_hours": 130.4,
         "total_amount": 0
       },
       {
@@ -2128,17 +2235,103 @@
             "hours": 1.17,
             "rate": 90,
             "amount": 105.3
+          },
+          {
+            "date": "46148",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46153",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46156",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46161",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46163",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46167",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46170",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
           }
         ],
-        "total_hours": 4.84,
+        "total_hours": 13.03,
         "total_amount": 0
       }
     ],
-    "totalHours": 118.02000000000001,
+    "totalHours": 143.43,
     "totalAmount": 0
   },
   "materials": {
     "vendors": [
+      {
+        "name": "1047335 B.C. LTD (dba Complete Damp Proof",
+        "bills": [
+          {
+            "date": "46169",
+            "num": "11561",
+            "memo": "1047335 B.C. LTD (dba Complete Damp Proof Damp proofing  11561",
+            "amount": 2735.6
+          }
+        ],
+        "total": 2735.6
+      },
+      {
+        "name": "DBL Disposal Services Ltd",
+        "bills": [
+          {
+            "date": "46171",
+            "num": "305329",
+            "memo": "DBL  Portable Washroom-  305329",
+            "amount": 75
+          },
+          {
+            "date": "46173",
+            "num": "305327",
+            "memo": "DBL Disposal Services Ltd Portable Washroom- 305327",
+            "amount": 22.58
+          }
+        ],
+        "total": 97.58
+      },
       {
         "name": "Ecolibrium Energy Solutions Inc.",
         "bills": [
@@ -2152,11 +2345,47 @@
         "total": 975
       },
       {
+        "name": "Heidelberg Materials Canada Limited",
+        "bills": [
+          {
+            "date": "46154",
+            "num": "3190336",
+            "memo": "Heidelberg Materials Canada Limited Concrete Footings 3190336",
+            "amount": 6107.56
+          },
+          {
+            "date": "46163",
+            "num": "3191123",
+            "memo": "Heidelberg Materials Canada Limited Concrete Walls 3191123",
+            "amount": 7698.65
+          }
+        ],
+        "total": 13806.21
+      },
+      {
+        "name": "Island Concrete Pumping Ltd",
+        "bills": [
+          {
+            "date": "46154",
+            "num": "28435",
+            "memo": "Island Concrete Pumping Ltd Concrete Pump Truck 28435",
+            "amount": 1482.88
+          },
+          {
+            "date": "46163",
+            "num": "28478",
+            "memo": "Island Concrete Pumping Ltd Concrete Pump Truck 28478",
+            "amount": 1750
+          }
+        ],
+        "total": 3232.88
+      },
+      {
         "name": "Island Electric Company",
         "bills": [
           {
             "date": "46142",
-            "num": "1189-1",
+            "num": "EWO-1189-1A",
             "memo": "Island Electric Company Change Order Underground Cable Replacement 1189-1",
             "amount": 1864.51
           }
@@ -2177,9 +2406,33 @@
             "num": "0067130",
             "memo": "JE Anderson & Associates Survey 0067130",
             "amount": 210.75
+          },
+          {
+            "date": "46148",
+            "num": "0067962",
+            "memo": "JE Anderson & Associates Survey 0067962",
+            "amount": 892.5
           }
         ],
-        "total": 3971.15
+        "total": 4863.65
+      },
+      {
+        "name": "JXN SOLUTIONS LTD",
+        "bills": [
+          {
+            "date": "46170",
+            "num": "invoice 39",
+            "memo": "JXN SOLUTIONS LTD Footings and Foundation Labour invoice 39",
+            "amount": 17635
+          },
+          {
+            "date": "46170",
+            "num": "invoice 39",
+            "memo": "JXN SOLUTIONS LTD Change Order Footings and Foundation Labour invoice 39",
+            "amount": 11431.25
+          }
+        ],
+        "total": 29066.25
       },
       {
         "name": "Kivela Contracting Ltd.",
@@ -2225,9 +2478,15 @@
             "num": "104422",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Engineering 104422",
             "amount": 2477.4
+          },
+          {
+            "date": "46153",
+            "num": "104886",
+            "memo": "Lewkowich Engineering Associates Ltd Geotechnical Engineering 104886",
+            "amount": 352.4
           }
         ],
-        "total": 6537.4
+        "total": 6889.799999999999
       },
       {
         "name": "Print Three Nanaimo",
@@ -2237,9 +2496,15 @@
             "num": "5-36986",
             "memo": "Print Three Nanaimo Revised Plan Printing 5-36986",
             "amount": 321.75
+          },
+          {
+            "date": "46147",
+            "num": "5-37167",
+            "memo": "Print Three Nanaimo Plan Printing 5-37167",
+            "amount": 71.16
           }
         ],
-        "total": 321.75
+        "total": 392.90999999999997
       },
       {
         "name": "Regional District of Nanaimo",
@@ -2257,10 +2522,58 @@
             "amount": 13700.75
           }
         ],
-        "total": 14725.75
+        "total": 14853.88
+      },
+      {
+        "name": "Rona 221227- Mcmann Group",
+        "bills": [
+          {
+            "date": "46147",
+            "num": "103-25261351",
+            "memo": "Rona Footings and Foundation Material 103-25261351",
+            "amount": 7268.71
+          },
+          {
+            "date": "46148",
+            "num": "103-25259301",
+            "memo": "Rona Engineering Material 103-25259301",
+            "amount": 637.91
+          }
+        ],
+        "total": 7906.62
+      },
+      {
+        "name": "Slegg Building Materials",
+        "bills": [
+          {
+            "date": "46153",
+            "num": "IN5565137",
+            "memo": "Slegg Building Material Footings and Foundation Material IN5565137",
+            "amount": 215.54
+          },
+          {
+            "date": "46154",
+            "num": "IN5567055",
+            "memo": "Slegg Building Material Footings and Foundation Material IN5567055",
+            "amount": 335.43
+          },
+          {
+            "date": "46156",
+            "num": "IN5570960",
+            "memo": "Slegg Building Material Footings and Foundation Material IN5570960",
+            "amount": 207.15
+          },
+          {
+            "date": "46156",
+            "num": "IN5571123",
+            "memo": "Slegg Building Material Footings and Foundation Material IN5571123",
+            "amount": 253.59
+          }
+        ],
+        "total": 1011.71
       }
     ],
-    "grandTotal": 39553.11
+    "grandTotal": 98854.15000000001
   },
   "schedule": [
     {
@@ -3307,11 +3620,11 @@
     }
   },
   "_meta": {
-    "report": "April 2026",
+    "report": "May 2026",
     "dateFrom": "2025-10-01",
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-17T00:30:07.441Z"
+    "syncedAt": "2026-06-18T19:43:05.940Z"
   }
 }
