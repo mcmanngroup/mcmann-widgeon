@@ -5,7 +5,7 @@
   "clientPhone": "",
   "projectAddress": "",
   "projectManager": "A. McMann",
-  "reportLabel": "May 1, 2025 Ã¢ÂÂ May 31, 2026",
+  "reportLabel": "May 1, 2025 – May 31, 2026",
   "updated": "June 22, 2026",
   "costBreakdown": {
     "categories": [
@@ -3631,6 +3631,6 @@
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-22T22:44:22.436Z"
+    "syncedAt": "2026-06-22T22:55:43.064Z"
   }
 }
