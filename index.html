@@ -449,7 +449,9 @@ var tsFilterEl=document.getElementById('ts-filter');
   if(type==='ts'){
     var tsSum=0;
     document.querySelectorAll('[data-group="'+id+'"].ts-detail').forEach(function(r){
-      if(r.style.display!=='none')tsSum+=parseFloat(r.querySelector('.num').textContent)||0;
+      var rMo=r.getAttribute('data-month');
+      var rMatches=(activeMonth==='all'||!rMo||rMo===activeMonth);
+      if(rMatches)tsSum+=parseFloat(r.querySelector('.num').textContent)||0;
     });
     if(tsNum)tsNum.textContent=tsSum.toFixed(2);
     if(subRow){var subNum=subRow.querySelector('.num');if(subNum)subNum.textContent=tsSum.toFixed(2);}
