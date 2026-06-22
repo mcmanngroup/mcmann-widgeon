@@ -1127,13 +1127,28 @@ function renderTimesheet(ts){
     +'</tbody></table></div></div>';
   $('tab-timesheet').innerHTML=html;
 }
-
 function filterTimesheet(){
   var val=document.getElementById('ts-filter').value;
-  document.querySelectorAll('.ts-detail').forEach(function(r){
-    var mo=r.getAttribute('data-month');
-    r.style.display=(val==='all'||mo===val)?'table-row':'none';
+  var grand=0;
+  document.querySelectorAll('.ts-group-row').forEach(function(catRow){
+    var gid=catRow.id.replace('ts-cat-','');
+    var sum=0;
+    document.querySelectorAll('[data-group="'+gid+'"].ts-detail').forEach(function(r){
+      var mo=r.getAttribute('data-month');
+      var show=(val==='all'||mo===val);
+      r.style.display=show?'table-row':'none';
+      if(show)sum+=parseFloat(r.querySelector('.num').textContent)||0;
+    });
+    var numEl=document.getElementById('ts-num-'+gid);
+    if(numEl)numEl.textContent=sum.toFixed(2);
+    var subRow=document.getElementById('ts-sub-'+gid);
+    if(subRow){var subNum=subRow.querySelector('.num');if(subNum)subNum.textContent=sum.toFixed(2);}
+    grand+=sum;
   });
+  var totalRow=document.querySelector('.ts-total-row .num strong');
+  if(totalRow)totalRow.textContent=grand.toFixed(2);
+  var kpi=document.querySelector('.kpi-card.blue .kpi-val');
+  if(kpi)kpi.textContent=grand.toFixed(2);
 }
 
 // ── VENDORS ──
