@@ -440,12 +440,20 @@ var tsFilterEl=document.getElementById('ts-filter');
       r.style.display=(activeMonth==='all'||!mo||mo===activeMonth)?'table-row':'none';
     }
   });
-  // sub row: uses type prefix correctly for all three types
+// sub row: uses type prefix correctly for all three types
   var subRow=$(type+'-sub-'+id);
   if(subRow)subRow.style.display=isOpen?'none':'table-row';
-  // timesheet: hide group total when expanded
+  // timesheet: hide group total when expanded, and recalc it from visible rows
   var tsNum=$('ts-num-'+id);
   if(tsNum)tsNum.style.visibility=isOpen?'visible':'hidden';
+  if(type==='ts'){
+    var tsSum=0;
+    document.querySelectorAll('[data-group="'+id+'"].ts-detail').forEach(function(r){
+      if(r.style.display!=='none')tsSum+=parseFloat(r.querySelector('.num').textContent)||0;
+    });
+    if(tsNum)tsNum.textContent=tsSum.toFixed(2);
+    if(subRow){var subNum=subRow.querySelector('.num');if(subNum)subNum.textContent=tsSum.toFixed(2);}
+  }
   // FIX #1: vendor total — visible when CLOSED, hidden when OPEN (was inverted)
   var vsNum=$('vs-num-'+id);
   if(vsNum)vsNum.style.visibility=isOpen?'visible':'hidden';
