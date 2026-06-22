@@ -430,8 +430,15 @@ function toggleGroup(id,type){
   btn.classList.toggle('open',!isOpen);
   var catRow=$(type+'-cat-'+id);
   if(catRow)catRow.classList.toggle('expanded',!isOpen);
+var tsFilterEl=document.getElementById('ts-filter');
+  var activeMonth=tsFilterEl?tsFilterEl.value:'all';
   document.querySelectorAll('[data-group="'+id+'"]').forEach(function(r){
-    r.style.display=isOpen?'none':'table-row';
+    if(isOpen){
+      r.style.display='none';
+    } else {
+      var mo=r.getAttribute('data-month');
+      r.style.display=(activeMonth==='all'||!mo||mo===activeMonth)?'table-row':'none';
+    }
   });
   // sub row: uses type prefix correctly for all three types
   var subRow=$(type+'-sub-'+id);
