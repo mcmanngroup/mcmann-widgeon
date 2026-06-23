@@ -428,6 +428,7 @@ function showTab(id,btn){
   $('tab-'+id).classList.add('active');
   btn.classList.add('active');
   _activeTab=id;
+  if(id==='calendar')buildCalDays();
 }
 
 // ── TOGGLE GROUP ──
@@ -1380,7 +1381,6 @@ function buildCalDays(){
     ranges.push({item:it,start:s,end:e});
   });
 
-  var h='<div class="cal-week">';
   var dayCellsHtml='';
   var cc=0;
   for(var i=fd-1;i>=0;i--){dayCellsHtml+='<div class="cal-day other-month"><div class="cal-day-num">'+(pd-i)+'</div></div>';cc++;}
@@ -1396,40 +1396,30 @@ function buildCalDays(){
   var tr=(7-(cc%7))%7;
   for(var t2=1;t2<=tr;t2++){dayCellsHtml+='<div class="cal-day other-month"><div class="cal-day-num">'+t2+'</div></div>';cc++;}
 
-  h+=dayCellsHtml;
-
+  var rowsData=[];
   for(var row=0;row<totalRows;row++){
     var rowStart=new Date(gridStart);rowStart.setDate(gridStart.getDate()+row*7);
     var rowEnd=new Date(rowStart);rowEnd.setDate(rowStart.getDate()+6);
     var rowRanges=ranges.filter(function(r){return r.end>=rowStart&&r.start<=rowEnd;});
-    if(!rowRanges.length)continue;
     rowRanges.sort(function(a,b){return a.start-b.start||(b.end-b.start)-(a.end-a.start);});
-    var lanes=[];
+    var laneEnds=[];
+    var segments=[];
     rowRanges.forEach(function(r){
       var colStart=Math.max(0,Math.round((r.start-rowStart)/86400000));
       var colEnd=Math.min(6,Math.round((r.end-rowStart)/86400000));
       var lane=0;
-      while(lanes[lane]&&lanes[lane]>=colStart)lane++;
-      lanes[lane]=colEnd+1;
-      r._col=colStart;r._span=colEnd-colStart+1;r._lane=lane;
+      while(laneEnds[lane]!==undefined&&laneEnds[lane]>=colStart)lane++;
+      laneEnds[lane]=colEnd;
+      segments.push({item:r.item,row:row,colStart:colStart,colEnd:colEnd,lane:lane});
     });
-    var barsHtml='';
-    rowRanges.forEach(function(r){
-      var leftPct=(r._col/7*100);
-      var widthPct=(r._span/7*100);
-      var top=r._lane*19;
-      var color=groupColor(r.item.group);
-      barsHtml+='<div class="cal-bar" style="left:calc('+leftPct+'% + 3px);width:calc('+widthPct+'% - 6px);top:'+top+'px;background:'+color+'" title="'+r.item.name+'" onclick="openCalPopup(this,\''+dayKeyFromDate(r.start)+'\')">'+r.item.name+'</div>';
-    });
-    h+='<div class="cal-week-row" style="position:relative;top:-'+(80*7-80*7)+'px"></div>';
-    h+='<div class="cal-bars" style="top:'+(80*(row+1)*-1+24+80*row)+'px"></div>';
+    rowsData.push({lanes:laneEnds.length,segments:segments});
   }
-  h+='</div>';
 
   var g=$('cal-days');
   if(g){
     g.innerHTML='';
     g.style.position='relative';
+    g.style.display='block';
     var dayWrap=document.createElement('div');
     dayWrap.style.display='grid';
     dayWrap.style.gridTemplateColumns='repeat(7,1fr)';
@@ -1442,32 +1432,51 @@ function buildCalDays(){
     overlay.style.pointerEvents='none';
     g.appendChild(overlay);
 
-    for(var row2=0;row2<totalRows;row2++){
-      var rStart=new Date(gridStart);rStart.setDate(gridStart.getDate()+row2*7);
-      var rEnd=new Date(rStart);rEnd.setDate(rStart.getDate()+6);
-      var rRanges=ranges.filter(function(r){return r.end>=rStart&&r.start<=rEnd;});
-      if(!rRanges.length)continue;
-      rRanges.sort(function(a,b){return a.start-b.start||(b.end-b.start)-(a.end-a.start);});
-      var laneEnds=[];
-      rRanges.forEach(function(r){
-        var colStart=Math.max(0,Math.round((r.start-rStart)/86400000));
-        var colEnd=Math.min(6,Math.round((r.end-rStart)/86400000));
-        var lane=0;
-        while(laneEnds[lane]!==undefined&&laneEnds[lane]>=colStart)lane++;
-        laneEnds[lane]=colEnd;
+    var dayCellEls=dayWrap.children;
+    var gridRect=g.getBoundingClientRect();
+
+    for(var row3=0;row3<totalRows;row3++){
+      var firstCellIdx=row3*7;
+      var firstCell=dayCellEls[firstCellIdx];
+      if(!firstCell)continue;
+      var numEl=firstCell.querySelector('.cal-day-num');
+      var cellRect=firstCell.getBoundingClientRect();
+      var numRect=numEl?numEl.getBoundingClientRect():cellRect;
+      var rowTopPx=cellRect.top-gridRect.top;
+      var barsStartPx=(numRect.bottom-gridRect.top)+4;
+      var neededLanes=rowsData[row3]?rowsData[row3].lanes:0;
+      if(neededLanes>0){
+        var neededHeight=(barsStartPx-rowTopPx)+neededLanes*19+6;
+        for(var c=0;c<7;c++){
+          var cellEl=dayCellEls[firstCellIdx+c];
+          if(cellEl)cellEl.style.minHeight=Math.max(80,neededHeight)+'px';
+        }
+      }
+    }
+
+    gridRect=g.getBoundingClientRect();
+    rowsData.forEach(function(rd){
+      rd.segments.forEach(function(seg){
+        var firstCellIdx=seg.row*7;
+        var firstCell=dayCellEls[firstCellIdx];
+        if(!firstCell)return;
+        var numEl=firstCell.querySelector('.cal-day-num');
+        var cellRect=firstCell.getBoundingClientRect();
+        var numRect=numEl?numEl.getBoundingClientRect():cellRect;
+        var topPx=(numRect.bottom-gridRect.top)+4+seg.lane*19;
         var bar=document.createElement('div');
         bar.className='cal-bar';
-        bar.style.left='calc('+(colStart/7*100)+'% + 3px)';
-        bar.style.width='calc('+((colEnd-colStart+1)/7*100)+'% - 6px)';
-bar.style.top=(row2*80+28+lane*19)+'px';
-        bar.style.background=groupColor(r.item.group);
-        bar.title=r.item.name;
-        bar.textContent=r.item.name;
+        bar.style.left='calc('+(seg.colStart/7*100)+'% + 3px)';
+        bar.style.width='calc('+((seg.colEnd-seg.colStart+1)/7*100)+'% - 6px)';
+        bar.style.top=topPx+'px';
+        bar.style.background=groupColor(seg.item.group);
+        bar.title=seg.item.name;
+        bar.textContent=seg.item.name;
         bar.style.pointerEvents='auto';
-        bar.onclick=(function(rr){return function(){openCalPopupForRange(rr);};})(r);
+        bar.onclick=(function(it){return function(){openCalPopupForItem(it);};})(seg.item);
         overlay.appendChild(bar);
       });
-    }
+    });
   }
   renderCalLegend(ranges);
 }
@@ -1530,9 +1539,10 @@ function openCalPopup(el){
   $('cal-popup-overlay').classList.add('open');
 }
 
-function openCalPopupForRange(r){
-  var k=dayKeyFromDate(r.start);
-  openCalPopup({dataset:{key:k}});
+function openCalPopupForItem(item){
+  if(!item.timeline)return;
+  var startStr=item.timeline.split(' - ')[0];
+  openCalPopup({dataset:{key:startStr}});
 }
 
 function closeCalPopup(){
