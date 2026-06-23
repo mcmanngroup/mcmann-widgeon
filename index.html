@@ -1264,20 +1264,44 @@ function filterVendors(){
     var mo=r.getAttribute('data-month');
     r.style.display=(val==='all'||mo===val)?'table-row':'none';
   });
+  var grandFiltered=0,visibleVendorCount=0,visibleBillCount=0;
   document.querySelectorAll('.vendor-row').forEach(function(row){
     var grp=row.id.replace('vs-cat-','');
     var details=document.querySelectorAll('.vendor-detail[data-group="'+grp+'"]');
-    var anyVisible=false;
-    details.forEach(function(r){if(r.style.display!=='none')anyVisible=true;});
+    var anyVisible=false,vendorSum=0,vendorBillCount=0;
+    details.forEach(function(r){
+      if(r.style.display!=='none'){
+        anyVisible=true;
+        vendorBillCount++;
+        var amtCell=r.querySelector('td.num');
+        var amt=amtCell?parseFloat(amtCell.textContent.replace(/[^0-9.-]/g,'')):0;
+        if(!isNaN(amt))vendorSum+=amt;
+      }
+    });
     var sub=document.getElementById('vs-sub-'+grp);
+    var numCell=document.getElementById('vs-num-'+grp);
     var expBtn=document.getElementById('exp-'+grp);
     var isExpanded=expBtn?expBtn.classList.contains('open'):false;
-    // FIX #3: always show the vendor-row itself; only hide sub rows when not expanded
     row.style.display='table-row';
-    // Hide vendor if it truly has no bills in this month filter
     if(val!=='all'&&!anyVisible){row.style.display='none';}
     if(sub)sub.style.display=(anyVisible&&isExpanded)?'table-row':'none';
+    if(anyVisible){
+      visibleVendorCount++;
+      visibleBillCount+=vendorBillCount;
+      grandFiltered+=vendorSum;
+      if(numCell)numCell.textContent=fC(vendorSum);
+      var subCell=sub?sub.querySelector('td.num'):null;
+      if(subCell)subCell.textContent=fC(vendorSum);
+    }
   });
+  var kpiVal=document.querySelector('#tab-vendors .kpi-val');
+  var kpiSub=document.querySelector('#tab-vendors .kpi-sub');
+  if(kpiVal)kpiVal.textContent=fC(grandFiltered);
+  if(kpiSub)kpiSub.textContent=visibleVendorCount+' vendors · '+visibleBillCount+' invoices';
+  var totalRow=document.querySelector('#tab-vendors .ts-total-row td.num strong');
+  var totalRowLabel=document.querySelector('#tab-vendors .ts-total-row td strong');
+  if(totalRow)totalRow.textContent=fC(grandFiltered);
+  if(totalRowLabel)totalRowLabel.innerHTML='Total Vendor Spend &nbsp;·&nbsp; '+visibleVendorCount+' vendors &nbsp;·&nbsp; '+visibleBillCount+' invoices';
 }
 
 // ── SCHEDULE ──
