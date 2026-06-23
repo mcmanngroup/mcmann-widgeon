@@ -439,11 +439,15 @@ function toggleGroup(id,type){
   btn.classList.toggle('open',!isOpen);
   var catRow=$(type+'-cat-'+id);
   if(catRow)catRow.classList.toggle('expanded',!isOpen);
-var tsFilterEl=document.getElementById('ts-filter');
-  var activeMonth=tsFilterEl?tsFilterEl.value:'all';
+var filterId=type==='vs'?'v-filter':'ts-filter';
+  var activeFilterEl=document.getElementById(filterId);
+  var activeMonth=activeFilterEl?activeFilterEl.value:'all';
   document.querySelectorAll('[data-group="'+id+'"]').forEach(function(r){
     if(isOpen){
       r.style.display='none';
+    } else if(type==='vs'){
+      var matchAttr=r.getAttribute('data-month-match');
+      r.style.display=(matchAttr===null?true:matchAttr==='1')?'table-row':'none';
     } else {
       var mo=r.getAttribute('data-month');
       r.style.display=(activeMonth==='all'||!mo||mo===activeMonth)?'table-row':'none';
@@ -894,6 +898,10 @@ function shExpandAll(type){
   document.querySelectorAll('[id^="exp-'+prefix+'"]').forEach(function(btn){
     if(!btn.classList.contains('open')){
       var id=btn.id.replace('exp-','');
+      if(type==='vs'){
+        var catRow=document.getElementById('vs-cat-'+id);
+        if(catRow&&catRow.style.display==='none')return;
+      }
       toggleGroup(id,type);
     }
   });
@@ -1268,16 +1276,18 @@ function filterVendors(){
   });
   document.querySelectorAll('.vendor-detail').forEach(function(r){
     var mo=r.getAttribute('data-month');
-    r.style.display=(val==='all'||mo===val)?'table-row':'none';
+    var matches=(val==='all'||mo===val);
+    r.setAttribute('data-month-match',matches?'1':'0');
+    r.style.display='none';
   });
   var grandFiltered=0,visibleVendorCount=0,visibleBillCount=0;
   document.querySelectorAll('.vendor-row').forEach(function(row){
     var grp=row.id.replace('vs-cat-','');
     var details=document.querySelectorAll('.vendor-detail[data-group="'+grp+'"]');
-    var anyVisible=false,vendorSum=0,vendorBillCount=0;
+    var anyMatch=false,vendorSum=0,vendorBillCount=0;
     details.forEach(function(r){
-      if(r.style.display!=='none'){
-        anyVisible=true;
+      if(r.getAttribute('data-month-match')==='1'){
+        anyMatch=true;
         vendorBillCount++;
         var amtCell=r.querySelector('td.num');
         var amt=amtCell?parseFloat(amtCell.textContent.replace(/[^0-9.-]/g,'')):0;
@@ -1286,16 +1296,14 @@ function filterVendors(){
     });
     var sub=document.getElementById('vs-sub-'+grp);
     var numCell=document.getElementById('vs-num-'+grp);
-    var expBtn=document.getElementById('exp-'+grp);
-    var isExpanded=expBtn?expBtn.classList.contains('open'):false;
     row.style.display='table-row';
-    if(val!=='all'&&!anyVisible){row.style.display='none';}
-    if(sub)sub.style.display=(anyVisible&&isExpanded)?'table-row':'none';
-    if(anyVisible){
+    if(val!=='all'&&!anyMatch){row.style.display='none';}
+    if(sub)sub.style.display='none';
+    if(anyMatch){
       visibleVendorCount++;
       visibleBillCount+=vendorBillCount;
       grandFiltered+=vendorSum;
-      if(numCell)numCell.textContent=fC(vendorSum);
+      if(numCell){numCell.textContent=fC(vendorSum);numCell.style.visibility='visible';}
       var subCell=sub?sub.querySelector('td.num'):null;
       if(subCell)subCell.textContent=fC(vendorSum);
     }
