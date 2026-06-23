@@ -18,8 +18,8 @@
             "budget": 800,
             "prevInv": 321.75,
             "curInv": 71.16,
-            "totInv": 392.91,
-            "tbc": 407.09,
+            "totInv": 392.90999999999997,
+            "tbc": 407.09000000000003,
             "ob": 0,
             "co": 0
           }
@@ -29,8 +29,8 @@
           "budget": 800,
           "prevInv": 321.75,
           "curInv": 71.16,
-          "totInv": 392.91,
-          "tbc": 407.09,
+          "totInv": 392.90999999999997,
+          "tbc": 407.09000000000003,
           "ob": 0,
           "co": 0
         }
@@ -104,7 +104,7 @@
             "prevInv": 3971.15,
             "curInv": 892.5,
             "totInv": 4863.65,
-            "tbc": 1136.35,
+            "tbc": 1136.3500000000004,
             "ob": 0,
             "co": 0
           },
@@ -114,7 +114,7 @@
             "budget": 4000,
             "prevInv": 6537.4,
             "curInv": 352.4,
-            "totInv": 6889.8,
+            "totInv": 6889.799999999999,
             "tbc": 0,
             "ob": -2889.7999999999993,
             "co": 0
@@ -147,7 +147,7 @@
           "budget": 18000,
           "prevInv": 13283.55,
           "curInv": 1244.9,
-          "totInv": 14528.45,
+          "totInv": 14528.449999999999,
           "tbc": 8161.35,
           "ob": -2889.7999999999993,
           "co": 1800
@@ -222,7 +222,7 @@
             "prevInv": 0,
             "curInv": 8280.42,
             "totInv": 8280.42,
-            "tbc": 142.3,
+            "tbc": 142.29999999999927,
             "ob": 0,
             "co": 0
           },
@@ -255,7 +255,7 @@
             "prevInv": 0,
             "curInv": 13806.21,
             "totInv": 13806.21,
-            "tbc": 993.79,
+            "tbc": 993.7900000000009,
             "ob": 0,
             "co": 0
           },
@@ -350,11 +350,11 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34,
+          "budget": 71839.34000000001,
           "prevInv": 0,
-          "curInv": 57121.36,
-          "totInv": 57121.36,
-          "tbc": 26149.23,
+          "curInv": 57121.35999999999,
+          "totInv": 57121.35999999999,
+          "tbc": 26149.229999999996,
           "ob": 0,
           "co": 11431.25
         }
@@ -442,11 +442,11 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.77,
+          "budget": 124747.76999999999,
           "prevInv": 0,
           "curInv": 637.91,
           "totInv": 637.91,
-          "tbc": 124109.86,
+          "tbc": 124109.85999999999,
           "ob": 0,
           "co": 0
         }
@@ -479,11 +479,11 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.38,
+          "budget": 32181.379999999997,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.38,
+          "tbc": 32181.379999999997,
           "ob": 0,
           "co": 0
         }
@@ -892,11 +892,11 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84,
+          "budget": 77167.84000000001,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84,
+          "tbc": 77167.84000000001,
           "ob": 0,
           "co": 0
         }
@@ -1659,9 +1659,9 @@
             "label": "Credit - Management Billing as per Pricing Contract",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
+            "prevInv": -5000,
             "curInv": 0,
-            "totInv": 0,
+            "totInv": -5000,
             "tbc": 5000,
             "ob": 0,
             "co": 0
@@ -1681,7 +1681,7 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "prevInv": 5906.2,
+          "prevInv": 5906.200000000001,
           "curInv": 2449.8,
           "totInv": 8356,
           "tbc": 29444,
@@ -1735,22 +1735,11 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
-          },
-          {
-            "label": "COLOUR LEGEND",
-            "type": "detail",
-            "budget": 0,
-            "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 0,
-            "ob": 0,
-            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.48,
+          "budget": 39028.479999999996,
           "prevInv": 435.6,
           "curInv": 737.1,
           "totInv": 1172.7,
@@ -1764,40 +1753,40 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "prevInv": 45894.91,
+        "prevInv": 45894.909999999996,
         "curInv": 62487.94,
-        "totInv": 108382.85,
-        "tbc": 1090208.79,
+        "totInv": 108382.84999999999,
+        "tbc": 1090208.7899999998,
         "ob": -9243.679999999998,
         "co": 16828.309999999998
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.95,
-        "prevInv": 4979.88,
-        "curInv": 8895.16,
-        "totInv": 13875.04,
-        "tbc": 163531.32,
-        "ob": 0,
-        "co": 2524.25
+        "budget": 175877.94749999998,
+        "prevInv": 4979.884499999999,
+        "curInv": 8895.156,
+        "totInv": 13875.0405,
+        "tbc": 163531.31849999996,
+        "ob": -433.4699999999998,
+        "co": 2524.2464999999997
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.88,
-        "prevInv": 2543.74,
-        "curInv": 3569.15,
-        "totInv": 6112.89,
-        "tbc": 62687.01,
-        "ob": 0,
-        "co": 967.63
+        "budget": 67419.879875,
+        "prevInv": 2543.739725,
+        "curInv": 3569.1548000000003,
+        "totInv": 6112.894525,
+        "tbc": 62687.005424999996,
+        "ob": -483.8574999999999,
+        "co": 967.627825
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.48,
-        "prevInv": 53418.53,
-        "curInv": 74952.25,
-        "totInv": 128370.79,
-        "tbc": 1316427.11,
+        "budget": 1415817.477375,
+        "prevInv": 53418.534224999996,
+        "curInv": 74952.25080000001,
+        "totInv": 128370.78502499999,
+        "tbc": 1316427.113925,
         "ob": -10161.007499999998,
         "co": 20320.184325
       }
@@ -3510,6 +3499,24 @@
       "group": "Exterior Hardscaping & Landscaping",
       "status": "",
       "timeline": "2026-11-24 - 2026-11-24"
+    },
+    {
+      "name": "McMann Walk-Through Deficiency List – Occupancy",
+      "group": "Final",
+      "status": "",
+      "timeline": "2026-12-03 - 2026-12-05"
+    },
+    {
+      "name": "Book for  Occupancy",
+      "group": "Final",
+      "status": "",
+      "timeline": "2026-12-05 - 2026-12-11"
+    },
+    {
+      "name": "Client walk Thoguh Deficiency",
+      "group": "Final",
+      "status": "",
+      "timeline": "2026-12-15 - 2026-12-18"
     }
   ],
   "_schema": {
@@ -3564,6 +3571,6 @@
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-23T21:16:16.716Z"
+    "syncedAt": "2026-06-23T22:08:10.677Z"
   }
 }
