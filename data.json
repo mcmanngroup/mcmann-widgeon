@@ -2721,12 +2721,6 @@
       "timeline": "2026-05-20 - 2026-05-20"
     },
     {
-      "name": "Invoice Foundation Draw As Per Contract",
-      "group": "Foundation",
-      "status": "Done",
-      "timeline": "2026-05-21 - 2026-05-21"
-    },
-    {
       "name": "Schedule Damproofing",
       "group": "Foundation",
       "status": "Done",
@@ -2899,12 +2893,6 @@
       "group": "Framing",
       "status": "",
       "timeline": "2026-08-15 - 2026-08-15"
-    },
-    {
-      "name": "Invoice Framing Draw As Per Contract",
-      "group": "Framing",
-      "status": "",
-      "timeline": "2026-07-22 - 2026-07-22"
     },
     {
       "name": "Order Skylights",
@@ -3163,12 +3151,6 @@
       "group": "Insulation & Drywall",
       "status": "",
       "timeline": "2026-09-11 - 2026-09-11"
-    },
-    {
-      "name": "Invoice Drywall Draw As Per Contract",
-      "group": "Insulation & Drywall",
-      "status": "",
-      "timeline": "2026-09-14 - 2026-09-14"
     },
     {
       "name": "Have Clients Select Roofing",
@@ -3517,66 +3499,6 @@
       "group": "Exterior Hardscaping & Landscaping",
       "status": "",
       "timeline": "2026-11-24 - 2026-11-24"
-    },
-    {
-      "name": "Schedule Final House Clean",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": ""
-    },
-    {
-      "name": "Final House Clean",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": "2026-12-14 - 2026-12-14"
-    },
-    {
-      "name": "Request Schedule C-B from Engineer",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": "2026-12-15 - 2026-12-15"
-    },
-    {
-      "name": "Schedule Energy Advisor to Test & Report",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": ""
-    },
-    {
-      "name": "McMann Group Occupancy Inspection",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": ""
-    },
-    {
-      "name": "Book Occupancy Inspection",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": "2026-12-16 - 2026-12-16"
-    },
-    {
-      "name": "Occupancy Inspection",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": "2026-12-17 - 2026-12-17"
-    },
-    {
-      "name": "Schedule Client Deficiency Walkthrough",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": ""
-    },
-    {
-      "name": "Client Deficiency Walkthrough",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": "2026-12-17 - 2026-12-17"
-    },
-    {
-      "name": "Invoice Final Draw as per Contract",
-      "group": "Project Close Out",
-      "status": "",
-      "timeline": ""
     }
   ],
   "_schema": {
@@ -3631,6 +3553,6 @@
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-23T18:57:25.099Z"
+    "syncedAt": "2026-06-23T19:43:01.682Z"
   }
 }
