@@ -275,11 +275,10 @@ tr.ts-total-row td.num{text-align:right;color:#ffffff}
 .cal-day{min-height:80px;padding:7px 8px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
 .cal-day:nth-child(7n){border-right:none}
 .cal-day.other-month{background:#f8faff;opacity:.5}
-.cal-day.today-cell{background:#eff6ff;border-top:3px solid var(--blue)}
-.cal-day.has-tasks{cursor:pointer}
+.cal-day.today-cell{background:#fff;border-top:none}.cal-day.has-tasks{cursor:pointer}
 .cal-day.has-tasks:hover{background:var(--blue-pale)}
-.cal-day-num{font-size:13px;font-weight:700;color:var(--text2);margin-bottom:4px}
-.today-cell .cal-day-num{background:var(--blue);color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
+.cal-day-num{font-size:13px;font-weight:700;color:#000;margin-bottom:4px;text-align:right}
+.today-cell .cal-day-num{background:var(--blue);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;margin-left:auto;margin-bottom:4px}
 .task-pip{font-size:10px;font-weight:500;padding:2px 6px;border-radius:3px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cal-popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:var(--radius);box-shadow:0 8px 40px rgba(10,22,40,.25);border:1px solid var(--border);width:340px;z-index:500;overflow:hidden}
 .cal-popup.open{display:block}
@@ -1466,8 +1465,8 @@ function buildCalDays(){
         var topPx=(numRect.bottom-gridRect.top)+4+seg.lane*19;
         var bar=document.createElement('div');
         bar.className='cal-bar';
-        bar.style.left='calc('+(seg.colStart/7*100)+'% + 3px)';
-        bar.style.width='calc('+((seg.colEnd-seg.colStart+1)/7*100)+'% - 6px)';
+bar.style.left='calc('+(seg.colStart/7*100)+'%)';
+bar.style.width='calc('+((seg.colEnd-seg.colStart+1)/7*100)+'%)';
         bar.style.top=topPx+'px';
         bar.style.background=groupColor(seg.item.group);
         bar.title=seg.item.name;
