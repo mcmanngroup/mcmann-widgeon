@@ -1260,6 +1260,12 @@ function renderVendors(mat){
 // FIX #3: filterVendors resets vendor-row visibility when switching to All Months
 function filterVendors(){
   var val=document.getElementById('v-filter').value;
+  document.querySelectorAll('[id^="exp-vnd"]').forEach(function(btn){
+    btn.classList.remove('open');
+  });
+  document.querySelectorAll('.vendor-row').forEach(function(row){
+    row.classList.remove('expanded');
+  });
   document.querySelectorAll('.vendor-detail').forEach(function(r){
     var mo=r.getAttribute('data-month');
     r.style.display=(val==='all'||mo===val)?'table-row':'none';
