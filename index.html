@@ -445,7 +445,7 @@ var filterId=type==='vs'?'v-filter':'ts-filter';
   document.querySelectorAll('[data-group="'+id+'"]').forEach(function(r){
     if(isOpen){
       r.style.display='none';
-    } else if(type==='vs'){
+    } else if(type==='vs'||type==='ts'){
       var matchAttr=r.getAttribute('data-month-match');
       r.style.display=(matchAttr===null?true:matchAttr==='1')?'table-row':'none';
     } else {
@@ -462,8 +462,8 @@ var filterId=type==='vs'?'v-filter':'ts-filter';
   if(type==='ts'){
     var tsSum=0;
     document.querySelectorAll('[data-group="'+id+'"].ts-detail').forEach(function(r){
-      var rMo=r.getAttribute('data-month');
-      var rMatches=(activeMonth==='all'||!rMo||rMo===activeMonth);
+      var matchAttr2=r.getAttribute('data-month-match');
+      var rMatches=(matchAttr2===null?true:matchAttr2==='1');
       if(rMatches)tsSum+=parseFloat(r.querySelector('.num').textContent)||0;
     });
     if(tsNum)tsNum.textContent=tsSum.toFixed(2);
@@ -898,8 +898,9 @@ function shExpandAll(type){
   document.querySelectorAll('[id^="exp-'+prefix+'"]').forEach(function(btn){
     if(!btn.classList.contains('open')){
       var id=btn.id.replace('exp-','');
-      if(type==='vs'){
-        var catRow=document.getElementById('vs-cat-'+id);
+      if(type==='vs'||type==='ts'){
+        var catRowId=type+'-cat-'+id;
+        var catRow=document.getElementById(catRowId);
         if(catRow&&catRow.style.display==='none')return;
       }
       toggleGroup(id,type);
@@ -1156,25 +1157,42 @@ function renderTimesheet(ts){
 }
 function filterTimesheet(){
   var val=document.getElementById('ts-filter').value;
-  var grand=0;
+  document.querySelectorAll('[id^="exp-tsgrp"]').forEach(function(btn){
+    btn.classList.remove('open');
+  });
+  document.querySelectorAll('.ts-group-row').forEach(function(row){
+    row.classList.remove('expanded');
+  });
+  document.querySelectorAll('.ts-detail').forEach(function(r){
+    var mo=r.getAttribute('data-month');
+    var matches=(val==='all'||mo===val);
+    r.setAttribute('data-month-match',matches?'1':'0');
+    r.style.display='none';
+  });
+  var grand=0,visibleGroupCount=0;
   document.querySelectorAll('.ts-group-row').forEach(function(catRow){
     var gid=catRow.id.replace('ts-cat-','');
-    var sum=0;
+    var sum=0,anyMatch=false;
     document.querySelectorAll('[data-group="'+gid+'"].ts-detail').forEach(function(r){
-      var mo=r.getAttribute('data-month');
-      var show=(val==='all'||mo===val);
-      r.style.display=show?'table-row':'none';
-      if(show)sum+=parseFloat(r.querySelector('.num').textContent)||0;
+      if(r.getAttribute('data-month-match')==='1'){
+        anyMatch=true;
+        sum+=parseFloat(r.querySelector('.num').textContent)||0;
+      }
     });
     var numEl=document.getElementById('ts-num-'+gid);
     if(numEl)numEl.textContent=sum.toFixed(2);
     var subRow=document.getElementById('ts-sub-'+gid);
-    if(subRow){var subNum=subRow.querySelector('.num');if(subNum)subNum.textContent=sum.toFixed(2);}
-    grand+=sum;
+    if(subRow){
+      subRow.style.display='none';
+      var subNum=subRow.querySelector('.num');
+      if(subNum)subNum.textContent=sum.toFixed(2);
+    }
+    catRow.style.display=(val!=='all'&&!anyMatch)?'none':'table-row';
+    if(anyMatch){visibleGroupCount++;grand+=sum;}
   });
-  var totalRow=document.querySelector('.ts-total-row .num strong');
+  var totalRow=document.querySelector('#tab-timesheet .ts-total-row .num strong');
   if(totalRow)totalRow.textContent=grand.toFixed(2);
-  var kpi=document.querySelector('.kpi-card.blue .kpi-val');
+  var kpi=document.querySelector('#tab-timesheet .kpi-card.blue .kpi-val');
   if(kpi)kpi.textContent=grand.toFixed(2);
 }
 
