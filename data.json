@@ -16,10 +16,10 @@
             "label": "Plan Printing & Photocopying",
             "type": "detail",
             "budget": 800,
-            "prevInv": 392.91,
+            "prevInv": 392.90999999999997,
             "curInv": 0,
-            "totInv": 392.91,
-            "tbc": 407.09,
+            "totInv": 392.90999999999997,
+            "tbc": 407.09000000000003,
             "ob": 0,
             "co": 0
           }
@@ -27,10 +27,10 @@
         "subtotal": {
           "label": "DESIGN SERVICES — Subtotal",
           "budget": 800,
-          "prevInv": 392.91,
+          "prevInv": 392.90999999999997,
           "curInv": 0,
-          "totInv": 392.91,
-          "tbc": 407.09,
+          "totInv": 392.90999999999997,
+          "tbc": 407.09000000000003,
           "ob": 0,
           "co": 0
         }
@@ -104,7 +104,7 @@
             "prevInv": 4863.65,
             "curInv": 817,
             "totInv": 5680.65,
-            "tbc": 319.35,
+            "tbc": 319.35000000000036,
             "ob": 0,
             "co": 0
           },
@@ -112,9 +112,9 @@
             "label": "Geotechnical Engineer",
             "type": "detail",
             "budget": 4000,
-            "prevInv": 6889.8,
+            "prevInv": 6889.799999999999,
             "curInv": 130,
-            "totInv": 7019.8,
+            "totInv": 7019.799999999999,
             "tbc": 0,
             "ob": -3019.7999999999993,
             "co": 0
@@ -145,9 +145,9 @@
         "subtotal": {
           "label": "ENGINEERING FEES — Subtotal",
           "budget": 18000,
-          "prevInv": 14528.45,
+          "prevInv": 14528.449999999999,
           "curInv": 947,
-          "totInv": 15475.45,
+          "totInv": 15475.449999999999,
           "tbc": 7344.35,
           "ob": -3019.7999999999993,
           "co": 1800
@@ -163,7 +163,7 @@
             "prevInv": 7625,
             "curInv": 25175.55,
             "totInv": 32800.55,
-            "tbc": 10474.45,
+            "tbc": 10474.449999999997,
             "ob": 0,
             "co": 0
           },
@@ -217,8 +217,8 @@
           "budget": 62000,
           "prevInv": 9357.55,
           "curInv": 27800.55,
-          "totInv": 37158.1,
-          "tbc": 26574.45,
+          "totInv": 37158.100000000006,
+          "tbc": 26574.449999999997,
           "ob": 0,
           "co": 1732.55
         }
@@ -233,7 +233,7 @@
             "prevInv": 8280.42,
             "curInv": 130.38,
             "totInv": 8410.8,
-            "tbc": 11.92,
+            "tbc": 11.920000000000073,
             "ob": 0,
             "co": 0
           },
@@ -266,7 +266,7 @@
             "prevInv": 13806.21,
             "curInv": 0,
             "totInv": 13806.21,
-            "tbc": 993.79,
+            "tbc": 993.7900000000009,
             "ob": 0,
             "co": 0
           },
@@ -277,7 +277,7 @@
             "prevInv": 0,
             "curInv": 806.3,
             "totInv": 806.3,
-            "tbc": 393.7,
+            "tbc": 393.70000000000005,
             "ob": 0,
             "co": 0
           },
@@ -361,11 +361,11 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34,
-          "prevInv": 57121.36,
-          "curInv": 4620.47,
+          "budget": 71839.34000000001,
+          "prevInv": 57121.35999999999,
+          "curInv": 4620.469999999999,
           "totInv": 61741.83,
-          "tbc": 21528.76,
+          "tbc": 21528.760000000002,
           "ob": 0,
           "co": 11431.25
         }
@@ -380,7 +380,7 @@
             "prevInv": 0,
             "curInv": 22477.74,
             "totInv": 22477.74,
-            "tbc": 21666.53,
+            "tbc": 21666.529999999995,
             "ob": 0,
             "co": 0
           },
@@ -453,10 +453,10 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.77,
+          "budget": 124747.76999999999,
           "prevInv": 637.91,
-          "curInv": 23460.8,
-          "totInv": 24098.71,
+          "curInv": 23460.800000000003,
+          "totInv": 24098.710000000003,
           "tbc": 100649.06,
           "ob": 0,
           "co": 0
@@ -490,11 +490,11 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.38,
+          "budget": 32181.379999999997,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.38,
+          "tbc": 32181.379999999997,
           "ob": 0,
           "co": 0
         }
@@ -914,11 +914,11 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84,
+          "budget": 77167.84000000001,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84,
+          "tbc": 77167.84000000001,
           "ob": 0,
           "co": 0
         }
@@ -1614,7 +1614,7 @@
             "prevInv": 97.58,
             "curInv": 175,
             "totInv": 272.58,
-            "tbc": 927.42,
+            "tbc": 927.4200000000001,
             "ob": 0,
             "co": 0
           },
@@ -1658,7 +1658,7 @@
           "prevInv": 97.58,
           "curInv": 484.86,
           "totInv": 582.44,
-          "tbc": 6617.56,
+          "tbc": 6617.5599999999995,
           "ob": 0,
           "co": 0
         }
@@ -1681,9 +1681,9 @@
             "label": "Credit - Management Billing as per Pricing Contract",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
+            "prevInv": -5000,
             "curInv": 0,
-            "totInv": 0,
+            "totInv": -5000,
             "tbc": 5000,
             "ob": 0,
             "co": 0
@@ -1720,8 +1720,8 @@
             "budget": 8628.48,
             "prevInv": 1172.7,
             "curInv": 737.1,
-            "totInv": 1909.8,
-            "tbc": 6718.68,
+            "totInv": 1909.8000000000002,
+            "tbc": 6718.679999999999,
             "ob": 0,
             "co": 0
           },
@@ -1757,26 +1757,15 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
-          },
-          {
-            "label": "COLOUR LEGEND",
-            "type": "detail",
-            "budget": 0,
-            "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 0,
-            "ob": 0,
-            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.48,
+          "budget": 39028.479999999996,
           "prevInv": 1172.7,
           "curInv": 2057.15,
-          "totInv": 3229.85,
-          "tbc": 35798.63,
+          "totInv": 3229.8500000000004,
+          "tbc": 35798.630000000005,
           "ob": 0,
           "co": 0
         }
@@ -1786,40 +1775,40 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "prevInv": 108382.85,
+        "prevInv": 108382.84999999999,
         "curInv": 84098.92,
-        "totInv": 192481.77,
-        "tbc": 1012338.65,
+        "totInv": 192481.77000000002,
+        "tbc": 1012338.6499999999,
         "ob": -9373.679999999998,
         "co": 22927.09
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.95,
-        "prevInv": 13875.04,
-        "curInv": 11856.99,
-        "totInv": 25951.23,
-        "tbc": 151850.8,
-        "ob": 0,
-        "co": 3439.06
+        "budget": 175877.94749999998,
+        "prevInv": 13875.0405,
+        "curInv": 11856.985499999999,
+        "totInv": 25951.2285,
+        "tbc": 151850.7975,
+        "ob": -452.9699999999998,
+        "co": 3439.0634999999997
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.88,
-        "prevInv": 6112.89,
-        "curInv": 4797.8,
-        "totInv": 10921.65,
-        "tbc": 58209.47,
-        "ob": 0,
-        "co": 1318.31
+        "budget": 67419.879875,
+        "prevInv": 6112.894525,
+        "curInv": 4797.7952749999995,
+        "totInv": 10921.649925000002,
+        "tbc": 58209.47237499999,
+        "ob": -491.3324999999999,
+        "co": 1318.307675
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.48,
-        "prevInv": 128370.79,
-        "curInv": 100753.7,
-        "totInv": 229354.65,
-        "tbc": 1222398.92,
+        "budget": 1415817.477375,
+        "prevInv": 128370.78502499999,
+        "curInv": 100753.70077499999,
+        "totInv": 229354.64842500002,
+        "tbc": 1222398.9198749997,
         "ob": -10317.982499999998,
         "co": 27684.461175
       }
@@ -4060,6 +4049,6 @@
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-07-20T22:40:04.775Z"
+    "syncedAt": "2026-07-20T22:40:50.519Z"
   }
 }
