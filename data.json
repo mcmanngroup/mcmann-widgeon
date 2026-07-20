@@ -6,7 +6,7 @@
   "projectAddress": "",
   "projectManager": "A. McMann",
   "reportLabel": "May 1, 2025 – May 31, 2026",
-  "updated": "June 23, 2026",
+  "updated": "July 20, 2026",
   "costBreakdown": {
     "categories": [
       {
@@ -16,10 +16,10 @@
             "label": "Plan Printing & Photocopying",
             "type": "detail",
             "budget": 800,
-            "prevInv": 321.75,
-            "curInv": 71.16,
-            "totInv": 392.90999999999997,
-            "tbc": 407.09000000000003,
+            "prevInv": 392.91,
+            "curInv": 0,
+            "totInv": 392.91,
+            "tbc": 407.09,
             "ob": 0,
             "co": 0
           }
@@ -27,10 +27,10 @@
         "subtotal": {
           "label": "DESIGN SERVICES — Subtotal",
           "budget": 800,
-          "prevInv": 321.75,
-          "curInv": 71.16,
-          "totInv": 392.90999999999997,
-          "tbc": 407.09000000000003,
+          "prevInv": 392.91,
+          "curInv": 0,
+          "totInv": 392.91,
+          "tbc": 407.09,
           "ob": 0,
           "co": 0
         }
@@ -42,8 +42,8 @@
             "label": "Building Permit Fees",
             "type": "detail",
             "budget": 8500,
-            "prevInv": 14725.75,
-            "curInv": 128.13,
+            "prevInv": 14853.88,
+            "curInv": 0,
             "totInv": 14853.88,
             "tbc": 0,
             "ob": -6353.879999999999,
@@ -75,8 +75,8 @@
         "subtotal": {
           "label": "PERMITS & HOME WARRANTY — Subtotal",
           "budget": 19790,
-          "prevInv": 14725.75,
-          "curInv": 128.13,
+          "prevInv": 14853.88,
+          "curInv": 0,
           "totInv": 14853.88,
           "tbc": 11290,
           "ob": -6353.879999999999,
@@ -101,10 +101,10 @@
             "label": "Land Survey",
             "type": "detail",
             "budget": 6000,
-            "prevInv": 3971.15,
-            "curInv": 892.5,
-            "totInv": 4863.65,
-            "tbc": 1136.3500000000004,
+            "prevInv": 4863.65,
+            "curInv": 817,
+            "totInv": 5680.65,
+            "tbc": 319.35,
             "ob": 0,
             "co": 0
           },
@@ -112,11 +112,11 @@
             "label": "Geotechnical Engineer",
             "type": "detail",
             "budget": 4000,
-            "prevInv": 6537.4,
-            "curInv": 352.4,
-            "totInv": 6889.799999999999,
+            "prevInv": 6889.8,
+            "curInv": 130,
+            "totInv": 7019.8,
             "tbc": 0,
-            "ob": -2889.7999999999993,
+            "ob": -3019.7999999999993,
             "co": 0
           },
           {
@@ -145,11 +145,11 @@
         "subtotal": {
           "label": "ENGINEERING FEES — Subtotal",
           "budget": 18000,
-          "prevInv": 13283.55,
-          "curInv": 1244.9,
-          "totInv": 14528.449999999999,
-          "tbc": 8161.35,
-          "ob": -2889.7999999999993,
+          "prevInv": 14528.45,
+          "curInv": 947,
+          "totInv": 15475.45,
+          "tbc": 7344.35,
+          "ob": -3019.7999999999993,
           "co": 1800
         }
       },
@@ -159,11 +159,22 @@
           {
             "label": "Excavation, Backfill, Perimeter & Drain Labour",
             "type": "detail",
-            "budget": 45000,
+            "budget": 43275,
             "prevInv": 7625,
-            "curInv": 0,
-            "totInv": 7625,
-            "tbc": 37375,
+            "curInv": 25175.55,
+            "totInv": 32800.55,
+            "tbc": 10474.45,
+            "ob": 0,
+            "co": 0
+          },
+          {
+            "label": "Site Work - Outside Scope of Work",
+            "type": "detail",
+            "budget": 1725,
+            "prevInv": 0,
+            "curInv": 1725,
+            "totInv": 1725,
+            "tbc": 0,
             "ob": 0,
             "co": 0
           },
@@ -172,9 +183,9 @@
             "type": "detail",
             "budget": 10000,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 10000,
+            "curInv": 900,
+            "totInv": 900,
+            "tbc": 9100,
             "ob": 0,
             "co": 0
           },
@@ -205,9 +216,9 @@
           "label": "SITE WORK — Subtotal",
           "budget": 62000,
           "prevInv": 9357.55,
-          "curInv": 0,
-          "totInv": 9357.55,
-          "tbc": 54375,
+          "curInv": 27800.55,
+          "totInv": 37158.1,
+          "tbc": 26574.45,
           "ob": 0,
           "co": 1732.55
         }
@@ -219,10 +230,10 @@
             "label": "Footings & Foundation Material",
             "type": "detail",
             "budget": 8422.72,
-            "prevInv": 0,
-            "curInv": 8280.42,
-            "totInv": 8280.42,
-            "tbc": 142.29999999999927,
+            "prevInv": 8280.42,
+            "curInv": 130.38,
+            "totInv": 8410.8,
+            "tbc": 11.92,
             "ob": 0,
             "co": 0
           },
@@ -230,8 +241,8 @@
             "label": "Footings & Foundation Labour",
             "type": "detail",
             "budget": 17635,
-            "prevInv": 0,
-            "curInv": 17635,
+            "prevInv": 17635,
+            "curInv": 0,
             "totInv": 17635,
             "tbc": 0,
             "ob": 0,
@@ -241,8 +252,8 @@
             "label": "Change Order #1 JXN Solutions: Footings and Foundation Labour",
             "type": "co",
             "budget": 0,
-            "prevInv": 0,
-            "curInv": 11431.25,
+            "prevInv": 11431.25,
+            "curInv": 0,
             "totInv": 11431.25,
             "tbc": 0,
             "ob": 0,
@@ -252,10 +263,10 @@
             "label": "Footings & Foundation Concrete",
             "type": "detail",
             "budget": 14800,
-            "prevInv": 0,
-            "curInv": 13806.21,
+            "prevInv": 13806.21,
+            "curInv": 0,
             "totInv": 13806.21,
-            "tbc": 993.7900000000009,
+            "tbc": 993.79,
             "ob": 0,
             "co": 0
           },
@@ -264,9 +275,9 @@
             "type": "detail",
             "budget": 1200,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 1200,
+            "curInv": 806.3,
+            "totInv": 806.3,
+            "tbc": 393.7,
             "ob": 0,
             "co": 0
           },
@@ -297,9 +308,9 @@
             "type": "detail",
             "budget": 3200,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 3200,
+            "curInv": 2243.79,
+            "totInv": 2243.79,
+            "tbc": 956.21,
             "ob": 0,
             "co": 0
           },
@@ -308,9 +319,9 @@
             "type": "detail",
             "budget": 4887,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 4887,
+            "curInv": 1440,
+            "totInv": 1440,
+            "tbc": 3447,
             "ob": 0,
             "co": 0
           },
@@ -318,8 +329,8 @@
             "label": "Concrete Pump Truck",
             "type": "detail",
             "budget": 4500,
-            "prevInv": 0,
-            "curInv": 3232.88,
+            "prevInv": 3232.88,
+            "curInv": 0,
             "totInv": 3232.88,
             "tbc": 1267.12,
             "ob": 0,
@@ -329,8 +340,8 @@
             "label": "Damproofing",
             "type": "detail",
             "budget": 7500,
-            "prevInv": 0,
-            "curInv": 2735.6,
+            "prevInv": 2735.6,
+            "curInv": 0,
             "totInv": 2735.6,
             "tbc": 4764.4,
             "ob": 0,
@@ -350,11 +361,11 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34000000001,
-          "prevInv": 0,
-          "curInv": 57121.35999999999,
-          "totInv": 57121.35999999999,
-          "tbc": 26149.229999999996,
+          "budget": 71839.34,
+          "prevInv": 57121.36,
+          "curInv": 4620.47,
+          "totInv": 61741.83,
+          "tbc": 21528.76,
           "ob": 0,
           "co": 11431.25
         }
@@ -367,9 +378,9 @@
             "type": "detail",
             "budget": 44144.27,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 44144.27,
+            "curInv": 22477.74,
+            "totInv": 22477.74,
+            "tbc": 21666.53,
             "ob": 0,
             "co": 0
           },
@@ -399,8 +410,8 @@
             "label": "Engineering Parts",
             "type": "detail",
             "budget": 4236.2,
-            "prevInv": 0,
-            "curInv": 637.91,
+            "prevInv": 637.91,
+            "curInv": 0,
             "totInv": 637.91,
             "tbc": 3598.29,
             "ob": 0,
@@ -422,9 +433,9 @@
             "type": "detail",
             "budget": 2692.58,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 2692.58,
+            "curInv": 983.06,
+            "totInv": 983.06,
+            "tbc": 1709.52,
             "ob": 0,
             "co": 0
           },
@@ -442,11 +453,11 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.76999999999,
-          "prevInv": 0,
-          "curInv": 637.91,
-          "totInv": 637.91,
-          "tbc": 124109.85999999999,
+          "budget": 124747.77,
+          "prevInv": 637.91,
+          "curInv": 23460.8,
+          "totInv": 24098.71,
+          "tbc": 100649.06,
           "ob": 0,
           "co": 0
         }
@@ -479,11 +490,11 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.379999999997,
+          "budget": 32181.38,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.379999999997,
+          "tbc": 32181.38,
           "ob": 0,
           "co": 0
         }
@@ -566,9 +577,9 @@
             "type": "detail",
             "budget": 26044,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 26044,
+            "curInv": 13022,
+            "totInv": 13022,
+            "tbc": 13022,
             "ob": 0,
             "co": 0
           },
@@ -593,17 +604,28 @@
             "tbc": 0,
             "ob": 0,
             "co": 1864.51
+          },
+          {
+            "label": "Change Order 3: Electrical Change Order - 400A Service Upgrade & Underground Extra Work",
+            "type": "co",
+            "budget": 0,
+            "prevInv": 0,
+            "curInv": 6098.78,
+            "totInv": 6098.78,
+            "tbc": 0,
+            "ob": 0,
+            "co": 6098.78
           }
         ],
         "subtotal": {
           "label": "ELECTRICAL — Subtotal",
           "budget": 109299.9,
           "prevInv": 1864.51,
-          "curInv": 0,
-          "totInv": 1864.51,
-          "tbc": 109299.9,
+          "curInv": 19120.78,
+          "totInv": 20985.29,
+          "tbc": 96277.9,
           "ob": 0,
-          "co": 1864.51
+          "co": 7963.29
         }
       },
       {
@@ -614,9 +636,9 @@
             "type": "detail",
             "budget": 25000,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 25000,
+            "curInv": 2520.41,
+            "totInv": 2520.41,
+            "tbc": 22479.59,
             "ob": 0,
             "co": 0
           },
@@ -647,9 +669,9 @@
           "label": "PLUMBING — Subtotal",
           "budget": 49000,
           "prevInv": 0,
-          "curInv": 0,
-          "totInv": 0,
-          "tbc": 49000,
+          "curInv": 2520.41,
+          "totInv": 2520.41,
+          "tbc": 46479.59,
           "ob": 0,
           "co": 0
         }
@@ -892,11 +914,11 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84000000001,
+          "budget": 77167.84,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84000000001,
+          "tbc": 77167.84,
           "ob": 0,
           "co": 0
         }
@@ -1553,9 +1575,9 @@
             "type": "detail",
             "budget": 1500,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 1500,
+            "curInv": 233,
+            "totInv": 233,
+            "tbc": 1267,
             "ob": 0,
             "co": 0
           },
@@ -1575,9 +1597,9 @@
           "label": "CONSTRUCTION CLEAN UP — Subtotal",
           "budget": 19500,
           "prevInv": 0,
-          "curInv": 0,
-          "totInv": 0,
-          "tbc": 19500,
+          "curInv": 233,
+          "totInv": 233,
+          "tbc": 19267,
           "ob": 0,
           "co": 0
         }
@@ -1589,10 +1611,10 @@
             "label": "Portable Washroom",
             "type": "detail",
             "budget": 1200,
-            "prevInv": 0,
-            "curInv": 97.58,
-            "totInv": 97.58,
-            "tbc": 1102.42,
+            "prevInv": 97.58,
+            "curInv": 175,
+            "totInv": 272.58,
+            "tbc": 927.42,
             "ob": 0,
             "co": 0
           },
@@ -1612,9 +1634,9 @@
             "type": "detail",
             "budget": 1000,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 1000,
+            "curInv": 309.86,
+            "totInv": 309.86,
+            "tbc": 690.14,
             "ob": 0,
             "co": 0
           },
@@ -1633,10 +1655,10 @@
         "subtotal": {
           "label": "JOBSITE FACILITIES — Subtotal",
           "budget": 7200,
-          "prevInv": 0,
-          "curInv": 97.58,
-          "totInv": 97.58,
-          "tbc": 7102.42,
+          "prevInv": 97.58,
+          "curInv": 484.86,
+          "totInv": 582.44,
+          "tbc": 6617.56,
           "ob": 0,
           "co": 0
         }
@@ -1648,10 +1670,10 @@
             "label": "Management & Supervision",
             "type": "detail",
             "budget": 25200,
-            "prevInv": 10186.2,
-            "curInv": 1549.8,
-            "totInv": 11736,
-            "tbc": 13464,
+            "prevInv": 11736,
+            "curInv": 2043.9,
+            "totInv": 13779.9,
+            "tbc": 11420.1,
             "ob": 0,
             "co": 0
           },
@@ -1659,9 +1681,9 @@
             "label": "Credit - Management Billing as per Pricing Contract",
             "type": "co",
             "budget": 0,
-            "prevInv": -5000,
+            "prevInv": 0,
             "curInv": 0,
-            "totInv": -5000,
+            "totInv": 0,
             "tbc": 5000,
             "ob": 0,
             "co": 0
@@ -1670,10 +1692,10 @@
             "label": "Accounting & Admin",
             "type": "detail",
             "budget": 12600,
-            "prevInv": 720,
-            "curInv": 900,
-            "totInv": 1620,
-            "tbc": 10980,
+            "prevInv": 1620,
+            "curInv": 810,
+            "totInv": 2430,
+            "tbc": 10170,
             "ob": 0,
             "co": 0
           }
@@ -1681,10 +1703,10 @@
         "subtotal": {
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
-          "prevInv": 5906.200000000001,
-          "curInv": 2449.8,
-          "totInv": 8356,
-          "tbc": 29444,
+          "prevInv": 8356,
+          "curInv": 2853.9,
+          "totInv": 11209.9,
+          "tbc": 26590.1,
           "ob": 0,
           "co": 0
         }
@@ -1696,10 +1718,10 @@
             "label": "Travel",
             "type": "detail",
             "budget": 8628.48,
-            "prevInv": 435.6,
+            "prevInv": 1172.7,
             "curInv": 737.1,
-            "totInv": 1172.7,
-            "tbc": 7455.78,
+            "totInv": 1909.8,
+            "tbc": 6718.68,
             "ob": 0,
             "co": 0
           },
@@ -1719,9 +1741,9 @@
             "type": "detail",
             "budget": 23400,
             "prevInv": 0,
-            "curInv": 0,
-            "totInv": 0,
-            "tbc": 23400,
+            "curInv": 1320.05,
+            "totInv": 1320.05,
+            "tbc": 22079.95,
             "ob": 0,
             "co": 0
           },
@@ -1735,15 +1757,26 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
+          },
+          {
+            "label": "COLOUR LEGEND",
+            "type": "detail",
+            "budget": 0,
+            "prevInv": 0,
+            "curInv": 0,
+            "totInv": 0,
+            "tbc": 0,
+            "ob": 0,
+            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.479999999996,
-          "prevInv": 435.6,
-          "curInv": 737.1,
-          "totInv": 1172.7,
-          "tbc": 37855.78,
+          "budget": 39028.48,
+          "prevInv": 1172.7,
+          "curInv": 2057.15,
+          "totInv": 3229.85,
+          "tbc": 35798.63,
           "ob": 0,
           "co": 0
         }
@@ -1753,42 +1786,42 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "prevInv": 45894.909999999996,
-        "curInv": 62487.94,
-        "totInv": 108382.84999999999,
-        "tbc": 1090208.7899999998,
-        "ob": -9243.679999999998,
-        "co": 16828.309999999998
+        "prevInv": 108382.85,
+        "curInv": 84098.92,
+        "totInv": 192481.77,
+        "tbc": 1012338.65,
+        "ob": -9373.679999999998,
+        "co": 22927.09
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.94749999998,
-        "prevInv": 4979.884499999999,
-        "curInv": 8895.156,
-        "totInv": 13875.0405,
-        "tbc": 163531.31849999996,
-        "ob": -433.4699999999998,
-        "co": 2524.2464999999997
+        "budget": 175877.95,
+        "prevInv": 13875.04,
+        "curInv": 11856.99,
+        "totInv": 25951.23,
+        "tbc": 151850.8,
+        "ob": 0,
+        "co": 3439.06
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.879875,
-        "prevInv": 2543.739725,
-        "curInv": 3569.1548000000003,
-        "totInv": 6112.894525,
-        "tbc": 62687.005424999996,
-        "ob": -483.8574999999999,
-        "co": 967.627825
+        "budget": 67419.88,
+        "prevInv": 6112.89,
+        "curInv": 4797.8,
+        "totInv": 10921.65,
+        "tbc": 58209.47,
+        "ob": 0,
+        "co": 1318.31
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.477375,
-        "prevInv": 53418.534224999996,
-        "curInv": 74952.25080000001,
-        "totInv": 128370.78502499999,
-        "tbc": 1316427.113925,
-        "ob": -10161.007499999998,
-        "co": 20320.184325
+        "budget": 1415817.48,
+        "prevInv": 128370.79,
+        "curInv": 100753.7,
+        "totInv": 229354.65,
+        "tbc": 1222398.92,
+        "ob": -10317.982499999998,
+        "co": 27684.461175
       }
     ]
   },
@@ -2196,9 +2229,145 @@
             "hours": 2.91,
             "rate": 90,
             "amount": 261.90000000000003
+          },
+          {
+            "date": "46175",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.83,
+            "rate": 90,
+            "amount": 74.7
+          },
+          {
+            "date": "46176",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.16,
+            "rate": 90,
+            "amount": 194.4
+          },
+          {
+            "date": "46177",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.42,
+            "rate": 90,
+            "amount": 127.8
+          },
+          {
+            "date": "46181",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.25,
+            "rate": 90,
+            "amount": 202.5
+          },
+          {
+            "date": "46181",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.83,
+            "rate": 90,
+            "amount": 74.7
+          },
+          {
+            "date": "46182",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.25,
+            "rate": 90,
+            "amount": 112.5
+          },
+          {
+            "date": "46184",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.75,
+            "rate": 90,
+            "amount": 67.5
+          },
+          {
+            "date": "46184",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.91,
+            "rate": 90,
+            "amount": 81.9
+          },
+          {
+            "date": "46189",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.58,
+            "rate": 90,
+            "amount": 142.20000000000002
+          },
+          {
+            "date": "46190",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.58,
+            "rate": 90,
+            "amount": 52.199999999999996
+          },
+          {
+            "date": "46191",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.41,
+            "rate": 90,
+            "amount": 126.89999999999999
+          },
+          {
+            "date": "46192",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.08,
+            "rate": 90,
+            "amount": 97.2
+          },
+          {
+            "date": "46195",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.42,
+            "rate": 90,
+            "amount": 37.8
+          },
+          {
+            "date": "46195",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.5,
+            "rate": 90,
+            "amount": 225
+          },
+          {
+            "date": "46196",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.66,
+            "rate": 90,
+            "amount": 239.4
+          },
+          {
+            "date": "46196",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.25,
+            "rate": 90,
+            "amount": 22.5
+          },
+          {
+            "date": "46202",
+            "name": "Russell McMann",
+            "status": "Unbilled",
+            "hours": 1.83,
+            "rate": 90,
+            "amount": 164.70000000000002
           }
         ],
-        "total_hours": 130.4,
+        "total_hours": 153.11000000000004,
         "total_amount": 0
       },
       {
@@ -2291,13 +2460,147 @@
             "hours": 1.17,
             "rate": 90,
             "amount": 105.3
+          },
+          {
+            "date": "46175",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46176",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46181",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46184",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46191",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46196",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
+          },
+          {
+            "date": "46202",
+            "name": "Russell McMann",
+            "status": "Unbilled",
+            "hours": 1.17,
+            "rate": 90,
+            "amount": 105.3
           }
         ],
-        "total_hours": 13.03,
+        "total_hours": 21.220000000000006,
+        "total_amount": 0
+      },
+      {
+        "label": "Foundation:Slap Prep Labor",
+        "items": [
+          {
+            "date": "46191",
+            "name": "Alaa Kadah",
+            "status": "Unbilled",
+            "hours": 3.58,
+            "rate": 55,
+            "amount": 196.9
+          },
+          {
+            "date": "46191",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 7.5,
+            "rate": 55,
+            "amount": 412.5
+          },
+          {
+            "date": "46197",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 2,
+            "rate": 55,
+            "amount": 110
+          },
+          {
+            "date": "46199",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 1.58,
+            "rate": 55,
+            "amount": 86.9
+          }
+        ],
+        "total_hours": 14.66,
+        "total_amount": 0
+      },
+      {
+        "label": "Demolition",
+        "items": [
+          {
+            "date": "46196",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 4.33,
+            "rate": 55,
+            "amount": 238.15
+          },
+          {
+            "date": "46196",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 4.17,
+            "rate": 55,
+            "amount": 229.35
+          },
+          {
+            "date": "46197",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 0.33,
+            "rate": 55,
+            "amount": 18.150000000000002
+          },
+          {
+            "date": "46197",
+            "name": "Fielding K Benton",
+            "status": "Unbilled",
+            "hours": 3.08,
+            "rate": 55,
+            "amount": 169.4
+          }
+        ],
+        "total_hours": 11.91,
         "total_amount": 0
       }
     ],
-    "totalHours": 143.43,
+    "totalHours": 200.90000000000003,
     "totalAmount": 0
   },
   "materials": {
@@ -2315,6 +2618,18 @@
         "total": 2735.6
       },
       {
+        "name": "Coastline Plumbing Ltd",
+        "bills": [
+          {
+            "date": "46192",
+            "num": "3247",
+            "memo": "Coastline Plumbing Ltd Radon Piping, Relocation of water service 3247",
+            "amount": 2520.41
+          }
+        ],
+        "total": 2520.41
+      },
+      {
         "name": "DBL Disposal Services Ltd",
         "bills": [
           {
@@ -2328,9 +2643,21 @@
             "num": "305327",
             "memo": "DBL Disposal Services Ltd Portable Washroom- 305327",
             "amount": 22.58
+          },
+          {
+            "date": "46203",
+            "num": "307885",
+            "memo": "DBL Disposal Services Ltd Portable Washroom- 307885",
+            "amount": 175
+          },
+          {
+            "date": "46203",
+            "num": "316498",
+            "memo": "DBL Disposal Services Ltd Disposal Bins 316498",
+            "amount": 233
           }
         ],
-        "total": 97.58
+        "total": 505.58
       },
       {
         "name": "Ecolibrium Energy Solutions Inc.",
@@ -2343,6 +2670,18 @@
           }
         ],
         "total": 975
+      },
+      {
+        "name": "Excel Concrete Finishing Inc",
+        "bills": [
+          {
+            "date": "46203",
+            "num": "3038",
+            "memo": "Excel Concrete Finishing Inc Slab Finishng 3038",
+            "amount": 1440
+          }
+        ],
+        "total": 1440
       },
       {
         "name": "Heidelberg Materials Canada Limited",
@@ -2358,9 +2697,15 @@
             "num": "3191123",
             "memo": "Heidelberg Materials Canada Limited Concrete Walls 3191123",
             "amount": 7698.65
+          },
+          {
+            "date": "46202",
+            "num": "3194511",
+            "memo": "Heidelberg Materials Canada Limited Concrete Skim Coat 3194511",
+            "amount": 2243.79
           }
         ],
-        "total": 13806.21
+        "total": 16050
       },
       {
         "name": "Island Concrete Pumping Ltd",
@@ -2388,9 +2733,33 @@
             "num": "EWO-1189-1A",
             "memo": "Island Electric Company Change Order Underground Cable Replacement 1189-1",
             "amount": 1864.51
+          },
+          {
+            "date": "46188",
+            "num": "EWO-1189-2",
+            "memo": "Island Electric Company Change Order Main 400A Service Feeder Cables EWO-1189-2",
+            "amount": 4278
+          },
+          {
+            "date": "46188",
+            "num": "EWO-1189-2",
+            "memo": "Island Electric Company Change Order Receptacle and Future Lighting Circuit EWO-1189-2",
+            "amount": 960.41
+          },
+          {
+            "date": "46188",
+            "num": "EWO-1189-2",
+            "memo": "Island Electric Company Change Order Future Swimming Pool Sub-feed  EWO-1189-2",
+            "amount": 860.37
+          },
+          {
+            "date": "46188",
+            "num": "1189-1",
+            "memo": "Island Electric Company 400A Service Upgrade 1189-1",
+            "amount": 13022
           }
         ],
-        "total": 1864.51
+        "total": 20985.29
       },
       {
         "name": "JE Anderson & Associates",
@@ -2412,9 +2781,15 @@
             "num": "0067962",
             "memo": "JE Anderson & Associates Survey 0067962",
             "amount": 892.5
+          },
+          {
+            "date": "46181",
+            "num": "0068312",
+            "memo": "JE Anderson & Associates Survey 0068312",
+            "amount": 817
           }
         ],
-        "total": 4863.65
+        "total": 5680.65
       },
       {
         "name": "JXN SOLUTIONS LTD",
@@ -2454,9 +2829,27 @@
             "num": "2694",
             "memo": "Kivela Contracting Ltd. Change Order Septic Field Work 2694",
             "amount": 1732.55
+          },
+          {
+            "date": "46197",
+            "num": "2697",
+            "memo": "Kivela Contracting Ltd. Site Work 2697",
+            "amount": 26900.55
           }
         ],
-        "total": 11157.55
+        "total": 38058.1
+      },
+      {
+        "name": "Kyle Windle",
+        "bills": [
+          {
+            "date": "46203",
+            "num": "",
+            "memo": "Kyle Windle Demolition Labour",
+            "amount": 665
+          }
+        ],
+        "total": 665
       },
       {
         "name": "Lewkowich Engineering Associates Ltd",
@@ -2484,9 +2877,15 @@
             "num": "104886",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Engineering 104886",
             "amount": 352.4
+          },
+          {
+            "date": "46188",
+            "num": "105386",
+            "memo": "Lewkowich Engineering Associates Ltd Geotech Report 105386",
+            "amount": 130
           }
         ],
-        "total": 6889.799999999999
+        "total": 7019.799999999999
       },
       {
         "name": "Print Three Nanaimo",
@@ -2544,9 +2943,69 @@
             "num": "103-25259301",
             "memo": "Rona Engineering Material 103-25259301",
             "amount": 637.91
+          },
+          {
+            "date": "46190",
+            "num": "103-25311001",
+            "memo": "Rona Footings and Foundation Material 103-25311001",
+            "amount": 130.38
+          },
+          {
+            "date": "46195",
+            "num": "103-25314501",
+            "memo": "Rona Framing Material Cost 103-25314501",
+            "amount": 8.18
+          },
+          {
+            "date": "46195",
+            "num": "103-25314711",
+            "memo": "Rona Framing Material Cost 103-25314711",
+            "amount": 122.09
+          },
+          {
+            "date": "46196",
+            "num": "83323-10489571",
+            "memo": "Rona Framing Material Cost 83323-10489571",
+            "amount": 110.65
+          },
+          {
+            "date": "46202",
+            "num": "103-25300781",
+            "memo": "Rona Framing Material Cost  103-25300781",
+            "amount": 6385.55
+          },
+          {
+            "date": "46203",
+            "num": "103-25300782",
+            "memo": "Rona Framing Material Cost  103-25300782",
+            "amount": 8469.7
+          },
+          {
+            "date": "46203",
+            "num": "103-25300591",
+            "memo": "Rona Framing Material Cost  103-25300591",
+            "amount": 4079.43
+          },
+          {
+            "date": "46203",
+            "num": "103-25300921",
+            "memo": "Rona Framing Material Cost  103-25300921",
+            "amount": 3280.38
           }
         ],
-        "total": 7906.62
+        "total": 30492.980000000003
+      },
+      {
+        "name": "Russel Metals Inc",
+        "bills": [
+          {
+            "date": "46182",
+            "num": "75624994",
+            "memo": "Russel Metals Inc Framing Steel Beams 75624994",
+            "amount": 983.06
+          }
+        ],
+        "total": 983.06
       },
       {
         "name": "Slegg Building Materials",
@@ -2574,12 +3033,42 @@
             "num": "IN5571123",
             "memo": "Slegg Building Material Footings and Foundation Material IN5571123",
             "amount": 253.59
+          },
+          {
+            "date": "46195",
+            "num": "IN3-0043992",
+            "memo": "Slegg Building Materials Framing Material Cost IN3-0043992",
+            "amount": 21.76
           }
         ],
-        "total": 1011.71
+        "total": 1033.47
+      },
+      {
+        "name": "Sunbelt Rentals",
+        "bills": [
+          {
+            "date": "46198",
+            "num": "80009140-0001",
+            "memo": "Sunbelt Rental Rental Equipment",
+            "amount": 159.86
+          }
+        ],
+        "total": 159.86
+      },
+      {
+        "name": "Westcoast Cutting and Coring Ltd.",
+        "bills": [
+          {
+            "date": "46183",
+            "num": "2115166",
+            "memo": "Westcoast Cutting and Coring Ltd. Foundation Labour 2115166",
+            "amount": 900
+          }
+        ],
+        "total": 900
       }
     ],
-    "grandTotal": 98854.15000000001
+    "grandTotal": 177750.72
   },
   "schedule": [
     {
@@ -2652,7 +3141,7 @@
       "name": "Septic Field Install",
       "group": "Excavation",
       "status": "",
-      "timeline": "2026-07-08 - 2026-07-09"
+      "timeline": "2026-07-31 - 2026-08-01"
     },
     {
       "name": "Complete Footings Material Take Offs & Order Materials",
@@ -2765,7 +3254,7 @@
     {
       "name": "Plumbing Underslab",
       "group": "Foundation",
-      "status": "Working on it",
+      "status": "Done",
       "timeline": "2026-06-12 - 2026-06-12"
     },
     {
@@ -2795,7 +3284,7 @@
     {
       "name": "Slab Prep",
       "group": "Foundation",
-      "status": "Working on it",
+      "status": "Done",
       "timeline": "2026-06-15 - 2026-06-15"
     },
     {
@@ -2819,31 +3308,31 @@
     {
       "name": "Order Any Required Engineering Components",
       "group": "Framing",
-      "status": "",
+      "status": "Done",
       "timeline": ""
     },
     {
       "name": "Order Crawl Space Framing Package",
       "group": "Framing",
-      "status": "",
+      "status": "Done",
       "timeline": "2026-06-24 - 2026-06-24"
     },
     {
       "name": "Crawl Space Framing Labour",
       "group": "Framing",
-      "status": "",
+      "status": "Done",
       "timeline": "2026-06-29 - 2026-06-30"
     },
     {
       "name": "Order Main Floor Framing Package",
       "group": "Framing",
-      "status": "",
+      "status": "Done",
       "timeline": "2026-06-24 - 2026-06-24"
     },
     {
       "name": "Main Floor Framing Labour",
       "group": "Framing",
-      "status": "",
+      "status": "Working on it",
       "timeline": "2026-07-01 - 2026-07-15"
     },
     {
@@ -2862,79 +3351,79 @@
       "name": "Second Floor Framing Labour",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-07-16 - 2026-07-19"
+      "timeline": "2026-07-16 - 2026-07-21"
     },
     {
       "name": "Schedule Roof Truss & Floor System Delivery",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-07-20 - 2026-07-20"
+      "timeline": "2026-07-22 - 2026-07-22"
     },
     {
       "name": "Roof System Labour",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-07-20 - 2026-07-27"
+      "timeline": "2026-07-24 - 2026-07-31"
     },
     {
       "name": "McMann Group Framing & Rough Ins Inspection",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-08-19 - 2026-08-19"
     },
     {
       "name": "Schedule Engineer Framing Field Review",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-07-28 - 2026-07-28"
+      "timeline": "2026-08-01 - 2026-08-01"
     },
     {
       "name": "Book Framing Inspection",
       "group": "Framing",
       "status": "",
-      "timeline": "2026-08-15 - 2026-08-15"
+      "timeline": "2026-08-19 - 2026-08-19"
     },
     {
       "name": "Order Skylights",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-28 - 2026-07-28"
+      "timeline": "2026-08-01 - 2026-08-01"
     },
     {
       "name": "Order Windows",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-06 - 2026-07-06"
+      "timeline": "2026-07-15 - 2026-07-15"
     },
     {
       "name": "Install Windows",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-30 - 2026-07-30"
+      "timeline": "2026-08-01 - 2026-08-01"
     },
     {
       "name": "Order & Schedule Exterior Doors Delivery",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-07 - 2026-07-07"
+      "timeline": "2026-07-15 - 2026-07-15"
     },
     {
       "name": "Install Exterior Doors",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-31 - 2026-07-31"
+      "timeline": "2026-08-02 - 2026-08-02"
     },
     {
       "name": "Order Garage Doors",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-03 - 2026-07-03"
+      "timeline": "2026-07-17 - 2026-07-17"
     },
     {
       "name": "Schedule Garage Door Installation",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-09-11 - 2026-09-11"
+      "timeline": "2026-09-12 - 2026-09-12"
     },
     {
       "name": "Install Garage Doors",
@@ -2946,7 +3435,7 @@
       "name": "Order & Schedule Interior Doors Delivery",
       "group": "Windows & Doors",
       "status": "",
-      "timeline": "2026-07-13 - 2026-07-13"
+      "timeline": "2026-07-31 - 2026-07-31"
     },
     {
       "name": "Install Interior Doors",
@@ -2964,25 +3453,25 @@
       "name": "Schedule Walkthrough with Clients to Confirm Location of Plugs, Lights, Switches",
       "group": "Electrical",
       "status": "",
-      "timeline": "2026-07-21 - 2026-07-21"
+      "timeline": "2026-08-05 - 2026-08-05"
     },
     {
       "name": "Schedule Electrical Rough In",
       "group": "Electrical",
       "status": "",
-      "timeline": "2026-07-28 - 2026-07-28"
+      "timeline": "2026-08-01 - 2026-08-01"
     },
     {
       "name": "Electrical Rough In",
       "group": "Electrical",
       "status": "",
-      "timeline": "2026-08-07 - 2026-08-14"
+      "timeline": "2026-08-11 - 2026-08-18"
     },
     {
       "name": "Select Light Fixtures with Clients & Order",
       "group": "Electrical",
       "status": "",
-      "timeline": "2026-08-15 - 2026-08-15"
+      "timeline": "2026-08-19 - 2026-08-19"
     },
     {
       "name": "Schedule Electrical Finish",
@@ -3018,25 +3507,25 @@
       "name": "Schedule Plumbing Rough In",
       "group": "Plumbing",
       "status": "",
-      "timeline": "2026-07-22 - 2026-07-22"
+      "timeline": "2026-07-29 - 2026-07-29"
     },
     {
       "name": "Plumbing Rough In",
       "group": "Plumbing",
       "status": "",
-      "timeline": "2026-07-28 - 2026-08-01"
+      "timeline": "2026-08-01 - 2026-08-05"
     },
     {
       "name": "Book Plumbing Rough In Inspection",
       "group": "Plumbing",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-08-06 - 2026-08-06"
     },
     {
       "name": "Plumbing Rough In Inspection",
       "group": "Plumbing",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-08-06 - 2026-08-06"
     },
     {
       "name": "Water Treatment System",
@@ -3066,19 +3555,19 @@
       "name": "Schedule Mechanical Rough In",
       "group": "HVAC/Mechanical",
       "status": "",
-      "timeline": "2026-07-23 - 2026-07-23"
+      "timeline": "2026-08-01 - 2026-08-01"
     },
     {
       "name": "Mechanical Rough In",
       "group": "HVAC/Mechanical",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-06"
+      "timeline": "2026-08-06 - 2026-08-10"
     },
     {
       "name": "Install Fireplace",
       "group": "HVAC/Mechanical",
       "status": "",
-      "timeline": "2026-09-11 - 2026-09-11"
+      "timeline": "2026-09-12 - 2026-09-12"
     },
     {
       "name": "Schedule Mechanical Finish",
@@ -3120,13 +3609,13 @@
       "name": "Schedule Insulation & Vapour Barrier Install",
       "group": "Insulation & Drywall",
       "status": "",
-      "timeline": "2026-07-21 - 2026-07-21"
+      "timeline": "2026-08-17 - 2026-08-17"
     },
     {
       "name": "Insulation & Vapour Barrier Install",
       "group": "Insulation & Drywall",
       "status": "",
-      "timeline": "2026-08-23 - 2026-08-25"
+      "timeline": "2026-08-23 - 2026-08-26"
     },
     {
       "name": "Book Insulation & Vapour Barrier Inspection",
@@ -3144,13 +3633,13 @@
       "name": "Drywall Install",
       "group": "Insulation & Drywall",
       "status": "",
-      "timeline": "2026-08-26 - 2026-09-10"
+      "timeline": "2026-08-27 - 2026-09-11"
     },
     {
       "name": "McMann Group Drywall Inspection",
       "group": "Insulation & Drywall",
       "status": "",
-      "timeline": "2026-09-11 - 2026-09-11"
+      "timeline": "2026-09-12 - 2026-09-12"
     },
     {
       "name": "Have Clients Select Roofing",
@@ -3162,13 +3651,13 @@
       "name": "Schedule Roofers",
       "group": "Roofing",
       "status": "",
-      "timeline": "2026-07-21 - 2026-07-21"
+      "timeline": "2026-07-29 - 2026-07-29"
     },
     {
       "name": "Roofing Install",
       "group": "Roofing",
       "status": "",
-      "timeline": "2026-07-28 - 2026-08-01"
+      "timeline": "2026-08-01 - 2026-08-05"
     },
     {
       "name": "Confirm Stone Selection with Clients",
@@ -3186,13 +3675,13 @@
       "name": "Building Paper & Rainscreen Install",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-24 - 2026-08-26"
+      "timeline": "2026-09-03 - 2026-09-05"
     },
     {
       "name": "McMann Group Paper & Flashing Inspection",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-01 - 2026-08-01"
+      "timeline": "2026-09-08 - 2026-09-08"
     },
     {
       "name": "Confirm Exterior Cladding Selection with Client",
@@ -3204,19 +3693,19 @@
       "name": "Schedule Soffit & Gutters Installation",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-16 - 2026-08-16"
+      "timeline": "2026-08-26 - 2026-08-26"
     },
     {
       "name": "Soffit & Gutters Install",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-09-02 - 2026-09-02"
     },
     {
       "name": "Book Building Envelope Inspection",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-09-09 - 2026-09-09"
     },
     {
       "name": "Exterior Trim & Flashing Install",
@@ -3228,7 +3717,7 @@
       "name": "Schedule Main Cladding Install",
       "group": "Exterior Veneer",
       "status": "",
-      "timeline": "2026-08-02 - 2026-08-02"
+      "timeline": "2026-09-07 - 2026-09-07"
     },
     {
       "name": "Main Cladding Install",
@@ -3336,7 +3825,7 @@
       "name": "Order Cabinets",
       "group": "Cabinetry & Countertops",
       "status": "",
-      "timeline": "2026-08-03 - 2026-08-03"
+      "timeline": "2026-08-11 - 2026-08-11"
     },
     {
       "name": "Schedule Cabinet Install with Supplier",
@@ -3566,11 +4055,11 @@
     }
   },
   "_meta": {
-    "report": "May 2026",
+    "report": "June 2026",
     "dateFrom": "2025-05-01",
     "dateTo": "2026-05-31",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-06-23T22:08:10.677Z"
+    "syncedAt": "2026-07-20T22:40:04.775Z"
   }
 }
