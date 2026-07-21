@@ -6,7 +6,7 @@
   "projectAddress": "",
   "projectManager": "A. McMann",
   "reportLabel": "May 1, 2025 – June 30, 2026",
-  "updated": "July 20, 2026",
+  "updated": "July 21, 2026",
   "costBreakdown": {
     "categories": [
       {
@@ -16,10 +16,10 @@
             "label": "Plan Printing & Photocopying",
             "type": "detail",
             "budget": 800,
-            "prevInv": 392.90999999999997,
+            "prevInv": 392.91,
             "curInv": 0,
-            "totInv": 392.90999999999997,
-            "tbc": 407.09000000000003,
+            "totInv": 392.91,
+            "tbc": 407.09,
             "ob": 0,
             "co": 0
           }
@@ -27,10 +27,10 @@
         "subtotal": {
           "label": "DESIGN SERVICES — Subtotal",
           "budget": 800,
-          "prevInv": 392.90999999999997,
+          "prevInv": 392.91,
           "curInv": 0,
-          "totInv": 392.90999999999997,
-          "tbc": 407.09000000000003,
+          "totInv": 392.91,
+          "tbc": 407.09,
           "ob": 0,
           "co": 0
         }
@@ -104,7 +104,7 @@
             "prevInv": 4863.65,
             "curInv": 817,
             "totInv": 5680.65,
-            "tbc": 319.35000000000036,
+            "tbc": 319.35,
             "ob": 0,
             "co": 0
           },
@@ -112,9 +112,9 @@
             "label": "Geotechnical Engineer",
             "type": "detail",
             "budget": 4000,
-            "prevInv": 6889.799999999999,
+            "prevInv": 6889.8,
             "curInv": 130,
-            "totInv": 7019.799999999999,
+            "totInv": 7019.8,
             "tbc": 0,
             "ob": -3019.7999999999993,
             "co": 0
@@ -145,9 +145,9 @@
         "subtotal": {
           "label": "ENGINEERING FEES — Subtotal",
           "budget": 18000,
-          "prevInv": 14528.449999999999,
+          "prevInv": 14528.45,
           "curInv": 947,
-          "totInv": 15475.449999999999,
+          "totInv": 15475.45,
           "tbc": 7344.35,
           "ob": -3019.7999999999993,
           "co": 1800
@@ -163,7 +163,7 @@
             "prevInv": 7625,
             "curInv": 25175.55,
             "totInv": 32800.55,
-            "tbc": 10474.449999999997,
+            "tbc": 10474.45,
             "ob": 0,
             "co": 0
           },
@@ -217,8 +217,8 @@
           "budget": 62000,
           "prevInv": 9357.55,
           "curInv": 27800.55,
-          "totInv": 37158.100000000006,
-          "tbc": 26574.449999999997,
+          "totInv": 37158.1,
+          "tbc": 26574.45,
           "ob": 0,
           "co": 1732.55
         }
@@ -233,7 +233,7 @@
             "prevInv": 8280.42,
             "curInv": 130.38,
             "totInv": 8410.8,
-            "tbc": 11.920000000000073,
+            "tbc": 11.92,
             "ob": 0,
             "co": 0
           },
@@ -266,7 +266,7 @@
             "prevInv": 13806.21,
             "curInv": 0,
             "totInv": 13806.21,
-            "tbc": 993.7900000000009,
+            "tbc": 993.79,
             "ob": 0,
             "co": 0
           },
@@ -277,7 +277,7 @@
             "prevInv": 0,
             "curInv": 806.3,
             "totInv": 806.3,
-            "tbc": 393.70000000000005,
+            "tbc": 393.7,
             "ob": 0,
             "co": 0
           },
@@ -361,11 +361,11 @@
         ],
         "subtotal": {
           "label": "FOUNDATION — Subtotal",
-          "budget": 71839.34000000001,
-          "prevInv": 57121.35999999999,
-          "curInv": 4620.469999999999,
+          "budget": 71839.34,
+          "prevInv": 57121.36,
+          "curInv": 4620.47,
           "totInv": 61741.83,
-          "tbc": 21528.760000000002,
+          "tbc": 21528.76,
           "ob": 0,
           "co": 11431.25
         }
@@ -380,7 +380,7 @@
             "prevInv": 0,
             "curInv": 22477.74,
             "totInv": 22477.74,
-            "tbc": 21666.529999999995,
+            "tbc": 21666.53,
             "ob": 0,
             "co": 0
           },
@@ -453,10 +453,10 @@
         ],
         "subtotal": {
           "label": "FRAMING — Subtotal",
-          "budget": 124747.76999999999,
+          "budget": 124747.77,
           "prevInv": 637.91,
-          "curInv": 23460.800000000003,
-          "totInv": 24098.710000000003,
+          "curInv": 23460.8,
+          "totInv": 24098.71,
           "tbc": 100649.06,
           "ob": 0,
           "co": 0
@@ -490,11 +490,11 @@
         ],
         "subtotal": {
           "label": "WINDOWS — Subtotal",
-          "budget": 32181.379999999997,
+          "budget": 32181.38,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 32181.379999999997,
+          "tbc": 32181.38,
           "ob": 0,
           "co": 0
         }
@@ -914,11 +914,11 @@
         ],
         "subtotal": {
           "label": "EXTERIOR VENEER — Subtotal",
-          "budget": 77167.84000000001,
+          "budget": 77167.84,
           "prevInv": 0,
           "curInv": 0,
           "totInv": 0,
-          "tbc": 77167.84000000001,
+          "tbc": 77167.84,
           "ob": 0,
           "co": 0
         }
@@ -1614,7 +1614,7 @@
             "prevInv": 97.58,
             "curInv": 175,
             "totInv": 272.58,
-            "tbc": 927.4200000000001,
+            "tbc": 927.42,
             "ob": 0,
             "co": 0
           },
@@ -1658,7 +1658,7 @@
           "prevInv": 97.58,
           "curInv": 484.86,
           "totInv": 582.44,
-          "tbc": 6617.5599999999995,
+          "tbc": 6617.56,
           "ob": 0,
           "co": 0
         }
@@ -1671,9 +1671,9 @@
             "type": "detail",
             "budget": 25200,
             "prevInv": 11736,
-            "curInv": 2043.9,
-            "totInv": 13779.9,
-            "tbc": 11420.1,
+            "curInv": 3199.5,
+            "totInv": 14935.5,
+            "tbc": 10264.5,
             "ob": 0,
             "co": 0
           },
@@ -1681,9 +1681,9 @@
             "label": "Credit - Management Billing as per Pricing Contract",
             "type": "co",
             "budget": 0,
-            "prevInv": -5000,
+            "prevInv": 0,
             "curInv": 0,
-            "totInv": -5000,
+            "totInv": 0,
             "tbc": 5000,
             "ob": 0,
             "co": 0
@@ -1693,9 +1693,9 @@
             "type": "detail",
             "budget": 12600,
             "prevInv": 1620,
-            "curInv": 810,
-            "totInv": 2430,
-            "tbc": 10170,
+            "curInv": 1170,
+            "totInv": 2790,
+            "tbc": 9810,
             "ob": 0,
             "co": 0
           }
@@ -1704,9 +1704,9 @@
           "label": "PROJECT MANAGEMENT — Subtotal",
           "budget": 37800,
           "prevInv": 8356,
-          "curInv": 2853.9,
-          "totInv": 11209.9,
-          "tbc": 26590.1,
+          "curInv": 4369.5,
+          "totInv": 12725.5,
+          "tbc": 25074.5,
           "ob": 0,
           "co": 0
         }
@@ -1720,8 +1720,8 @@
             "budget": 8628.48,
             "prevInv": 1172.7,
             "curInv": 737.1,
-            "totInv": 1909.8000000000002,
-            "tbc": 6718.679999999999,
+            "totInv": 1909.8,
+            "tbc": 6718.68,
             "ob": 0,
             "co": 0
           },
@@ -1757,15 +1757,26 @@
             "tbc": 2000,
             "ob": 0,
             "co": 0
+          },
+          {
+            "label": "COLOUR LEGEND",
+            "type": "detail",
+            "budget": 0,
+            "prevInv": 0,
+            "curInv": 0,
+            "totInv": 0,
+            "tbc": 0,
+            "ob": 0,
+            "co": 0
           }
         ],
         "subtotal": {
           "label": "MISCELLANEOUS — Subtotal",
-          "budget": 39028.479999999996,
+          "budget": 39028.48,
           "prevInv": 1172.7,
           "curInv": 2057.15,
-          "totInv": 3229.8500000000004,
-          "tbc": 35798.630000000005,
+          "totInv": 3229.85,
+          "tbc": 35798.63,
           "ob": 0,
           "co": 0
         }
@@ -1775,40 +1786,40 @@
       {
         "label": "Project Subtotal",
         "budget": 1172519.65,
-        "prevInv": 108382.84999999999,
-        "curInv": 84098.92,
-        "totInv": 192481.77000000002,
-        "tbc": 1012338.6499999999,
+        "prevInv": 108382.85,
+        "curInv": 85614.52,
+        "totInv": 193997.37,
+        "tbc": 1010823.05,
         "ob": -9373.679999999998,
         "co": 22927.09
       },
       {
         "label": "15% Mark-up",
-        "budget": 175877.94749999998,
-        "prevInv": 13875.0405,
-        "curInv": 11856.985499999999,
-        "totInv": 25951.2285,
-        "tbc": 151850.7975,
-        "ob": -452.9699999999998,
-        "co": 3439.0634999999997
+        "budget": 175877.95,
+        "prevInv": 13875.04,
+        "curInv": 11856.99,
+        "totInv": 25951.23,
+        "tbc": 151623.46,
+        "ob": 0,
+        "co": 3439.06
       },
       {
         "label": "GST (5%)",
-        "budget": 67419.879875,
-        "prevInv": 6112.894525,
-        "curInv": 4797.7952749999995,
-        "totInv": 10921.649925000002,
-        "tbc": 58209.47237499999,
-        "ob": -491.3324999999999,
-        "co": 1318.307675
+        "budget": 67419.88,
+        "prevInv": 6112.89,
+        "curInv": 4873.58,
+        "totInv": 10997.43,
+        "tbc": 58122.33,
+        "ob": 0,
+        "co": 1318.31
       },
       {
         "label": "PROJECT TOTAL",
-        "budget": 1415817.477375,
-        "prevInv": 128370.78502499999,
-        "curInv": 100753.70077499999,
-        "totInv": 229354.64842500002,
-        "tbc": 1222398.9198749997,
+        "budget": 1415817.48,
+        "prevInv": 128370.79,
+        "curInv": 102345.08,
+        "totInv": 230946.03,
+        "tbc": 1220568.83,
         "ob": -10317.982499999998,
         "co": 27684.461175
       }
@@ -2223,9 +2234,25 @@
             "date": "46175",
             "name": "James McMann",
             "status": "Unbilled",
+            "hours": 2,
+            "rate": 90,
+            "amount": 180
+          },
+          {
+            "date": "46175",
+            "name": "James McMann",
+            "status": "Unbilled",
             "hours": 0.83,
             "rate": 90,
             "amount": 74.7
+          },
+          {
+            "date": "46176",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.67,
+            "rate": 90,
+            "amount": 240.29999999999998
           },
           {
             "date": "46176",
@@ -2242,6 +2269,14 @@
             "hours": 1.42,
             "rate": 90,
             "amount": 127.8
+          },
+          {
+            "date": "46181",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 0.75,
+            "rate": 90,
+            "amount": 67.5
           },
           {
             "date": "46181",
@@ -2268,6 +2303,14 @@
             "amount": 112.5
           },
           {
+            "date": "46182",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.92,
+            "rate": 90,
+            "amount": 172.79999999999998
+          },
+          {
             "date": "46184",
             "name": "James McMann",
             "status": "Unbilled",
@@ -2284,6 +2327,22 @@
             "amount": 81.9
           },
           {
+            "date": "46188",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 2.08,
+            "rate": 90,
+            "amount": 187.20000000000002
+          },
+          {
+            "date": "46189",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.92,
+            "rate": 90,
+            "amount": 172.79999999999998
+          },
+          {
             "date": "46189",
             "name": "James McMann",
             "status": "Unbilled",
@@ -2298,6 +2357,14 @@
             "hours": 0.58,
             "rate": 90,
             "amount": 52.199999999999996
+          },
+          {
+            "date": "46190",
+            "name": "James McMann",
+            "status": "Unbilled",
+            "hours": 1.5,
+            "rate": 90,
+            "amount": 135
           },
           {
             "date": "46191",
@@ -2356,7 +2423,7 @@
             "amount": 164.70000000000002
           }
         ],
-        "total_hours": 153.11000000000004,
+        "total_hours": 165.95000000000002,
         "total_amount": 0
       },
       {
@@ -2589,7 +2656,7 @@
         "total_amount": 0
       }
     ],
-    "totalHours": 200.90000000000003,
+    "totalHours": 213.74,
     "totalAmount": 0
   },
   "materials": {
@@ -2598,7 +2665,7 @@
         "name": "1047335 B.C. LTD (dba Complete Damp Proof",
         "bills": [
           {
-            "date": "May 26, 2026",
+            "date": "46169",
             "num": "11561",
             "memo": "1047335 B.C. LTD (dba Complete Damp Proof Damp proofing  11561",
             "amount": 2735.6
@@ -2610,7 +2677,7 @@
         "name": "Coastline Plumbing Ltd",
         "bills": [
           {
-            "date": "Jun 18, 2026",
+            "date": "46192",
             "num": "3247",
             "memo": "Coastline Plumbing Ltd Radon Piping, Relocation of water service 3247",
             "amount": 2520.41
@@ -2622,37 +2689,37 @@
         "name": "DBL Disposal Services Ltd",
         "bills": [
           {
-            "date": "May 28, 2026",
+            "date": "46171",
             "num": "305329",
             "memo": "DBL  Portable Washroom-  305329",
             "amount": 75
           },
           {
-            "date": "May 30, 2026",
+            "date": "46173",
             "num": "305327",
             "memo": "DBL Disposal Services Ltd Portable Washroom- 305327",
             "amount": 22.58
           },
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "307885",
             "memo": "DBL Disposal Services Ltd Portable Washroom- 307885",
             "amount": 175
           },
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "316498",
             "memo": "DBL Disposal Services Ltd Disposal Bins 316498",
             "amount": 233
           }
         ],
-        "total": 408
+        "total": 505.58
       },
       {
         "name": "Ecolibrium Energy Solutions Inc.",
         "bills": [
           {
-            "date": "Oct 18, 2025",
+            "date": "45949",
             "num": "2344",
             "memo": "Ecolibrium Energy Solutions Inc. Energy Advisor Report 2344",
             "amount": 975
@@ -2664,7 +2731,7 @@
         "name": "Excel Concrete Finishing Inc",
         "bills": [
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "3038",
             "memo": "Excel Concrete Finishing Inc Slab Finishng 3038",
             "amount": 1440
@@ -2676,37 +2743,37 @@
         "name": "Heidelberg Materials Canada Limited",
         "bills": [
           {
-            "date": "May 11, 2026",
+            "date": "46154",
             "num": "3190336",
             "memo": "Heidelberg Materials Canada Limited Concrete Footings 3190336",
             "amount": 6107.56
           },
           {
-            "date": "May 20, 2026",
+            "date": "46163",
             "num": "3191123",
             "memo": "Heidelberg Materials Canada Limited Concrete Walls 3191123",
             "amount": 7698.65
           },
           {
-            "date": "Jun 28, 2026",
+            "date": "46202",
             "num": "3194511",
             "memo": "Heidelberg Materials Canada Limited Concrete Skim Coat 3194511",
             "amount": 2243.79
           }
         ],
-        "total": 2243.79
+        "total": 16050
       },
       {
         "name": "Island Concrete Pumping Ltd",
         "bills": [
           {
-            "date": "May 11, 2026",
+            "date": "46154",
             "num": "28435",
             "memo": "Island Concrete Pumping Ltd Concrete Pump Truck 28435",
             "amount": 1482.88
           },
           {
-            "date": "May 20, 2026",
+            "date": "46163",
             "num": "28478",
             "memo": "Island Concrete Pumping Ltd Concrete Pump Truck 28478",
             "amount": 1750
@@ -2718,79 +2785,79 @@
         "name": "Island Electric Company",
         "bills": [
           {
-            "date": "Apr 29, 2026",
+            "date": "46142",
             "num": "EWO-1189-1A",
             "memo": "Island Electric Company Change Order Underground Cable Replacement 1189-1",
             "amount": 1864.51
           },
           {
-            "date": "Jun 14, 2026",
+            "date": "46188",
             "num": "EWO-1189-2",
             "memo": "Island Electric Company Change Order Main 400A Service Feeder Cables EWO-1189-2",
             "amount": 4278
           },
           {
-            "date": "Jun 14, 2026",
+            "date": "46188",
             "num": "EWO-1189-2",
             "memo": "Island Electric Company Change Order Receptacle and Future Lighting Circuit EWO-1189-2",
             "amount": 960.41
           },
           {
-            "date": "Jun 14, 2026",
+            "date": "46188",
             "num": "EWO-1189-2",
             "memo": "Island Electric Company Change Order Future Swimming Pool Sub-feed  EWO-1189-2",
             "amount": 860.37
           },
           {
-            "date": "Jun 14, 2026",
+            "date": "46188",
             "num": "1189-1",
             "memo": "Island Electric Company 400A Service Upgrade 1189-1",
             "amount": 13022
           }
         ],
-        "total": 19120.78
+        "total": 20985.29
       },
       {
         "name": "JE Anderson & Associates",
         "bills": [
           {
-            "date": "Nov 12, 2025",
+            "date": "45974",
             "num": "0066328",
             "memo": "JE Anderson & Associates Survey 0066328",
             "amount": 3760.4
           },
           {
-            "date": "Feb 9, 2026",
+            "date": "46063",
             "num": "0067130",
             "memo": "JE Anderson & Associates Survey 0067130",
             "amount": 210.75
           },
           {
-            "date": "May 5, 2026",
+            "date": "46148",
             "num": "0067962",
             "memo": "JE Anderson & Associates Survey 0067962",
             "amount": 892.5
           },
           {
-            "date": "Jun 7, 2026",
+            "date": "46181",
             "num": "0068312",
             "memo": "JE Anderson & Associates Survey 0068312",
             "amount": 817
           }
         ],
-        "total": 817
+        "total": 5680.65
       },
       {
         "name": "JXN SOLUTIONS LTD",
         "bills": [
           {
-            "date": "May 27, 2026",
+            "date": "46170",
             "num": "invoice 39",
             "memo": "JXN SOLUTIONS LTD Footings and Foundation Labour invoice 39",
             "amount": 17635
           },
           {
-            "date": "May 27, 2026",
+            "date": "46170",
             "num": "invoice 39",
             "memo": "JXN SOLUTIONS LTD Change Order Footings and Foundation Labour invoice 39",
             "amount": 11431.25
@@ -2802,38 +2869,38 @@
         "name": "Kivela Contracting Ltd.",
         "bills": [
           {
-            "date": "Jan 15, 2026",
+            "date": "46038",
             "num": "2658",
             "memo": "Kivela Contracting Ltd. Septic Design and Permit 2658",
             "amount": 1800
           },
           {
-            "date": "Apr 29, 2026",
+            "date": "46142",
             "num": "2694",
             "memo": "Kivela Contracting Ltd. Site Work 2694",
             "amount": 7625
           },
           {
-            "date": "Apr 29, 2026",
+            "date": "46142",
             "num": "2694",
             "memo": "Kivela Contracting Ltd. Change Order Septic Field Work 2694",
             "amount": 1732.55
           },
           {
-            "date": "Jun 23, 2026",
+            "date": "46197",
             "num": "2697",
             "memo": "Kivela Contracting Ltd. Site Work 2697",
             "amount": 26900.55
           }
         ],
-        "total": 26900.55
+        "total": 38058.1
       },
       {
         "name": "Kyle Windle",
         "bills": [
           {
-            "date": "Jun 29, 2026",
-            "num": "—",
+            "date": "46203",
+            "num": "",
             "memo": "Kyle Windle Demolition Labour",
             "amount": 665
           }
@@ -2844,73 +2911,73 @@
         "name": "Lewkowich Engineering Associates Ltd",
         "bills": [
           {
-            "date": "Dec 9, 2025",
+            "date": "46001",
             "num": "102800",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Assessment Report 102800",
             "amount": 3760
           },
           {
-            "date": "Feb 8, 2026",
+            "date": "46062",
             "num": "103557",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Assessment Report 103557",
             "amount": 300
           },
           {
-            "date": "Apr 9, 2026",
+            "date": "46122",
             "num": "104422",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Engineering 104422",
             "amount": 2477.4
           },
           {
-            "date": "May 10, 2026",
+            "date": "46153",
             "num": "104886",
             "memo": "Lewkowich Engineering Associates Ltd Geotechnical Engineering 104886",
             "amount": 352.4
           },
           {
-            "date": "Jun 14, 2026",
+            "date": "46188",
             "num": "105386",
             "memo": "Lewkowich Engineering Associates Ltd Geotech Report 105386",
             "amount": 130
           }
         ],
-        "total": 130
+        "total": 7019.799999999999
       },
       {
         "name": "Print Three Nanaimo",
         "bills": [
           {
-            "date": "Apr 15, 2026",
+            "date": "46128",
             "num": "5-36986",
             "memo": "Print Three Nanaimo Revised Plan Printing 5-36986",
             "amount": 321.75
           },
           {
-            "date": "May 4, 2026",
+            "date": "46147",
             "num": "5-37167",
             "memo": "Print Three Nanaimo Plan Printing 5-37167",
             "amount": 71.16
           }
         ],
-        "total": 392.91
+        "total": 392.90999999999997
       },
       {
         "name": "Regional District of Nanaimo",
         "bills": [
           {
-            "date": "Dec 15, 2025",
+            "date": "46007",
             "num": "2182719713",
             "memo": "Regional District of Nanaimo Building Permit Fees 2182719713",
             "amount": 1025
           },
           {
-            "date": "Mar 23, 2026",
+            "date": "46105",
             "num": "PR20250000587",
             "memo": "Regional District of Nanaimo Building Permit PR20250000587",
             "amount": 13700.75
           },
           {
-            "date": "May 6, 2026",
+            "date": "46149",
             "num": "2405438517",
             "memo": "Regional District of Nanaimo BP Revision  2405438517",
             "amount": 128.13
@@ -2922,73 +2989,73 @@
         "name": "Rona 221227- Mcmann Group",
         "bills": [
           {
-            "date": "May 4, 2026",
+            "date": "46147",
             "num": "103-25261351",
             "memo": "Rona Footings and Foundation Material 103-25261351",
             "amount": 7268.71
           },
           {
-            "date": "May 5, 2026",
+            "date": "46148",
             "num": "103-25259301",
             "memo": "Rona Engineering Material 103-25259301",
             "amount": 637.91
           },
           {
-            "date": "Jun 16, 2026",
+            "date": "46190",
             "num": "103-25311001",
             "memo": "Rona Footings and Foundation Material 103-25311001",
             "amount": 130.38
           },
           {
-            "date": "Jun 21, 2026",
+            "date": "46195",
             "num": "103-25314501",
             "memo": "Rona Framing Material Cost 103-25314501",
             "amount": 8.18
           },
           {
-            "date": "Jun 21, 2026",
+            "date": "46195",
             "num": "103-25314711",
             "memo": "Rona Framing Material Cost 103-25314711",
             "amount": 122.09
           },
           {
-            "date": "Jun 22, 2026",
+            "date": "46196",
             "num": "83323-10489571",
             "memo": "Rona Framing Material Cost 83323-10489571",
             "amount": 110.65
           },
           {
-            "date": "Jun 28, 2026",
+            "date": "46202",
             "num": "103-25300781",
             "memo": "Rona Framing Material Cost  103-25300781",
             "amount": 6385.55
           },
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "103-25300782",
             "memo": "Rona Framing Material Cost  103-25300782",
             "amount": 8469.7
           },
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "103-25300591",
             "memo": "Rona Framing Material Cost  103-25300591",
             "amount": 4079.43
           },
           {
-            "date": "Jun 29, 2026",
+            "date": "46203",
             "num": "103-25300921",
             "memo": "Rona Framing Material Cost  103-25300921",
             "amount": 3280.38
           }
         ],
-        "total": 22586.36
+        "total": 30492.980000000003
       },
       {
         "name": "Russel Metals Inc",
         "bills": [
           {
-            "date": "Jun 8, 2026",
+            "date": "46182",
             "num": "75624994",
             "memo": "Russel Metals Inc Framing Steel Beams 75624994",
             "amount": 983.06
@@ -3000,43 +3067,43 @@
         "name": "Slegg Building Materials",
         "bills": [
           {
-            "date": "May 10, 2026",
+            "date": "46153",
             "num": "IN5565137",
             "memo": "Slegg Building Material Footings and Foundation Material IN5565137",
             "amount": 215.54
           },
           {
-            "date": "May 11, 2026",
+            "date": "46154",
             "num": "IN5567055",
             "memo": "Slegg Building Material Footings and Foundation Material IN5567055",
             "amount": 335.43
           },
           {
-            "date": "May 13, 2026",
+            "date": "46156",
             "num": "IN5570960",
             "memo": "Slegg Building Material Footings and Foundation Material IN5570960",
             "amount": 207.15
           },
           {
-            "date": "May 13, 2026",
+            "date": "46156",
             "num": "IN5571123",
             "memo": "Slegg Building Material Footings and Foundation Material IN5571123",
             "amount": 253.59
           },
           {
-            "date": "Jun 21, 2026",
+            "date": "46195",
             "num": "IN3-0043992",
             "memo": "Slegg Building Materials Framing Material Cost IN3-0043992",
             "amount": 21.76
           }
         ],
-        "total": 21.76
+        "total": 1033.47
       },
       {
         "name": "Sunbelt Rentals",
         "bills": [
           {
-            "date": "Jun 24, 2026",
+            "date": "46198",
             "num": "80009140-0001",
             "memo": "Sunbelt Rental Rental Equipment",
             "amount": 159.86
@@ -3048,7 +3115,7 @@
         "name": "Westcoast Cutting and Coring Ltd.",
         "bills": [
           {
-            "date": "Jun 9, 2026",
+            "date": "46183",
             "num": "2115166",
             "memo": "Westcoast Cutting and Coring Ltd. Foundation Labour 2115166",
             "amount": 900
@@ -3057,7 +3124,7 @@
         "total": 900
       }
     ],
-    "grandTotal": 78896.57
+    "grandTotal": 177750.72
   },
   "schedule": [
     {
@@ -4049,6 +4116,6 @@
     "dateTo": "2026-06-30",
     "jobId": "widgeon",
     "jobRepo": "mcmann-widgeon",
-    "syncedAt": "2026-07-21T00:00:41.676Z"
+    "syncedAt": "2026-07-21T16:54:17.514Z"
   }
 }
